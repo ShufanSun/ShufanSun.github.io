@@ -3,9 +3,12 @@
     "",
     "\\public",
     "\\src",
+    "\\src\\assets",
     "\\src\\components",
-    "\\src\\components\\canvas"
+    "\\src\\components\\canvas",
+    "\\src\\constants",
+    "\\src\\utils"
   ],
-  "SelectedNode": "\\src\\App.jsx",
+  "SelectedNode": "\\src\\assets\\logo.svg",
   "PreviewInSolutionExplorer": false
 }
