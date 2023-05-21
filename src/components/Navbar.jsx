@@ -34,6 +34,7 @@ cursor-pointer">Sofine <span className="sm:block hidden">Sun</span></p>
                         </li>
                         ))}
                 </ul>
+
             </div>
         </nav>
   )
