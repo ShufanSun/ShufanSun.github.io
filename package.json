@@ -1,6 +1,7 @@
 {
-  "homepage": "http://shufansun.github.io/",
+
   "name": "shufansun-github-io",
+  "homepage": "https://shufansun.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
