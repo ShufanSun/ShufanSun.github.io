@@ -15,7 +15,7 @@ const Navbar = () => {
                         window.scrollTo(0, 0);
                     }}
                 >
-                    <img src={logo} alt="logo" className="w-9 h-9 object-contain" />     
+                    <img src={logo} alt="logo" className="w-16 h-16 object-contain" />     
                     <p className="text-white text-[18px] font-bold
 cursor-pointer">Sofine <span className="sm:block hidden">Sun</span></p>
 
@@ -34,7 +34,13 @@ cursor-pointer">Sofine <span className="sm:block hidden">Sun</span></p>
                         </li>
                         ))}
                 </ul>
-
+                <div className="sm:hidden flex flex-1 justify-end items-center">
+                    <img
+                        src={menu}
+                        alt="menu"
+                        className="w-[28px] h-[28px] object-contain cursor-pointer"
+                    />
+                </div>
             </div>
         </nav>
   )
