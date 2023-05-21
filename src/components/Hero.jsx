@@ -13,13 +13,17 @@ top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
                   <div className="w-1 sm:h-80 h-40 violet-gradient"/>
               </div>
               <div>
-                  <h1 className={`${styles.heroHeadText}text-white`}>Hi, I'm<span className="text-[#915eff]">Sofine</span></h1>
+                  <h1 className={`${styles.heroHeadText}text-white`}>Hi, I'm<span className="text-[#915eff]">Sofine</span>
+                  </h1>
                   <p className={`${styles.heroSubText} mt-2 text-white-100`}>
                       I'm a current computer engineering + CS sophomore at UW-Madison.
-                      And my academic interests lay in developing user interface, multimedia, VR, graphics and machine learning.
+                      <br className="sm:block hidden"/>
+                      And my academic interests lay in<br className="sm:block hidden" /> developing user interface, animation, VR, graphics and machine learning.
                   </p>
-              </div>
+              </div> 
           </div>
+
+          <ComputersCanvas />
       </section>
   )
 }
