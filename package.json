@@ -11,6 +11,7 @@
   "type": "module",
 
   "scripts": {
+
     "start": " react-scripts start",
 
     "dev": "vite",
