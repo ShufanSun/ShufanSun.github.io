@@ -25,10 +25,10 @@
     background: linear-gradient( to right, #434343, #000000 ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.violet-gradient {
-    background: #804dee;
-    background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
-    background: -webkit-linear-gradient( -90deg, #804dee 0%, rgba(60, 51, 80, 0) 100% );
+.green-gradient {
+    background: #019400;
+    background: linear-gradient(-90deg, #01c900 0%, rgba(60, 168, 80, 0) 100%);
+    background: -webkit-linear-gradient( -90deg, #10a93d 0%, rgba(60, 158, 80, 0) 100% );
 }
 
 .green-pink-gradient {

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Parrot- Free 02
+* source:	https://sketchfab.com/3d-models/parrot-free-02-9f5455031311447f81bc09287431d069
+* author:	animated3d.us (https://sketchfab.com/animated3d.us)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Parrot- Free 02" (https://sketchfab.com/3d-models/parrot-free-02-9f5455031311447f81bc09287431d069) by animated3d.us (https://sketchfab.com/animated3d.us) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
