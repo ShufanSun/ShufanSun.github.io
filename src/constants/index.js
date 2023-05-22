@@ -4,24 +4,22 @@ import {
     creator,
     web,
     javascript,
-    typescript,
     html,
     css,
     reactjs,
-    redux,
-    tailwind,
+    matlab,
     nodejs,
-    mongodb,
+    ps,
     git,
-    figma,
-    docker,
+    python,
+    java,
     SSEC,
+    maya,
     wentai,
     illumination,
     carrent,
     jobit,
     tripguide,
-    threejs,
 } from "../assets";
 
 export const navLinks = [
@@ -44,6 +42,7 @@ const services = [
         title: "Java Developer",
         icon: web,
     },
+   
     {
         title: "Research",
         icon: mobile,
@@ -64,6 +63,10 @@ const technologies = [
         icon: html,
     },
     {
+        name: "Matlab",
+        icon: matlab,
+    },
+    {
         name: "CSS 3",
         icon: css,
     },
@@ -72,45 +75,37 @@ const technologies = [
         icon: javascript,
     },
     {
-        name: "TypeScript",
-        icon: typescript,
+        name: "Photoshop",
+        icon: ps,
+    },
+    {
+        name: "Java",
+        icon: java,
     },
     {
         name: "React JS",
         icon: reactjs,
     },
     {
-        name: "Redux Toolkit",
-        icon: redux,
+        title: "Maya",
+        icon: maya,
     },
-    {
-        name: "Tailwind CSS",
-        icon: tailwind,
-    },
+    
     {
         name: "Node JS",
         icon: nodejs,
     },
+
     {
-        name: "MongoDB",
-        icon: mongodb,
-    },
-    {
-        name: "Three JS",
-        icon: threejs,
+        name: "Python",
+        icon:python,
     },
     {
         name: "git",
         icon: git,
     },
-    {
-        name: "figma",
-        icon: figma,
-    },
-    {
-        name: "docker",
-        icon: docker,
-    },
+    
+    
 ];
 
 const experiences = [
