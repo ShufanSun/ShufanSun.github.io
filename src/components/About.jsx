@@ -12,6 +12,7 @@ const ServiceCard = ({ index,title,icon}) => {
             <motion.div
                 variants={fadeIn("right", "spring", index * 0.5, 0.75)}
                 className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+
             >
                 <div
                     options={{
@@ -19,7 +20,7 @@ const ServiceCard = ({ index,title,icon}) => {
                         scale: 1,
                         speed: 450,
                     }}
-                    className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+                    className='green rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
                 >
                     <img
                         src={icon}
@@ -46,6 +47,7 @@ const About = () => {
             <motion.p
                 variants={fadeIn("", "", 0.1, 1)}
                 className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+
             >
                 Applying multimedia to create contents is one of my greatest interests. I enjoy painting, coding, and the combination of both.
                 I'm on my way getting more expertise in more visualization tools such as Maya, python, js, etc. Let's work together to bring ideas to life:D
