@@ -15,10 +15,9 @@ import {
     git,
     figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
+    SSEC,
+    wentai,
+    illumination,
     carrent,
     jobit,
     tripguide,
@@ -116,57 +115,46 @@ const technologies = [
 
 const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#383E56",
-        date: "March 2020 - April 2021",
+        title: "Java Developing Engineer",
+        company_name: "Wentai Technology - Shanghai",
+        icon: wentai,
+        iconBg: "#ffffff",
+        date: "May 2023 - August 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
+            "Developing and maintaining web applications using java and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
             "Participating in code reviews and providing constructive feedback to other developers.",
+
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#E6DEDD",
-        date: "Jan 2021 - Feb 2022",
+        title: "Undergraduate Research Scholar",
+        company_name: "Space Science and Engineering Center, UW-Madison",
+        icon: SSEC,
+        iconBg: "#FFFFFF",
+        date: "Sep 2022 - May 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Performed data analysis using Jupyter Notebook to read and process local files.",
+            "Interpolated Venus occultation data in different dimensions and generated graphs.",
+            "Did independent research activities under Dr. Sanjay Limaye's mentoring.",
+            "Presented the poster at 2023 Undergraduate Symposium.",
+
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#383E56",
-        date: "Jan 2022 - Jan 2023",
+        title: "Journal Contributer",
+        company_name: "Illumination Journal",
+        icon: illumination,
+        iconBg: "#000000",
+        date: "May 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Selected as one of finalists to be published in the Visual Art category for Illumination Journal 2023 edition.",
+            "Contributed oil painting 'Autumn in Leaves' and watercolor painting'Green Bird in Cherry Blossom'",
+            "Attended distribution party and received a first print copy",
+
         ],
     },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#E6DEDD",
-        date: "Jan 2023 - Present",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
+    
 ];
 
 const testimonials = [
