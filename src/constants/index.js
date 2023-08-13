@@ -111,14 +111,14 @@ const technologies = [
 const experiences = [
     {
         title: "Game development projects",
-        company_name: "DS 579 summer 2023",
+        company_name: "DS/CS 579 summer 2023",
         icon: SSEC,
         iconBg: "#ffffff",
         date: "June-Auguest 2023",
         points: [
-            "Developed 3D and 2D games on my own for fun for the first time",
+            "Developed 3D and 2D games on my own for fun",
             "Got extremely interested in user experience design for virtual environments",
-            "Gained a lot of experience in game design projects",
+            "Gained a lot of insights in VR development",
 
         ],
     },
@@ -160,10 +160,25 @@ const experiences = [
             "Selected as one of finalists to be published in the Visual Art category for Illumination Journal 2023 edition.",
             "Contributed oil painting 'Autumn in Leaves' and watercolor painting'Green Bird in Cherry Blossom'",
             "Attended distribution party and received a first print copy",
+            "Links to the artworks:",
+            "Fox: https://www.instagram.com/p/CnZul86uQbx/?img_index=1",
+            "Bird: https://www.instagram.com/p/Cmt3BRXuGB8/",
 
         ],
     },
-    
+    {
+        title: "Wall painter",
+        company_name: "My dad's office",
+        icon: creator,
+        iconBg: "#ffffff",
+        date: "August 2022",
+        points: [
+            "This is something interesting that I've done for fun",
+            "There was a big blank wall there and I just painted it using a little brush for fun",
+            "Here's the working process if you're curious: https://www.instagram.com/p/CnROC5jBhPZ/",
+
+        ],
+    },
 ];
 
 const testimonials = [
