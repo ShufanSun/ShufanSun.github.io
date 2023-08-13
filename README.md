@@ -1,2 +1,3 @@
 # ShufanSun.github.io
-Sofine's personal website
+Welcome to My personal website :)
+Here I'll demostrate my finished works including artworks and some coding projects. 

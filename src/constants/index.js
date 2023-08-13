@@ -179,70 +179,80 @@ const testimonials = [
     },
 ];
 
+const gallery = [
+{
+
+},
+{
+    
+}
+];
+
 const projects = [
     {
-        name: "Car Rent",
+        name: "Alpaca Run!",
         description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-        tags: [
+            'This is my first 2d shooter unity game in c#, the player is able to control the alpaca to spit at different enemies. You can download or play the game online here: https://sofine.itch.io/alpaca-run',
+            
+        tags: [//<a href="https://sofine.itch.io/alpaca-run">here</a>
             {
-                name: "react",
+                name: "c#",
                 color: "blue-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "unity",
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "graphic design",
                 color: "pink-text-gradient",
             },
         ],
         image: carrent,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/ShufanSun/alpaca_run_2d_game",
     },
     {
-        name: "Job IT",
+        name: "My Personal Website",
         description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+            "My github personal website that lists my coding projects and artworks, it's like a resume but better looking:)",
         tags: [
             {
                 name: "react",
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
+                name: "javascript",
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "html/css",
                 color: "pink-text-gradient",
             },
         ],
         image: jobit,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://github.com/ShufanSun/ShufanSun.github.io",
     },
     {
-        name: "Trip Guide",
+        name: "Finding Maggie",
         description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+            "This is an adventure game that mixes 2D and 3D levels for the user to interact with the self-designed virtual environments.",
         tags: [
             {
-                name: "nextjs",
+                name: "unity",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "c#",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "2D & 3D platform game design",
                 color: "pink-text-gradient",
             },
         ],
         image: tripguide,
-        source_code_link: "https://github.com/",
+        source_code_link: "https://www.youtube.com/watch?v=UtZiMp_eG90",
     },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, gallery };
