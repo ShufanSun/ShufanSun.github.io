@@ -110,6 +110,20 @@ const technologies = [
 
 const experiences = [
     {
+        title: "Game development projects",
+        company_name: "DS 579 summer 2023",
+        icon: SSEC,
+        iconBg: "#ffffff",
+        date: "June-Auguest 2023",
+        points: [
+            "Developed 3D and 2D games on my own for fun for the first time",
+            "Got extremely interested in user experience design for virtual environments",
+            "Gained a lot of experience in game design projects",
+
+        ],
+    },
+
+    {
         title: "Java Developing Engineer",
         company_name: "Wentai Technology - Shanghai",
         icon: wentai,
