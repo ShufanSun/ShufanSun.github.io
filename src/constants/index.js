@@ -174,7 +174,7 @@ const experiences = [
         date: "August 2022",
         points: [
             "This is something interesting that I've done for fun",
-            "There was a big blank wall there and I just painted it using a little brush for fun",
+            "There was a big blank wall there and I just painted it using a little brush",
             "Here's the working process if you're curious: https://www.instagram.com/p/CnROC5jBhPZ/",
 
         ],
