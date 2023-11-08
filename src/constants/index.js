@@ -20,6 +20,13 @@ import {
     carrent,
     jobit,
     tripguide,
+    greenbird,
+    vanita,
+    wall,
+    deer,
+    forest,
+    crane,
+    haunted,
 } from "../assets";
 
 export const navLinks = [
@@ -56,6 +63,7 @@ const services = [
         icon: creator,
     },
 ];
+
 
 const technologies = [
     {
@@ -110,7 +118,20 @@ const technologies = [
 
 const experiences = [
     {
-        title: "Game development projects",
+        title: "VR research",
+        company_name: "Under the Guidance of Professor Kevin Ponto",
+        icon: SSEC,
+        iconBg: "#ffffff",
+        date: "June-Auguest 2023",
+        points: [
+            "Developed 3D and 2D games on my own for fun",
+            "Got extremely interested in user experience design for virtual environments",
+            "Gained a lot of insights in VR development",
+
+        ],
+    },
+    {
+        title: "Finding Maggie (an experiment of 2d and 3d game development)",
         company_name: "DS/CS 579 summer 2023",
         icon: SSEC,
         iconBg: "#ffffff",
@@ -210,11 +231,29 @@ const testimonials = [
 
 const gallery = [
 {
-
+      image: greenbird,
+     name: "Green Bird in Cherry Blossoms",
 },
 {
-    
-}
+    image: vanita,
+   name: "Green Bird in Cherry Blossoms",
+},
+{
+    image: crane,
+    name:"Egrets",
+},
+{
+    image: wall,
+    name:"My dad's office wall",
+},
+{
+    image: forest,
+    name:"Forest Mural (My dad's office)",
+},
+{
+    image: deer,
+    name:"Deer in Forest",
+},
 ];
 
 const projects = [
@@ -281,6 +320,27 @@ const projects = [
         ],
         image: tripguide,
         source_code_link: "https://www.youtube.com/watch?v=UtZiMp_eG90",
+    },
+    {
+        name: "Haunted Housekeeping",
+        description:
+            "This is a 2D top-down game that make you the house that helps the builder clean without getting killed by the monsters.",
+        tags: [
+            {
+                name: "unity",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Photoshop",
+                color: "green-text-gradient",
+            },
+            {
+                name: "2D game design",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: haunted,
+        source_code_link: "https://savagebananas7405.itch.io/haunted-housekeeping",
     },
 ];
 

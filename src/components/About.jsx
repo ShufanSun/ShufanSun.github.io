@@ -49,7 +49,7 @@ const About = () => {
                 className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
 
             >
-                Applying multimedia to create contents is one of my greatest interests. I enjoy painting, coding, and the combination of both.
+                Applying multimedia to create contents is one of my greatest interests. I enjoy art crafting, coding, and the cross-section of both.
                 I'm on my way getting more expertise in more visualization tools such as Maya, python, js, etc. Let's work together to bring ideas to life:D
             </motion.p>
             <div className='mt-20 flex flex-wrap gap-10'>

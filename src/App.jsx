@@ -1,5 +1,5 @@
 import {HashRouter } from 'react-router-dom';
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components';
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works,Gallery ,StarsCanvas } from './components';
 const App=()=> {
 
     return (
@@ -14,10 +14,11 @@ const App=()=> {
             <Experience />
             <Tech />
             <Works />
-            {/* <Gallery/> */}
+            <Gallery/>
             {/* <Feedbacks /> */}
             <div className="relative z-0">
-                <Contact />
+                {/* <Contact /> */}
+                ssun329@wisc.edu
                 {/* <StarsCanvas/> */}
             </div>
         </HashRouter>
