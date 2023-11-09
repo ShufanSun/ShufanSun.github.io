@@ -36,7 +36,31 @@
     background: linear-gradient(90.13deg, #002b00 1.9%, #58a644 97.5%);
     background: -webkit-linear-gradient(-90.13deg, #002b00 1.9%, #58a644 97.5%);
 }
+/* Add this CSS to your styles.css or equivalent file */
 
+.gallery-container {
+    margin: 0 auto; /* Center the container */
+    max-width: 1200px; /* Set a maximum width for the container, adjust as needed */
+  }
+  
+  .gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Adjust the gap between items as needed */
+  }
+  
+  .gallery-col {
+    flex: 1;
+    max-width: 300px; /* Adjust the maximum width of each column as needed */
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add rounded corners to the images */
+  }
+  
 .orange-text-gradient {
     background: #f12711; /* fallback for old browsers */
     background: -webkit-linear-gradient( to top, #f12711, #f5af19 ); /* Chrome 10-25, Safari 5.1-6 */
@@ -44,7 +68,9 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+#wrap img.fake {
+    width:50%;
+  }
 .green-text-gradient {
     background: #11998e; /* fallback for old browsers */
     background: -webkit-linear-gradient( to top, #11998e, #38ef7d ); /* Chrome 10-25, Safari 5.1-6 */

@@ -117,18 +117,29 @@ const technologies = [
 ];
 
 const experiences = [
+
     {
-        title: "VR research",
-        company_name: "Under the Guidance of Professor Kevin Ponto",
+        title: "Virtual Environment Group",
+        company_name: "Under the Guidance of Professor Kevin Ponto and Bryce Sprecher",
         icon: SSEC,
         iconBg: "#ffffff",
-        date: "June-Auguest 2023",
+        date: "August 2023 - Present",
         points: [
-            "Developed 3D and 2D games on my own for fun",
-            "Got extremely interested in user experience design for virtual environments",
-            "Gained a lot of insights in VR development",
-
+            "Optimized the game asset models and created the workflow for redering and retapology",
+            "Worked with Zbrush and Maya to decimate the size of the models down while maintaining similar looks",
         ],
+    },
+    {
+        title:"2023 Game Resprawn Jam",
+        company_name:"UW-Madison",
+        icon:SSEC,
+        iconBg:"#ffffff",
+        date:"October 19th - 26th 2023",
+        points:[
+            "Created a 2d top down game in c# and unity called Haunted Housekeeping",
+            "Collaborated a group of people to get the project finished within 7 days",
+            "THe given topic was 'The world is the main character'",
+        ]
     },
     {
         title: "Finding Maggie (an experiment of 2d and 3d game development)",

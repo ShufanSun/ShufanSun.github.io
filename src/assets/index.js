@@ -15,7 +15,7 @@ import javascript from "./tech/javascript.png";
 import nodejs from "./tech/nodejs.png";
 import greenbird from "./gallery/greenbird.jpg";
 import crane from "./gallery/crane.jpg";
-import vanita from "./gallery/fox.jpg";
+import vanita from "./gallery/vanita.png";
 
 import deer from "./gallery/deer.jpg";
 import forest from "./gallery/forest.jpg";
