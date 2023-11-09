@@ -260,7 +260,7 @@ const projects = [
     {
         name: "Alpaca Run!",
         description:
-            'This is my first 2d shooter unity game in c#, the player is able to control the alpaca to spit at different enemies. You can download or play the game online here: https://sofine.itch.io/alpaca-run',
+            'This is a 2d shooter unity game in c#, the player is able to control the alpaca to spit at different enemies. You can download or play the game online here: https://sofine.itch.io/alpaca-run',
             
         tags: [//<a href="https://sofine.itch.io/alpaca-run">here</a>
             {
