@@ -30,7 +30,61 @@
     background: linear-gradient(-90deg, #01c900 0%, rgba(60, 168, 80, 0) 100%);
     background: -webkit-linear-gradient( -90deg, #00cea8 0%, rgba(60, 51, 80, 0) 100% );
 }
+/* Add these styles to your existing CSS file or create a new one */
 
+/* Add these styles to your existing CSS file or create a new one */
+
+/* Add these styles to your existing CSS file or create a new one */
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px; /* Adjust spacing as needed */
+  }
+  
+  .tag {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  /* Styles for specific tag colors */
+  .tag.blue-text-gradient {
+    background: linear-gradient(to right, #0099FF, #0066CC);
+    color: white;
+  }
+  .gallery-image-modal {
+    max-width: 100%;
+    max-height: 400px; /* Adjust the maximum height as needed */
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .tag.green-text-gradient {
+    background: linear-gradient(to right, #00CC66, #009933);
+    color: white;
+  }
+  
+  .tag.pink-text-gradient {
+    background: linear-gradient(to right, #FF66B2, #FF3399);
+    color: white;
+  }
+  
+  /* Add styles for additional tag colors as needed */
+  
+  /* Adjust the color for the text within the tags */
+  .tag span {
+    color: black; /* Change this to your desired text color */
+  }
+  
+  
+  
+  /* Add styles for additional tag colors as needed */
+  
 .green-pink-gradient {
     background: "#019400";
     background: linear-gradient(90.13deg, #002b00 1.9%, #58a644 97.5%);
@@ -52,7 +106,7 @@
   
   .gallery-col {
     flex: 1;
-    max-width: 300px; /* Adjust the maximum width of each column as needed */
+    max-width: 360px; /* Adjust the maximum width of each column as needed */
   }
   
   .gallery-image {
@@ -87,6 +141,66 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+/* Add this to your CSS or styles file */
+.expanded-image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* Ensure it's on top of other elements */
+}
+
+.expanded-image {
+  max-width: 90vw; /* Use maximum viewport width units to ensure responsiveness */
+  max-height: 90vh; /* Use maximum viewport height units to ensure responsiveness */
+  background: rgba(0, 45, 16, 0.9); /* Adjust background color opacity as needed */
+  padding: 20px; /* Adjust as needed */
+  text-align: center;
+  display:flex;
+  border-radius: 15px; /* Add rounded corners */
+  position: relative; /* Add relative positioning to handle child absolute positioning */
+}
+
+.expanded-details {
+  position: absolute;
+  bottom: 20px; /* Adjust distance from the bottom */
+  left: 20px; /* Adjust distance from the left */
+  color: white; /* Text color */
+  text-align: left;
+}
+
+.expanded-image img {
+  width: 100%; /* Ensure the image takes up 100% of the container width */
+  height: auto; /* Maintain the original aspect ratio */
+  max-height: calc(90vh - 40px); /* Adjusted based on padding */
+  border-radius: 10px; /* Add rounded corners to the image */
+}
+
+/* Add this to your CSS */
+.carousel {
+  width: 100%; /* Set the width as needed */
+}
+
+.carousel-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center images vertically */
+}
+
+.carousel-item {
+  width: 100%; /* Ensure each item takes the full width */
+}
+
+.carousel-image {
+  width: 100%; /* Make sure images fill the carousel item */
+  height: auto; /* Maintain aspect ratio */
+}
+
 
 .pink-text-gradient {
     background: #ec008c; /* fallback for old browsers */

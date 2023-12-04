@@ -16,9 +16,9 @@ top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
                   <h1 className={`${styles.heroHeadText}text-green`}>Hi, I'm<span className="text-[#10a93d]">Sofine</span>
                   </h1>
                   <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-                      I'm a current computer engineering + CS sophomore at UW-Madison.
+                      I'm a current CS sophomore at UW-Madison.
                       <br className="sm:block hidden"/>
-                      And my academic interests lay in<br className="sm:block hidden" /> developing user interface, animation, VR, graphics and machine learning.
+                      My academic interests lay in<br className="sm:block hidden" /> animation, VR, real time rendering and computer vision.
                   </p>
               </div> 
           </div>

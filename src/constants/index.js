@@ -18,14 +18,27 @@ import {
     wentai,
     illumination,
     carrent,
+    lane,
     jobit,
     tripguide,
     greenbird,
+    d1,
+    puddle,
+    forest2,
+    fox,
+    parrot,
     vanita,
     wall,
     deer,
     forest,
     crane,
+    man1,
+    man2,
+    man3,
+    man4,
+    man5,
+    man6,man7,
+    man,
     haunted,
 } from "../assets";
 
@@ -129,31 +142,31 @@ const experiences = [
             "Worked with Zbrush and Maya to decimate the size of the models down while maintaining similar looks",
         ],
     },
-    {
-        title:"2023 Game Resprawn Jam",
-        company_name:"UW-Madison",
-        icon:SSEC,
-        iconBg:"#ffffff",
-        date:"October 19th - 26th 2023",
-        points:[
-            "Created a 2d top down game in c# and unity called Haunted Housekeeping",
-            "Collaborated a group of people to get the project finished within 7 days",
-            "THe given topic was 'The world is the main character'",
-        ]
-    },
-    {
-        title: "Finding Maggie (an experiment of 2d and 3d game development)",
-        company_name: "DS/CS 579 summer 2023",
-        icon: SSEC,
-        iconBg: "#ffffff",
-        date: "June-Auguest 2023",
-        points: [
-            "Developed 3D and 2D games on my own for fun",
-            "Got extremely interested in user experience design for virtual environments",
-            "Gained a lot of insights in VR development",
+    // {
+    //     title:"2023 Game Resprawn Jam",
+    //     company_name:"UW-Madison",
+    //     icon:SSEC,
+    //     iconBg:"#ffffff",
+    //     date:"October 19th - 26th 2023",
+    //     points:[
+    //         "Created a 2d top down game in c# and unity called Haunted Housekeeping",
+    //         "Collaborated with a group to get the project done for a 7 day game jam",
+    //         "THe given topic was 'The world is the main character'",
+    //     ]
+    // },
+    // {
+    //     title: "Finding Maggie (an experiment of 2d and 3d game development)",
+    //     company_name: "DS/CS 579 summer 2023",
+    //     icon: SSEC,
+    //     iconBg: "#ffffff",
+    //     date: "June-Auguest 2023",
+    //     points: [
+    //         "Developed 3D and 2D games on my own for fun",
+    //         "Got extremely interested in user experience design for virtual environments",
+    //         "Gained a lot of insights in VR development",
 
-        ],
-    },
+    //     ],
+    // },
 
     {
         title: "Java Developing Engineer",
@@ -163,7 +176,7 @@ const experiences = [
         date: "May 2023 - August 2023",
         points: [
             "Developing and maintaining web applications using java and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+            "Collaborating with cross-functional teams including designers, product managers, and other developers to provide high-quality to-B IT service.",
             "Participating in code reviews and providing constructive feedback to other developers.",
 
         ],
@@ -198,19 +211,19 @@ const experiences = [
 
         ],
     },
-    {
-        title: "Wall painter",
-        company_name: "My dad's office",
-        icon: creator,
-        iconBg: "#ffffff",
-        date: "August 2022",
-        points: [
-            "This is something interesting that I've done for fun",
-            "There was a big blank wall there and I just painted it using a little brush",
-            "Here's the working process if you're curious: https://www.instagram.com/p/CnROC5jBhPZ/",
+    // {
+    //     title: "Wall painter",
+    //     company_name: "My dad's office",
+    //     icon: creator,
+    //     iconBg: "#ffffff",
+    //     date: "August 2022",
+    //     points: [
+    //         "This is something interesting that I've done for fun",
+    //         "There was a big blank wall there and I just painted it using a little brush",
+    //         "Here's the working process if you're curious: https://www.instagram.com/p/CnROC5jBhPZ/",
 
-        ],
-    },
+    //     ],
+    // },
 ];
 
 const testimonials = [
@@ -241,33 +254,169 @@ const testimonials = [
 ];
 
 const gallery = [
+    {
+        image: man,
+       name: "My First Game Character",
+       description:"This is my first attempt of modeling a whole human that matches anatomy and topology principles from a square",
+       isCarousel: true,
+       carouselImages: [
+        man1,
+        man2,
+        man3,
+        man4,
+        man5,
+        man6,
+        man7,
+        // Add more carousel images as needed
+      ],
+       tags: [
+       {
+           name: "Maya",
+           color: "blue-text-gradient",
+       },
+       {
+           name: "Human Topology & Anatomy",
+           color: "green-text-gradient",
+       },
+       {
+           name: "Cloth Simulation",
+           color: "pink-text-gradient",
+       },
+       {
+        name: "Rigging",
+        color: "blue-text-gradient",
+    },
+   ],
+      },
 {
       image: greenbird,
      name: "Green Bird in Cherry Blossoms",
-},
+     description:"This is a watercolor painting selected to be published on Illumination Magazine for visual art genre.",
+     isCarousel: false,
+     tags: [
+     {
+         name: "Watercolor",
+         color: "blue-text-gradient",
+     },
+     {
+         name: "design",
+         color: "green-text-gradient",
+     },
+     {
+         name: "May 2023",
+         color: "pink-text-gradient",
+     },
+ ],
+    },
 {
     image: vanita,
-   name: "Green Bird in Cherry Blossoms",
+   name: "Skull Vanita",
+   description:"This is my first modeling attempt for human anatomy",
+   isCarousel: false,
+   tags: [
+    {
+        name: "Maya Modeling",
+        color: "blue-text-gradient",
+    },
+    {
+        name: "Arnold Rendering",
+        color: "green-text-gradient",
+    },
+    {
+        name: "November 2023",
+        color: "pink-text-gradient",
+    },
+],
 },
 {
     image: crane,
     name:"Egrets",
+    isCarousel: false,
+    description:"A piece of work I created for fun because I like birds.",
+   tags: [
+    {
+        name: "Oil Painting",
+        color: "blue-text-gradient",
+    },
+    {
+        name: "Birds",
+        color: "green-text-gradient",
+    },
+    {
+        name: "March 2023",
+        color: "pink-text-gradient",
+    },
+],
 },
 {
     image: wall,
+    isCarousel: false,
     name:"My dad's office wall",
 },
 {
+    image: parrot,
+    isCarousel: false,
+    name:"A drawing collection of my pet parrot mango",
+},
+{
+    image: forest2,
+    isCarousel: false,
+    name:"Sound of Forest",
+},
+{
     image: forest,
+    isCarousel: false,
     name:"Forest Mural (My dad's office)",
 },
 {
+    image: fox,
+    isCarousel: false,
+    name:"Autumn in Leaves",
+},
+{
     image: deer,
+    isCarousel: false,
     name:"Deer in Forest",
+},
+{
+    image: puddle,
+    isCarousel: false,
+    name:"Underneath the Roof",
+},
+{
+    image: d1,
+    isCarousel: false,
+    name:"An Afternoon with Ducks",
 },
 ];
 
 const projects = [
+    {
+        name: "Lane Detector",
+        description:
+            'The project utilizes a self-trained deep learning model trained by Roboflow to perform real-time lane detection on video feeds.',
+            
+        tags: [//<a href="https://sofine.itch.io/alpaca-run">here</a>
+            {
+                name: "python",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "opencv",
+                color: "green-text-gradient",
+            },
+            {
+                name: "MadHacks 2023",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "Yolo v8",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: lane,
+        source_code_link: "https://github.com/ShufanSun/TrafficDetection",
+    },
     {
         name: "Alpaca Run!",
         description:
