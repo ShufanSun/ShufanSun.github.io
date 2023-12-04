@@ -90,10 +90,10 @@ const Gallery = () => {
         />
       )}
       <div className="expanded-details">
-        <p className="mt-4">{gallery[expandedIndex].name}</p>
-        <p className="text-secondary text-[17px] max-w-3xl leading-[30px]">
+        {/* <p className="mt-4">{gallery[expandedIndex].name}</p> */}
+        {/* <p className="text-secondary text-[17px] max-w-3xl leading-[30px]">
           {gallery[expandedIndex].description}
-        </p>
+        </p> */}
         <div className="flex flex-wrap gap-2">
           {/* {gallery[expandedIndex].tags &&
             gallery[expandedIndex].tags.map((tag) => (
