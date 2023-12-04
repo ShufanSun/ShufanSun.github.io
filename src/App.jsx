@@ -16,7 +16,13 @@ const App=()=> {
             <Works />
             <Gallery/>
             {/* <Feedbacks /> */}
-            <div className="relative z-0">
+            {/* <Contact /> */}
+            <div className="relative z-0 text-center">
+                {/* <Contact /> */}
+                Contact
+                {/* <StarsCanvas/> */}
+            </div>
+            <div className="relative z-0 text-center">
                 {/* <Contact /> */}
                 ssun329@wisc.edu
                 {/* <StarsCanvas/> */}

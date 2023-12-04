@@ -22,8 +22,10 @@ import {
     jobit,
     tripguide,
     greenbird,
+    corn,
     d1,
     puddle,
+    birdy,
     forest2,
     fox,
     parrot,
@@ -332,7 +334,7 @@ const gallery = [
     image: crane,
     name:"Egrets",
     isCarousel: false,
-    description:"A piece of work I created for fun because I like birds.",
+    description:"I like birds.",
    tags: [
     {
         name: "Oil Painting",
@@ -352,41 +354,149 @@ const gallery = [
     image: wall,
     isCarousel: false,
     name:"My dad's office wall",
+    description:"25h work in total, finished within 4 days",
+    tags: [
+        {
+            name: "Acrylic",
+            color: "blue-text-gradient",
+        },
+        {
+            name: "Mural",
+            color: "green-text-gradient",
+        },
+        {
+            name: "August 2023",
+            color: "pink-text-gradient",
+        },
+    ],
 },
 {
     image: parrot,
     isCarousel: false,
-    name:"A drawing collection of my pet parrot mango",
+    name:"Mango",
+    description:"He's my pet lovebird Mango, as the name indicates.",
+    tags: [
+        {
+            name: "Sketching",
+            color: "blue-text-gradient",
+        },
+        {
+            name: "Pet",
+            color: "green-text-gradient",
+        },
+        {
+            name: "Jan 2023",
+            color: "pink-text-gradient",
+        },
+    ],
 },
 {
     image: forest2,
     isCarousel: false,
     name:"Sound of Forest",
+    description:"Concept of a forest scene.",
+    tags: [
+        {
+            name: "Gouache",
+            color: "green-text-gradient",
+        },
+        {
+            name: "Jan 2023",
+            color: "pink-text-gradient",
+        },
+    ],
 },
 {
     image: forest,
     isCarousel: false,
-    name:"Forest Mural (My dad's office)",
+    name:"Forest Mural",
+    description:"My dad's office again, free labor",
+    tags: [
+        {
+            name: "Acrylic",
+            color: "blue-text-gradient",
+        },
+        {
+            name: "Mural",
+            color: "green-text-gradient",
+        },
+        {
+            name: "Summer 2022",
+            color: "pink-text-gradient",
+        },
+    ],
 },
 {
     image: fox,
     isCarousel: false,
     name:"Autumn in Leaves",
+    description:"Published on Illumination Art Journel May 2023",
+    tags: [
+        {
+            name: "Oil Painting",
+            color: "blue-text-gradient",
+        },
+        {
+            name: "Canvas",
+            color: "green-text-gradient",
+        },
+        {
+            name: "Jan 2023",
+            color: "pink-text-gradient",
+        },
+    ],
 },
 {
     image: deer,
     isCarousel: false,
     name:"Deer in Forest",
+    description:"Concept work",
+    tags: [
+        {
+            name: "Gouache",
+            color: "blue-text-gradient",
+        },
+        {
+            name: "Jan 2023",
+            color: "pink-text-gradient",
+        },
+    ],
 },
 {
     image: puddle,
     isCarousel: false,
     name:"Underneath the Roof",
+    description:"A puddle that looks like ocean",
+    tags: [
+        {
+            name: "Photography",
+            color: "blue-text-gradient",
+        },
+        {
+            name: "Photoshop",
+            color: "green-text-gradient",
+        },
+        {
+            name: "Feb 2021",
+            color: "pink-text-gradient",
+        },
+    ],
 },
 {
-    image: d1,
+    image: birdy,
     isCarousel: false,
-    name:"An Afternoon with Ducks",
+    // name:"",
+    description:"CG concept",
+    tags: [
+        {
+            name: "Gouache",
+            color: "blue-text-gradient",
+        },
+        {
+            name: "Dec 2022",
+            color: "pink-text-gradient",
+        },
+    ],
 },
 ];
 
@@ -417,28 +527,7 @@ const projects = [
         image: lane,
         source_code_link: "https://github.com/ShufanSun/TrafficDetection",
     },
-    {
-        name: "Alpaca Run!",
-        description:
-            'This is a 2d shooter unity game in c#, the player is able to control the alpaca to spit at different enemies. You can download or play the game online here: https://sofine.itch.io/alpaca-run',
-            
-        tags: [//<a href="https://sofine.itch.io/alpaca-run">here</a>
-            {
-                name: "c#",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "unity",
-                color: "green-text-gradient",
-            },
-            {
-                name: "graphic design",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: carrent,
-        source_code_link: "https://github.com/ShufanSun/alpaca_run_2d_game",
-    },
+    
     {
         name: "My Personal Website",
         description:
@@ -459,6 +548,27 @@ const projects = [
         ],
         image: jobit,
         source_code_link: "https://github.com/ShufanSun/ShufanSun.github.io",
+    },
+    {
+        name: "Corn Processing",
+        description:
+            "A project for Image Processing ECE 533. Recognized different patterns of corns.",
+        tags: [
+            {
+                name: "Mathematica",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Image Processing",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Filters",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: corn,
+        source_code_link: "https://github.com/ShufanSun/Corn-Processing",
     },
     {
         name: "Finding Maggie",
@@ -501,6 +611,28 @@ const projects = [
         ],
         image: haunted,
         source_code_link: "https://savagebananas7405.itch.io/haunted-housekeeping",
+    },
+    {
+        name: "Alpaca Run!",
+        description:
+            'This is a 2d shooter unity game in c#, the player is able to control the alpaca to spit at different enemies. You can download or play the game online here: https://sofine.itch.io/alpaca-run',
+            
+        tags: [//<a href="https://sofine.itch.io/alpaca-run">here</a>
+            {
+                name: "c#",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "unity",
+                color: "green-text-gradient",
+            },
+            {
+                name: "graphic design",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: carrent,
+        source_code_link: "https://github.com/ShufanSun/alpaca_run_2d_game",
     },
 ];
 

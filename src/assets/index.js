@@ -14,7 +14,7 @@ import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import nodejs from "./tech/nodejs.png";
 import greenbird from "./gallery/greenbird.jpg";
-
+import birdy from "./gallery/birdy.jpg";
 import puddle from "./gallery/puddle.jpg";
 import fox from "./gallery/fox.jpg";
 import parrot from "./gallery/mango.jpg";
@@ -44,7 +44,7 @@ import carrent from "./carrent.png";
 import lane from "./lane.png"
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
+import corn from "./corn.jpg";
 import maya from "./tech/maya.png";
 import haunted from "./haunted.jpg";
 import illumination from "./company/illumination.png"
@@ -78,8 +78,10 @@ export {
     jobit,
     tripguide,
     haunted,
+    corn,
 
     greenbird,
+    birdy,
     fox,
     d1,
     parrot,
