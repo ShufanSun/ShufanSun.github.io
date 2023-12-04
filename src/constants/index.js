@@ -132,7 +132,16 @@ const technologies = [
 ];
 
 const experiences = [
-
+    {
+        title: "Website creation and design assistant",
+        company_name: "Part-Time Student Job",
+        icon: SSEC,
+        iconBg: "#ffffff",
+        date: "December 2023 - Present",
+        points: [
+            "Used SquareSpace to help an Anthropology professor with her website for UX UI and marketing",
+        ],
+    },
     {
         title: "Virtual Environment Group",
         company_name: "Under the Guidance of Professor Kevin Ponto and Bryce Sprecher",
@@ -259,7 +268,7 @@ const gallery = [
     {
         image: man,
        name: "My First Game Character",
-       description:"This is my first attempt of modeling a whole human that matches anatomy and topology principles from a square",
+       description:"This is my attempt of modeling a whole human that matches anatomy and topology principles ground up from a square",
        isCarousel: true,
        carouselImages: [
         man1,
@@ -293,7 +302,7 @@ const gallery = [
 {
       image: greenbird,
      name: "Green Bird in Cherry Blossoms",
-     description:"This is a watercolor painting selected to be published on Illumination Magazine for visual art genre.",
+     description:"This is a painting selected to be published on Illumination Magazine for visual art genre.",
      isCarousel: false,
      tags: [
      {
@@ -305,7 +314,7 @@ const gallery = [
          color: "green-text-gradient",
      },
      {
-         name: "May 2023",
+         name: "Dec 2022",
          color: "pink-text-gradient",
      },
  ],
