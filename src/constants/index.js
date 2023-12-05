@@ -61,16 +61,16 @@ export const navLinks = [
 
 const services = [
     {
-        title: "Java Developer",
+        title: "Animator",
         icon: web,
     },
    
     {
-        title: "Research",
+        title: "Frontend",
         icon: mobile,
     },
     {
-        title: "VR Creator",
+        title: "VR",
         icon: backend,
     },
     {
@@ -142,6 +142,7 @@ const experiences = [
             "Used SquareSpace to help an Anthropology professor with her website for UX UI and marketing",
         ],
     },
+
     {
         title: "Virtual Environment Group",
         company_name: "Under the Guidance of Professor Kevin Ponto and Bryce Sprecher",
@@ -149,8 +150,9 @@ const experiences = [
         iconBg: "#ffffff",
         date: "August 2023 - Present",
         points: [
-            "Optimized the game asset models and created the workflow for redering and retapology",
+            "Optimized the game asset models and created the workflow for rendering and retopology",
             "Worked with Zbrush and Maya to decimate the size of the models down while maintaining similar looks",
+            "3D normal map generations",
         ],
     },
     // {
@@ -186,8 +188,8 @@ const experiences = [
         iconBg: "#ffffff",
         date: "May 2023 - August 2023",
         points: [
-            "Developing and maintaining web applications using java and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to provide high-quality to-B IT service.",
+            "Developing and maintaining web applications using java for Springboot API server and postman for testing.",
+            "Collaborating with cross-functional teams including frontends, OAs, and verification to provide high-quality to-B IT service.",
             "Participating in code reviews and providing constructive feedback to other developers.",
 
         ],
@@ -203,7 +205,6 @@ const experiences = [
             "Interpolated Venus occultation data in different dimensions and generated graphs.",
             "Did independent research activities under Dr. Sanjay Limaye's mentoring.",
             "Presented the poster at 2023 Undergraduate Symposium.",
-
         ],
     },
     {
@@ -216,9 +217,6 @@ const experiences = [
             "Selected as one of finalists to be published in the Visual Art category for Illumination Journal 2023 edition.",
             "Contributed oil painting 'Autumn in Leaves' and watercolor painting'Green Bird in Cherry Blossom'",
             "Attended distribution party and received a first print copy",
-            "Links to the artworks:",
-            "Fox: https://www.instagram.com/p/CnZul86uQbx/?img_index=1",
-            "Bird: https://www.instagram.com/p/Cmt3BRXuGB8/",
 
         ],
     },
@@ -254,14 +252,7 @@ const testimonials = [
         company: "DEF Corp",
         image: "https://randomuser.me/api/portraits/men/5.jpg",
     },
-    {
-        testimonial:
-            "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-        name: "Lisa Wang",
-        designation: "CTO",
-        company: "456 Enterprises",
-        image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
+    
 ];
 
 const gallery = [
