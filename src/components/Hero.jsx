@@ -13,7 +13,7 @@ top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
                   <div className="w-1 sm:h-80 h-40 green-gradient"/>
               </div>
               <div>
-                  <h1 className={`${styles.heroHeadText}text-green`}>Hi, I'm<span className="text-[#10a93d]">Sofine</span>
+                  <h1 className={`${styles.heroHeadText}text-green`}>Hi, I'm<span className="text-[#10a93d]">Shufan</span>
                   </h1>
                   <p className={`${styles.heroSubText} mt-2 text-white-100`}>
                       I'm a current CS sophomore at UW-Madison.
