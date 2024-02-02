@@ -111,4 +111,4 @@ const Gallery = () => {
   );
 };
 
-export default SectionWrapper(Gallery, 'about');
+export default SectionWrapper(Gallery, 'gallery');

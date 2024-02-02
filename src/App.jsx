@@ -9,7 +9,7 @@ const App=()=> {
                 <Navbar />
                 <Hero />
 
-            </div>
+            
             <About />
             <Experience />
             <Tech />
@@ -26,6 +26,7 @@ const App=()=> {
                 {/* <Contact /> */}
                 ssun329@wisc.edu
                 {/* <StarsCanvas/> */}
+            </div>
             </div>
         </HashRouter>
   )
