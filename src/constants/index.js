@@ -291,7 +291,7 @@ const gallery = [
             color: "green-text-gradient",
         },
         {
-            name: "Photoshop",
+            name: "Feb 2024",
             color: "pink-text-gradient",
         },
     ],
@@ -522,22 +522,22 @@ const gallery = [
         },
     ],
 },
-{
-    image: birdy,
-    isCarousel: false,
-    // name:"",
-    description:"CG concept",
-    tags: [
-        {
-            name: "Gouache",
-            color: "blue-text-gradient",
-        },
-        {
-            name: "Dec 2022",
-            color: "pink-text-gradient",
-        },
-    ],
-},
+// {
+//     image: birdy,
+//     isCarousel: false,
+//     // name:"",
+//     description:"CG concept",
+//     tags: [
+//         {
+//             name: "Gouache",
+//             color: "blue-text-gradient",
+//         },
+//         {
+//             name: "Dec 2022",
+//             color: "pink-text-gradient",
+//         },
+//     ],
+// },
 ];
 
 const projects = [
