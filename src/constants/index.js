@@ -22,6 +22,11 @@ import {
     jobit,
     tripguide,
     greenbird,
+    venus,
+    venus1,
+    venus2,
+    venus3,
+    venus4,
     corn,
     d1,
     puddle,
@@ -266,18 +271,44 @@ const testimonials = [
 
 const gallery = [
     {
+        image: venus,
+       name: "Astrobiology Magazine Front Cover - Life on Venus?",
+       description:"Original artwork by Shufan Sun, with concept guided by Dr. Sanjay Limaye.",
+       isCarousel: true,
+       carouselImages: [
+        venus1,
+        venus2,
+        venus3,
+        venus4,
+      ],
+       tags: [
+        {
+            name: "Oil Painting",
+            color: "blue-text-gradient",
+        },
+        {
+            name: "Affinity Photo 2",
+            color: "green-text-gradient",
+        },
+        {
+            name: "Photoshop",
+            color: "pink-text-gradient",
+        },
+    ],
+    },
+    {
         image: man,
        name: "My First Game Character",
        description:"This is my attempt of modeling a whole human that matches anatomy and topology principles ground up from a square",
        isCarousel: true,
        carouselImages: [
         man1,
-        man2,
-        man3,
+        // man2,
+        // man3,
         man4,
         man5,
         man6,
-        man7,
+        // man7,
         // Add more carousel images as needed
       ],
        tags: [

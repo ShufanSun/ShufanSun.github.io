@@ -14,6 +14,7 @@ import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import nodejs from "./tech/nodejs.png";
 import greenbird from "./gallery/greenbird.jpg";
+import venus from "./gallery/Venus.png";
 import birdy from "./gallery/birdy.jpg";
 import puddle from "./gallery/puddle.jpg";
 import fox from "./gallery/fox.jpg";
@@ -27,6 +28,10 @@ import man4 from "./gallery/gameCharac/4.jpg";
 import man5 from "./gallery/gameCharac/5.jpg";
 import man6 from "./gallery/gameCharac/6.jpg";
 import man7 from "./gallery/gameCharac/7.jpg";
+import venus1 from "./gallery/Venus/venus1.jpg";
+import venus2 from "./gallery/Venus/venus2.jpg";
+import venus3 from "./gallery/Venus/venus3.jpg";
+import venus4 from "./gallery/Venus/venus4.jpg";
 import vanita from "./gallery/vanita.png";
 import d1 from "./gallery/d1.jpg";
 
@@ -82,6 +87,7 @@ export {
 
     greenbird,
     birdy,
+    venus,
     fox,
     d1,
     parrot,
@@ -98,6 +104,10 @@ export {
     man5,
     man6,
     man7,
+    venus1,
+    venus2,
+    venus3,
+    venus4,
     wall,
     deer,
 };
