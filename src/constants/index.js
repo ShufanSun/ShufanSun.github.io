@@ -19,6 +19,8 @@ import {
     illumination,
     carrent,
     lane,
+    baking,
+    baking2,
     jobit,
     tripguide,
     greenbird,
@@ -542,6 +544,32 @@ const gallery = [
 
 const projects = [
     {
+        name: "3D Game Asset Model Optimization",
+        description:
+            'THis project showcases a workflow to reduce the size of the model from 30M polygons to 100 polygons.',
+            
+        tags: [
+            {
+                name: "Maya",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "baking",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Dec 2023",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "VR",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: baking2,
+        // source_code_link: "https://github.com/ShufanSun/TrafficDetection",
+    },
+    {
         name: "Lane Detector",
         description:
             'The project utilizes a self-trained deep learning model trained by Roboflow to perform real-time lane detection on video feeds.',
@@ -567,6 +595,7 @@ const projects = [
         image: lane,
         source_code_link: "https://github.com/ShufanSun/TrafficDetection",
     },
+
     
     {
         name: "My Personal Website",
@@ -587,7 +616,7 @@ const projects = [
             },
         ],
         image: jobit,
-        source_code_link: "https://github.com/ShufanSun/ShufanSun.github.io",
+        // source_code_link: "https://github.com/ShufanSun/ShufanSun.github.io",
     },
     {
         name: "Corn Processing",
@@ -629,7 +658,7 @@ const projects = [
             },
         ],
         image: tripguide,
-        source_code_link: "https://www.youtube.com/watch?v=UtZiMp_eG90",
+        // source_code_link: "https://www.youtube.com/watch?v=UtZiMp_eG90",
     },
     {
         name: "Haunted Housekeeping",
@@ -650,7 +679,7 @@ const projects = [
             },
         ],
         image: haunted,
-        source_code_link: "https://savagebananas7405.itch.io/haunted-housekeeping",
+        // source_code_link: "https://savagebananas7405.itch.io/haunted-housekeeping",
     },
     {
         name: "Alpaca Run!",

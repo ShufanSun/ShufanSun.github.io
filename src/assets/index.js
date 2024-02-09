@@ -47,6 +47,8 @@ import wentai from "./company/wentai.png";
 import SSEC from "./company/SSEC.png";
 import carrent from "./carrent.png";
 import lane from "./lane.png"
+import baking from "./Forestry/baking1.jpg";
+import baking2 from "./Forestry/baking2.jpg";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import corn from "./corn.jpg";
@@ -80,6 +82,8 @@ export {
     
     carrent,
     lane,
+    baking,
+    baking2,
     jobit,
     tripguide,
     haunted,
