@@ -52,6 +52,7 @@ import baking2 from "./Forestry/baking2.jpg";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import corn from "./corn.jpg";
+import dogs from "./dogs.jpg";
 import maya from "./tech/maya.png";
 import haunted from "./haunted.jpg";
 import illumination from "./company/illumination.png"
@@ -88,7 +89,7 @@ export {
     tripguide,
     haunted,
     corn,
-
+    dogs,
     greenbird,
     birdy,
     venus,

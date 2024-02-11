@@ -30,6 +30,7 @@ import {
     venus3,
     venus4,
     corn,
+    dogs,
     d1,
     puddle,
     birdy,
@@ -546,24 +547,24 @@ const projects = [
     {
         name: "3D Game Asset Model Optimization",
         description:
-            'THis project showcases a workflow to reduce the size of the model from 30M polygons to 100 polygons.',
+            'This project showcases a workflow to reduce the size of the photogrammetry model from 30M polygons to 100 polygons with realistic depths.',
             
         tags: [
             {
-                name: "Maya",
+                name: "Maya baking",
                 color: "blue-text-gradient",
             },
             {
-                name: "baking",
+                name: "Normal & Displacement maps",
                 color: "green-text-gradient",
+            },
+            {
+                name: "Photogrammetry",
+                color: "blue-text-gradient",
             },
             {
                 name: "Dec 2023",
                 color: "pink-text-gradient",
-            },
-            {
-                name: "VR",
-                color: "blue-text-gradient",
             },
         ],
         image: baking2,
@@ -639,6 +640,29 @@ const projects = [
         image: corn,
         source_code_link: "https://github.com/ShufanSun/Corn-Processing",
     },
+
+    {
+        name: "Dog Search Gallery",
+        description:
+            "This is a frontend project that uses React framework to implement a searching eng for dog images by breeds with pretty user interface.",
+        tags: [
+            {
+                name: "React",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Fetching",
+                color: "green-text-gradient",
+            },
+            {
+                name: "User Interface",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: dogs,
+        source_code_link: "https://github.com/ShufanSun/DogSearchGallery",
+    },
+
     {
         name: "Finding Maggie",
         description:
