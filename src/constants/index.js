@@ -592,6 +592,10 @@ const projects = [
                 name: "Yolo v8",
                 color: "blue-text-gradient",
             },
+            {
+                name: "Roboflow",
+                color: "green-text-gradient",
+            },
         ],
         image: lane,
         source_code_link: "https://github.com/ShufanSun/TrafficDetection",
