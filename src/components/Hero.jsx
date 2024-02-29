@@ -18,7 +18,7 @@ top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
                   <p className={`${styles.heroSubText} mt-2 text-white-100`}>
                       I'm a current CS sophomore at UW-Madison.
                       <br className="sm:block hidden"/>
-                      My academic interests lay in<br className="sm:block hidden" /> animation, VR, real time rendering and computer vision.
+                      My academic interests lay in<br className="sm:block hidden" /> computer vision, optimization, VR, real time rendering and animation.
                   </p>
               </div> 
           </div>
