@@ -5,6 +5,9 @@ import mobile from "./mobile.png";
 import web from "./web.png";
 
 import github from "./github.png";
+import youtube from "./youtube.png";
+import itch from "./itch.svg";
+
 import menu from "./menu.svg";
 import close from "./close.svg";
 import ps from "./tech/ps.png";
@@ -50,6 +53,7 @@ import lane from "./lane.png"
 import baking from "./Forestry/baking1.jpg";
 import baking2 from "./Forestry/baking2.jpg";
 import jobit from "./jobit.png";
+import eyes from "./eyes.png"
 import tripguide from "./tripguide.png";
 import corn from "./corn.jpg";
 import dogs from "./dogs.jpg";
@@ -67,6 +71,8 @@ export {
     matlab,
     illumination,
     github,
+    youtube,
+    itch,
     menu,
     ps,
     close,
@@ -99,6 +105,7 @@ export {
     puddle,
     forest,
     forest2,
+    eyes,
     vanita,
     crane,
     man,

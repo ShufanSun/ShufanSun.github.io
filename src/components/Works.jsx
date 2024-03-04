@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { github } from "../assets";
+import { youtube } from "../assets"; // Import YouTube logo
+import { itch } from "../assets"; // Import itch logo
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
-
 
 const ProjectCard = ({
     index,
@@ -16,7 +17,15 @@ const ProjectCard = ({
     tags,
     image,
     source_code_link,
+    youtube_link, // New prop for YouTube link
+    itch_link, // New prop for itch link
 }) => {
+    const openYouTubeLink = () => {
+        if (youtube_link) {
+            window.open(youtube_link, "_blank");
+        }
+    };
+
     return (
         <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
             <Tilt
@@ -33,7 +42,37 @@ const ProjectCard = ({
                         alt='project_image'
                         className='w-full h-full object-cover rounded-2xl'
                     />
-
+                    {/* Check if YouTube link exists */}
+                    {youtube_link && (
+                        <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+                            <div
+                                onClick={openYouTubeLink} // Open YouTube link on click
+                                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                            >
+                                <img
+                                    src={youtube}
+                                    alt='YouTube'
+                                    className='w-1/2 h-1/2 object-contain'
+                                />
+                            </div>
+                        </div>
+                    )}
+                    {/* Check if itch link exists */}
+                    {itch_link && (
+                        <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+                            <div
+                                onClick={() => window.open(itch_link, "_blank")} // Open itch link on click
+                                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                            >
+                                <img
+                                    src={itch}
+                                    alt='Itch'
+                                    className='w-1/2 h-1/2 object-contain'
+                                />
+                            </div>
+                        </div>
+                    )}
+                    {/* Check if source code link exists */}
                     {source_code_link && (
                         <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
                             <div
@@ -71,31 +110,35 @@ const ProjectCard = ({
 };
 
 const Works = () => {
-  return (
-      <>
-          <motion.div variants={textVariant()}>
-              <p className={`${styles.sectionSubText} `}>My work</p>
-              <h2 className={`${styles.sectionHeadText}`}>Coding Projects.</h2>
-          </motion.div>
+    return (
+        <>
+            <motion.div variants={textVariant()}>
+                <p className={`${styles.sectionSubText} `}>My work</p>
+                <h2 className={`${styles.sectionHeadText}`}>Coding Projects.</h2>
+            </motion.div>
 
-          <div className='w-full flex'>
-              <motion.p
-                  variants={fadeIn("", "", 0.1, 1)}
-                  className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
-              >
-                  Following projects showcase my skills and experience through
-                  real-world examples of my work. Each project is briefly described with
-                  links to code repositories and live demos in it. 
-              </motion.p>
-          </div>
+            <div className='w-full flex'>
+                <motion.p
+                    variants={fadeIn("", "", 0.1, 1)}
+                    className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+                >
+                    Following projects showcase my skills and experience through
+                    real-world examples of my work. Each project is briefly described with
+                    links to code repositories and live demos in it. 
+                </motion.p>
+            </div>
 
-          <div className='mt-20 flex flex-wrap gap-7'>
-              {projects.map((project, index) => (
-                  <ProjectCard key={`project-${index}`} index={index} {...project} />
-              ))}
-          </div>
-      </>
-  )
-}
+            <div className='mt-20 flex flex-wrap gap-7'>
+                {projects.map((project, index) => (
+                    <ProjectCard
+                        key={`project-${index}`}
+                        index={index}
+                        {...project}
+                    />
+                ))}
+            </div>
+        </>
+    );
+};
 
 export default SectionWrapper(Works, "experience");

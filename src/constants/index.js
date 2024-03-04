@@ -35,6 +35,7 @@ import {
     puddle,
     birdy,
     forest2,
+    eyes,
     fox,
     parrot,
     vanita,
@@ -545,6 +546,36 @@ const gallery = [
 
 const projects = [
     {
+        name: "Eyes",
+        description:
+            'My first attempt of creating Maya animation. The story was inspired by the lining-up deadlines those few days.',
+            
+        tags: [
+            {
+                name: "Maya Keyframe",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Motion Paths",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Fluid simulation",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Arnold CPU Rendering",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Feb 2024",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: eyes,
+        youtube_link:"https://youtu.be/10SJ6G6IUjg",
+    },
+    {
         name: "3D Game Asset Model Optimization",
         description:
             'This project showcases a workflow to reduce the size of the photogrammetry model from 30M polygons to 100 polygons with realistic depths.',
@@ -568,7 +599,7 @@ const projects = [
             },
         ],
         image: baking2,
-        // source_code_link: "https://github.com/ShufanSun/TrafficDetection",
+      
     },
     {
         name: "Lane Detector",
@@ -598,6 +629,7 @@ const projects = [
             },
         ],
         image: lane,
+        youtube_link:"https://www.youtube.com/watch?v=3T2vT78VVpU",
         source_code_link: "https://github.com/ShufanSun/TrafficDetection",
     },
 
@@ -686,7 +718,7 @@ const projects = [
             },
         ],
         image: tripguide,
-        // source_code_link: "https://www.youtube.com/watch?v=UtZiMp_eG90",
+        youtube_link: "https://www.youtube.com/watch?v=UtZiMp_eG90",
     },
     {
         name: "Haunted Housekeeping",
@@ -707,7 +739,7 @@ const projects = [
             },
         ],
         image: haunted,
-        // source_code_link: "https://savagebananas7405.itch.io/haunted-housekeeping",
+        itch_link: "https://savagebananas7405.itch.io/haunted-housekeeping",
     },
     {
         name: "Alpaca Run!",
