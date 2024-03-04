@@ -17,6 +17,13 @@ import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import nodejs from "./tech/nodejs.png";
 import greenbird from "./gallery/greenbird.jpg";
+import girl1 from "./gallery/girl/girl1.jpg";
+import girl2 from "./gallery/girl/girl2.jpg";
+import mural1 from "./gallery/mural/mural1.jpg";
+import mural2 from "./gallery/mural/mural2.jpg";
+import mural3 from "./gallery/mural/mural3.jpg";
+import gb1 from "./gallery/greenbird/gb1.jpg";
+import gb2 from "./gallery/greenbird/gb2.jpg";
 import venus from "./gallery/Venus.png";
 import birdy from "./gallery/birdy.jpg";
 import puddle from "./gallery/puddle.jpg";
@@ -107,6 +114,13 @@ export {
     dogs,
     greenbird,
     springboot,
+    girl1,
+    girl2,
+    gb1,
+    gb2,
+    mural1,
+    mural2,
+    mural3,
     birdy,
     venus,
     fox,

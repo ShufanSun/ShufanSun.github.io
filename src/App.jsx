@@ -3,15 +3,16 @@ import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works,Galler
 import ParticlesBackground from './components/ParticlesBackground';
 
 const App=()=> {
-
+{/* <ParticlesBackground/> */}
     return (
         <HashRouter>
+             <ParticlesBackground/>
             <div className="relative z-0 bg-primary">
                 <div className="bg-hero-pattern bg-cover bg-np-repeat bg-center" />
                 <Navbar />
                 <Hero />
 
-            {/* <ParticlesBackground/>*/}
+                
             <About />
             <Experience />
             <Tech />

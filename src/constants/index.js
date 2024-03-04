@@ -28,7 +28,14 @@ import {
     baking2,
     jobit,
     tripguide,
+    girl1,
+    girl2,
     greenbird,
+    gb1,
+    gb2,
+    mural1,
+    mural2,
+    mural3,
     venus,
     venus1,
     venus2,
@@ -70,7 +77,7 @@ export const navLinks = [
     },
     {
         id:"experience",
-        title:"Coding Projects",
+        title:"Projects",
     },
     {
         id:"gallery",
@@ -89,7 +96,7 @@ const services = [
     },
    
     {
-        title: "Frontend",
+        title: "Graphics",
         icon: mobile,
     },
     {
@@ -312,6 +319,29 @@ const gallery = [
     ],
     },
     {
+        image: girl1,
+        isCarousel: true,
+   carouselImages: [
+    girl2,girl1
+  ],
+        name:"Peaceful Sunset",
+        description:"A painting that reflects my mood at the moment.",
+        tags: [
+            {
+                name: "Gouache",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Lighting",
+                color: "green-text-gradient",
+            },
+            {
+                name: "December 2023",
+                color: "pink-text-gradient",
+            },
+        ],
+    },
+    {
         image: man,
        name: "My First Game Character",
        description:"This is my attempt of modeling a whole human that matches anatomy and topology principles ground up from a square",
@@ -343,84 +373,72 @@ const gallery = [
         name: "Rigging",
         color: "blue-text-gradient",
     },
+    {
+        name: "Dec 2023",
+        color: "pink-text-gradient",
+    },
    ],
       },
-{
-      image: greenbird,
-     name: "Green Bird in Cherry Blossoms",
-     description:"This is a painting selected to be published on Illumination Magazine for visual art genre.",
-     isCarousel: false,
-     tags: [
-     {
-         name: "Watercolor",
-         color: "blue-text-gradient",
-     },
-     {
-         name: "design",
-         color: "green-text-gradient",
-     },
-     {
-         name: "Dec 2022",
-         color: "pink-text-gradient",
-     },
- ],
-    },
-{
-    image: vanita,
-   name: "Skull Vanita",
-   description:"This is my first modeling attempt for human anatomy",
-   isCarousel: false,
-   tags: [
-    {
-        name: "Maya Modeling",
-        color: "blue-text-gradient",
-    },
-    {
-        name: "Arnold Rendering",
-        color: "green-text-gradient",
-    },
-    {
-        name: "November 2023",
-        color: "pink-text-gradient",
-    },
-],
-},
-{
-    image: crane,
-    name:"Egrets",
-    isCarousel: false,
-    description:"I like birds.",
-   tags: [
-    {
-        name: "Oil Painting",
-        color: "blue-text-gradient",
-    },
-    {
-        name: "Birds",
-        color: "green-text-gradient",
-    },
-    {
-        name: "March 2023",
-        color: "pink-text-gradient",
-    },
-],
-},
-{
-    image: wall,
-    isCarousel: false,
-    name:"My dad's office wall",
-    description:"25h work in total, finished within 4 days",
-    tags: [
+      {
+        image: vanita,
+       name: "Skull Vanita",
+       description:"This is my first modeling attempt for human anatomy",
+       isCarousel: false,
+       tags: [
         {
-            name: "Acrylic",
+            name: "Maya Modeling",
             color: "blue-text-gradient",
         },
         {
-            name: "Mural",
+            name: "Arnold Rendering",
             color: "green-text-gradient",
         },
         {
-            name: "August 2023",
+            name: "November 2023",
+            color: "pink-text-gradient",
+        },
+    ],
+    },
+    {
+        image: wall,
+        isCarousel: true,
+   carouselImages: [
+    mural1,mural3,wall,
+  ],
+        name:"My dad's office wall",
+        description:"This is a piece of mural of approximately 3m*2m in size. It took me 25h of work in total(finished within 4 days).",
+        tags: [
+            {
+                name: "Acrylic",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Mural",
+                color: "green-text-gradient",
+            },
+            {
+                name: "August 2023",
+                color: "pink-text-gradient",
+            },
+        ],
+    },
+
+{
+    image: fox,
+    isCarousel: false,
+    name:"Autumn in Leaves",
+    description:"Published on Illumination Art Journel May 2023",
+    tags: [
+        {
+            name: "Oil Painting",
+            color: "blue-text-gradient",
+        },
+        {
+            name: "Canvas",
+            color: "green-text-gradient",
+        },
+        {
+            name: "Jan 2023",
             color: "pink-text-gradient",
         },
     ],
@@ -462,6 +480,29 @@ const gallery = [
     ],
 },
 {
+    image: greenbird,
+   name: "Green Bird in Cherry Blossoms",
+   description:"This is a painting selected to be published on Illumination Magazine for visual art genre.",
+   isCarousel: true,
+   carouselImages: [
+    gb2,gb1,
+  ],
+   tags: [
+   {
+       name: "Watercolor",
+       color: "blue-text-gradient",
+   },
+   {
+       name: "design",
+       color: "green-text-gradient",
+   },
+   {
+       name: "Dec 2022",
+       color: "pink-text-gradient",
+   },
+],
+  },
+{
     image: forest,
     isCarousel: false,
     name:"Forest Mural",
@@ -481,26 +522,7 @@ const gallery = [
         },
     ],
 },
-{
-    image: fox,
-    isCarousel: false,
-    name:"Autumn in Leaves",
-    description:"Published on Illumination Art Journel May 2023",
-    tags: [
-        {
-            name: "Oil Painting",
-            color: "blue-text-gradient",
-        },
-        {
-            name: "Canvas",
-            color: "green-text-gradient",
-        },
-        {
-            name: "Jan 2023",
-            color: "pink-text-gradient",
-        },
-    ],
-},
+
 {
     image: deer,
     isCarousel: false,
