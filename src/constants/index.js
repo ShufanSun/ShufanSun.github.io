@@ -7,7 +7,12 @@ import {
     html,
     css,
     reactjs,
+    cplusplus,
     matlab,
+    unity,
+    springboot,
+    csharp,
+    mathematica,
     nodejs,
     ps,
     git,
@@ -100,21 +105,36 @@ const services = [
 
 const technologies = [
     {
-        name: "HTML 5",
-        icon: html,
+        name: "JavaScript",
+        icon: javascript,
+    },
+    {
+        name: "Python",
+        icon:python,
+    },
+    {
+        title: "Maya",
+        icon: maya,
+    },
+    {name: "Mathematica",
+    icon: mathematica,},
+    {
+        name: "git",
+        icon: git,
+    },
+    {
+        name:"C++",
+        icon:cplusplus,
+    },
+    {
+        name: "c#",
+        icon: csharp,
     },
     {
         name: "Matlab",
         icon: matlab,
     },
-    {
-        name: "CSS 3",
-        icon: css,
-    },
-    {
-        name: "JavaScript",
-        icon: javascript,
-    },
+   
     {
         name: "Photoshop",
         icon: ps,
@@ -127,23 +147,14 @@ const technologies = [
         name: "React JS",
         icon: reactjs,
     },
-    {
-        title: "Maya",
-        icon: maya,
-    },
-    
-    {
-        name: "Node JS",
-        icon: nodejs,
-    },
 
     {
-        name: "Python",
-        icon:python,
+        name: "Unity",
+        icon: unity,
     },
     {
-        name: "git",
-        icon: git,
+        name: "Springboot",
+        icon:springboot,
     },
     
     

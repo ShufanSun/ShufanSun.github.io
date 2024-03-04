@@ -45,7 +45,12 @@ import wall from "./gallery/wall.jpg";
 import reactjs from "./tech/reactjs.png";
 import python from "./tech/python.png";
 import java from "./tech/java.png";
+import unity from "./tech/unity.png";
 import matlab from "./tech/matlab.png";
+import springboot from "./tech/springboot.png";
+import cplusplus from "./tech/cplusplus.png";
+import csharp from "./tech/csharp.png";
+import mathematica from "./tech/mathematica.jpg";
 import wentai from "./company/wentai.png";
 import SSEC from "./company/SSEC.png";
 import carrent from "./carrent.png";
@@ -67,10 +72,14 @@ export {
     creator,
     mobile,
     web,
+    mathematica,
     java,
     matlab,
+    unity,
+    csharp,
     illumination,
     github,
+    cplusplus,
     youtube,
     itch,
     menu,
@@ -97,6 +106,7 @@ export {
     corn,
     dogs,
     greenbird,
+    springboot,
     birdy,
     venus,
     fox,
