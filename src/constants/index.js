@@ -48,6 +48,7 @@ import {
     birdy,
     forest2,
     eyes,
+    cockatoo,
     fox,
     parrot,
     vanita,
@@ -579,6 +580,36 @@ const gallery = [
 
 const projects = [
     {
+        name: "Blooming",
+        description:
+            'An idea about separation and hope.',
+            
+        tags: [
+            {
+                name: "Maya Keyframe",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Arnold GPU rendering",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Deformer",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Normal maps",
+                color: "green-text-gradient",
+            },
+            {
+                name: "March 2024",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: cockatoo,
+        youtube_link:"https://www.youtube.com/watch?v=V4qVRuGTsFw",
+    },
+    {
         name: "Eyes",
         description:
             'My first attempt of creating Maya animation. The story was inspired by the lining-up deadlines those few days.',
@@ -703,6 +734,10 @@ const projects = [
             },
             {
                 name: "Filters",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "November 2023",
                 color: "pink-text-gradient",
             },
         ],
@@ -710,27 +745,27 @@ const projects = [
         source_code_link: "https://github.com/ShufanSun/Corn-Processing",
     },
 
-    {
-        name: "Dog Search Gallery",
-        description:
-            "This is a frontend project that uses React framework to implement a searching eng for dog images by breeds with pretty user interface.",
-        tags: [
-            {
-                name: "React",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "Fetching",
-                color: "green-text-gradient",
-            },
-            {
-                name: "User Interface",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: dogs,
-        source_code_link: "https://github.com/ShufanSun/DogSearchGallery",
-    },
+    // {
+    //     name: "Dog Search Gallery",
+    //     description:
+    //         "This is a frontend project that uses React framework to implement a searching eng for dog images by breeds with pretty user interface.",
+    //     tags: [
+    //         {
+    //             name: "React",
+    //             color: "blue-text-gradient",
+    //         },
+    //         {
+    //             name: "Fetching",
+    //             color: "green-text-gradient",
+    //         },
+    //         {
+    //             name: "User Interface",
+    //             color: "pink-text-gradient",
+    //         },
+    //     ],
+    //     image: dogs,
+    //     source_code_link: "https://github.com/ShufanSun/DogSearchGallery",
+    // },
 
     {
         name: "Finding Maggie",

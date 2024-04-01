@@ -69,6 +69,7 @@ import eyes from "./eyes.png"
 import tripguide from "./tripguide.png";
 import corn from "./corn.jpg";
 import dogs from "./dogs.jpg";
+import cockatoo from "./cockatoo.png";
 import maya from "./tech/maya.png";
 import haunted from "./haunted.jpg";
 import illumination from "./company/illumination.png"
@@ -130,6 +131,7 @@ export {
     forest,
     forest2,
     eyes,
+    cockatoo,
     vanita,
     crane,
     man,
