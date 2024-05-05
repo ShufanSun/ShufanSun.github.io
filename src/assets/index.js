@@ -14,6 +14,7 @@ import ps from "./tech/ps.png";
 import css from "./tech/css.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
+import outside from "./outside.png";
 import javascript from "./tech/javascript.png";
 import nodejs from "./tech/nodejs.png";
 import greenbird from "./gallery/greenbird.jpg";
@@ -70,6 +71,8 @@ import tripguide from "./tripguide.png";
 import corn from "./corn.jpg";
 import dogs from "./dogs.jpg";
 import cockatoo from "./cockatoo.png";
+import boat from "./boattracer.png";
+import neurobrush from "./neurobrush.jpg";
 import maya from "./tech/maya.png";
 import haunted from "./haunted.jpg";
 import illumination from "./company/illumination.png"
@@ -126,12 +129,15 @@ export {
     venus,
     fox,
     d1,
+    outside,
     parrot,
     puddle,
     forest,
     forest2,
     eyes,
     cockatoo,
+    boat,
+    neurobrush,
     vanita,
     crane,
     man,

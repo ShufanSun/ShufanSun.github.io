@@ -48,9 +48,12 @@ import {
     birdy,
     forest2,
     eyes,
+    boat,
     cockatoo,
     fox,
+    neurobrush,
     parrot,
+    outside,
     vanita,
     wall,
     deer,
@@ -579,6 +582,96 @@ const gallery = [
 ];
 
 const projects = [
+    {
+        name: "NeuroBrush",
+        description:
+            'Advancing Artistic Creation with Neural Networks through Subject Aware Painting and Color Blending',
+            
+        tags: [
+            {
+                name: "Transformer",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Mixbox",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Image Segmentation",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "May 2024",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: neurobrush,
+        source_code_link:"https://gefeishen.github.io/NuroBrush-web/",
+    },
+    {
+        name: "Outside",
+        description:
+            'A digital artwork that utilized dynamic techniques.',
+            
+        tags: [
+            {
+                name: "Maya Keyframe",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Arnold CPU rendering",
+                color: "green-text-gradient",
+            },
+            {
+                name: "MASH",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "nParticles",
+                color: "green-text-gradient",
+            },
+            {
+                name: "nCloth",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "fluids",
+                color: "green-text-gradient",
+            },
+            {
+                name: "April 2024",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: outside,
+        youtube_link:"https://www.youtube.com/watch?v=ZxqKoFglJ7Y",
+    },
+    {
+        name: "BoatTracer",
+        description:
+            '2D Research project for CS 559',
+            
+        tags: [
+            {
+                name: "Ray Tracing",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Fluid simulation",
+                color: "green-text-gradient",
+            },
+            {
+                name: "javascript",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "April 2024",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: boat,
+        source_code_link:"https://github.com/ShufanSun/BoatTracer",
+    },
     {
         name: "Blooming",
         description:
