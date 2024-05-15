@@ -73,23 +73,31 @@ export const navLinks = [
     {
         id: "about",
         title: "About",
+        path: "/"
     },
     
     {
         id: "work",
         title: "Experience",
+        path: "/experience"
     },
+
     {
         id:"experience",
         title:"Projects",
+        path: "/projects"
     },
+
     {
         id:"gallery",
         title:"Art Gallery",
+        path: "/gallery"
     },
+    
     {
         id: "contact",
         title: "Contact",
+        path: "/contact"
     },
 ];
 
