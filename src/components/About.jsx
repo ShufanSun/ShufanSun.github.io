@@ -7,6 +7,7 @@ import { services } from "../constants";
 import { Tilt } from "react-tilt";
 import {SectionWrapper} from '../hoc'
 import Hero from "./Hero";
+import Contact from "./Contact";
 
 const ServiceCard = ({ index,title,icon}) => {
     return (
@@ -61,7 +62,7 @@ const About = () => {
                     <ServiceCard key={service.title} index={index} {...service} />
                     ))}
             </div>
-
+<Contact/>
         </>
     );
 };

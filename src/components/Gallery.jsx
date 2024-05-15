@@ -7,6 +7,7 @@ import { Col } from 'react-bootstrap';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { SectionWrapper } from '../hoc';
 import { Carousel } from 'react-bootstrap';
+import Contact from "./Contact.jsx";
 import ImageSlider from './ImageSlider.jsx';
 const Gallery = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -106,7 +107,7 @@ const Gallery = () => {
     </div>
   </motion.div>
 )}
-
+<Contact/>
     </>
   );
 };

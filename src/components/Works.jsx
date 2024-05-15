@@ -9,7 +9,7 @@ import { itch } from "../assets"; // Import itch logo
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
-
+import Contact from "./Contact.jsx";
 const ProjectCard = ({
     index,
     name,
@@ -137,6 +137,7 @@ const Works = () => {
                     />
                 ))}
             </div>
+            <Contact/>
         </>
     );
 };

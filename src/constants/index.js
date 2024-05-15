@@ -94,11 +94,11 @@ export const navLinks = [
         path: "/gallery"
     },
     
-    {
-        id: "contact",
-        title: "Contact",
-        path: "/contact"
-    },
+    // {
+    //     id: "contact",
+    //     title: "Contact",
+    //     path: "/contact"
+    // },
 ];
 
 const services = [
@@ -112,7 +112,7 @@ const services = [
         icon: mobile,
     },
     {
-        title: "VR",
+        title: "Computer Vision",
         icon: backend,
     },
     {
@@ -571,22 +571,22 @@ const gallery = [
         },
     ],
 },
-// {
-//     image: birdy,
-//     isCarousel: false,
-//     // name:"",
-//     description:"CG concept",
-//     tags: [
-//         {
-//             name: "Gouache",
-//             color: "blue-text-gradient",
-//         },
-//         {
-//             name: "Dec 2022",
-//             color: "pink-text-gradient",
-//         },
-//     ],
-// },
+{
+    image: birdy,
+    isCarousel: false,
+    // name:"",
+    description:"CG concept",
+    tags: [
+        {
+            name: "Gouache",
+            color: "blue-text-gradient",
+        },
+        {
+            name: "Dec 2022",
+            color: "pink-text-gradient",
+        },
+    ],
+},
 ];
 
 const projects = [

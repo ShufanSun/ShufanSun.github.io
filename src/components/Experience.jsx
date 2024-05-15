@@ -10,7 +10,7 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 import Tech from './Tech';
-
+import Contact from './Contact';
 const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
         contentStyle={{ background: '#1d331a', color: '#fff' }}
@@ -74,6 +74,7 @@ const Experience = () => {
                   ))}
               </VerticalTimeline>
           </div>
+          <Contact/>
       </>
   )
 }
