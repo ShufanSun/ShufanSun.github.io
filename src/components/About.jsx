@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import { services } from "../constants";
 import { Tilt } from "react-tilt";
 import {SectionWrapper} from '../hoc'
+import Hero from "./Hero";
+
 const ServiceCard = ({ index,title,icon}) => {
     return (
         <Tilt className='xs:w-[250px] w-full'>
@@ -40,9 +42,11 @@ const ServiceCard = ({ index,title,icon}) => {
 const About = () => {
     return (
         <>
-          <motion.div>
-            <p className={styles.sectionSubText}>Introduction</p>
-            <h2 className={ styles.sectionHeadText}>Overview.</h2>
+            <Hero />
+
+            <motion.div>
+                <p className={styles.sectionSubText}>Introduction</p>
+                <h2 className={ styles.sectionHeadText}>Overview.</h2>
             </motion.div>
             <motion.p
                 variants={fadeIn("", "", 0.1, 1)}

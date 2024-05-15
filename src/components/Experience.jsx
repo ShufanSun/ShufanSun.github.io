@@ -9,6 +9,7 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import Tech from './Tech';
 
 const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
@@ -60,6 +61,9 @@ const Experience = () => {
                   Experience.
               </h2>
           </motion.div>
+
+          <Tech />
+
           <div className='mt-20 flex flex-col'>
               <VerticalTimeline>
                   {experiences.map((experience, index) => (
