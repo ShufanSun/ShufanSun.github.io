@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works,Gallery ,StarsCanvas } from './components';
 import ParticlesBackground from './components/ParticlesBackground';
 
