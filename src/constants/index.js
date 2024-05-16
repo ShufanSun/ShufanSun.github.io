@@ -79,19 +79,19 @@ export const navLinks = [
     {
         id: "work",
         title: "Experience",
-        path: "/experience"
+        path: "/#/experience"
     },
 
     {
         id:"experience",
         title:"Projects",
-        path: "/projects"
+        path: "/#/projects"
     },
 
     {
         id:"gallery",
         title:"Art Gallery",
-        path: "/gallery"
+        path: "/#/gallery"
     },
     
     // {
