@@ -2,11 +2,15 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
+
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-    const computer = useGLTF("./valheim_black_forest/scene.gltf");
-
+    const computer = useGLTF("./girl/girlModelNorm.gltf");
+    
+    // useEffect(() => {
+    //     console.log("Loaded model:", computer);
+    // }, [computer]);
     return (
         <mesh>
             <hemisphereLight intensity={0.15} groundColor='black' />

@@ -20,8 +20,8 @@
 }
 .bg-primary {
   background-color: rgba(1, 60, 2, 0.2); /* Semi-transparent white */
-  backdrop-filter: blur(1000px); /* Blur effect */
-  transition: background-color 1s ease, backdrop-filter 1s ease; /* Slower transition */
+  backdrop-filter: blur(100px); /* Blur effect */
+  /* transition: background-color 1s ease, backdrop-filter 1s ease; Slower transition */
 }
 .black-gradient {
     background: #000000; /* fallback for old browsers */
