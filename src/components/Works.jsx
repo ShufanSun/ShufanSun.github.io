@@ -10,6 +10,7 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import Contact from "./Contact.jsx";
+import '../index.css';
 const ProjectCard = ({
     index,
     name,
@@ -27,7 +28,8 @@ const ProjectCard = ({
     };
 
     return (
-        <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+        <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+        >
             <Tilt
                 options={{
                     max: 45,
