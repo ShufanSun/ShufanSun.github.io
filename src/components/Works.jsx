@@ -17,6 +17,7 @@ const ProjectCard = ({
     description,
     tags,
     image,
+    category,
     source_code_link,
     youtube_link, // New prop for YouTube link
     itch_link, // New prop for itch link
@@ -44,6 +45,9 @@ const ProjectCard = ({
                         alt='project_image'
                         className='w-full h-full object-cover rounded-2xl'
                     />
+                    <div className='absolute top-0 left-0 m-3'>
+                        <span className='bg-primary text-white px-2 py-1 rounded-md'>{category}</span>
+                    </div>
                     {/* Check if YouTube link exists */}
                     {youtube_link && (
                         <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
@@ -116,7 +120,7 @@ const Works = () => {
         <>
             <motion.div variants={textVariant()}>
                 <p className={`${styles.sectionSubText} `}>My work</p>
-                <h2 className={`${styles.sectionHeadText}`}>Coding Projects.</h2>
+                <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
             </motion.div>
 
             <div className='w-full flex'>

@@ -589,12 +589,13 @@ const gallery = [
 },
 ];
 
+
 const projects = [
     {
         name: "NeuroBrush",
         description:
             'Advancing Artistic Creation with Neural Networks through Subject Aware Painting and Color Blending',
-            
+        category:'Computer Vision',
         tags: [
             {
                 name: "Transformer",
@@ -618,6 +619,7 @@ const projects = [
     },
     {
         name: "Outside",
+        category:'Animation',
         description:
             'A digital artwork that utilized dynamic techniques.',
             
@@ -647,6 +649,10 @@ const projects = [
                 color: "green-text-gradient",
             },
             {
+                name: "mel script",
+                color: "blue-text-gradient",
+            },
+            {
                 name: "April 2024",
                 color: "pink-text-gradient",
             },
@@ -655,6 +661,7 @@ const projects = [
         youtube_link:"https://www.youtube.com/watch?v=ZxqKoFglJ7Y",
     },
     {
+        category:'Computer Graphics',
         name: "BoatTracer",
         description:
             '2D Research project for CS 559',
@@ -682,6 +689,7 @@ const projects = [
     },
     {
         name: "Blooming",
+        category:'Animation',
         description:
             'An idea about separation and hope.',
             
@@ -712,6 +720,7 @@ const projects = [
     },
     {
         name: "Eyes",
+        category:'Animation',
         description:
             'My first attempt of creating Maya animation. The story was inspired by the lining-up deadlines those few days.',
             
@@ -740,7 +749,7 @@ const projects = [
         image: eyes,
         youtube_link:"https://youtu.be/10SJ6G6IUjg",
     },
-    {
+    {category:'Computer Graphics',
         name: "3D Game Asset Model Optimization",
         description:
             'This project showcases a workflow to reduce the size of the photogrammetry model from 30M polygons to 100 polygons with realistic depths.',
@@ -767,6 +776,7 @@ const projects = [
       
     },
     {
+        category:'Computer Vision',
         name: "Lane Detector",
         description:
             'The project utilizes a self-trained deep learning model trained by Roboflow to perform real-time lane detection on video feeds.',
@@ -781,16 +791,16 @@ const projects = [
                 color: "green-text-gradient",
             },
             {
-                name: "MadHacks 2023",
-                color: "pink-text-gradient",
-            },
-            {
                 name: "Yolo v8",
                 color: "blue-text-gradient",
             },
             {
                 name: "Roboflow",
                 color: "green-text-gradient",
+            },
+            {
+                name: "MadHacks 2023",
+                color: "pink-text-gradient",
             },
         ],
         image: lane,
@@ -800,6 +810,7 @@ const projects = [
 
     
     {
+        category:'Web development',
         name: "My Personal Website",
         description:
             "My github personal website that lists my coding projects and artworks, it's like a resume but better looking:)",
@@ -814,13 +825,26 @@ const projects = [
             },
             {
                 name: "html/css",
-                color: "pink-text-gradient",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Three.js",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Vanta.js",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "React",
+                color: "green-text-gradient",
             },
         ],
         image: jobit,
         // source_code_link: "https://github.com/ShufanSun/ShufanSun.github.io",
     },
     {
+        category:'Image Processing',
         name: "Corn Processing",
         description:
             "A project for Image Processing ECE 533. Recognized different patterns of corns.",
@@ -846,29 +870,30 @@ const projects = [
         source_code_link: "https://github.com/ShufanSun/Corn-Processing",
     },
 
-    // {
-    //     name: "Dog Search Gallery",
-    //     description:
-    //         "This is a frontend project that uses React framework to implement a searching eng for dog images by breeds with pretty user interface.",
-    //     tags: [
-    //         {
-    //             name: "React",
-    //             color: "blue-text-gradient",
-    //         },
-    //         {
-    //             name: "Fetching",
-    //             color: "green-text-gradient",
-    //         },
-    //         {
-    //             name: "User Interface",
-    //             color: "pink-text-gradient",
-    //         },
-    //     ],
-    //     image: dogs,
-    //     source_code_link: "https://github.com/ShufanSun/DogSearchGallery",
-    // },
-
     {
+        name: "Dog Search Gallery",
+        description:
+            "This is a frontend project that uses React framework to implement a searching eng for dog images by breeds with pretty user interface.",
+        tags: [
+            {
+                name: "React",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "Fetching",
+                color: "green-text-gradient",
+            },
+            {
+                name: "User Interface",
+                color: "pink-text-gradient",
+            },
+        ],
+        category:'Frontend',
+        image: dogs,
+        source_code_link: "https://github.com/ShufanSun/DogSearchGallery",
+    },
+
+    {category:'Game dev',
         name: "Finding Maggie",
         description:
             "This is an adventure game that mixes 2D and 3D levels for the user to interact with the self-designed virtual environments.",
@@ -889,7 +914,7 @@ const projects = [
         image: tripguide,
         youtube_link: "https://www.youtube.com/watch?v=UtZiMp_eG90",
     },
-    {
+    {category:'Game dev',
         name: "Haunted Housekeeping",
         description:
             "This is a 2D top-down game that make you the house that helps the builder clean without getting killed by the monsters.",
@@ -910,7 +935,7 @@ const projects = [
         image: haunted,
         itch_link: "https://savagebananas7405.itch.io/haunted-housekeeping",
     },
-    {
+    {category:'Game dev',
         name: "Alpaca Run!",
         description:
             'This is a 2d shooter unity game in c#, the player is able to control the alpaca to spit at different enemies. You can download or play the game online here: https://sofine.itch.io/alpaca-run',
