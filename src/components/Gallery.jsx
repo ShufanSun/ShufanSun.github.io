@@ -31,12 +31,12 @@ const Gallery = () => {
           <p className={styles.sectionSubText}>Artworks</p>
           <h2 className={styles.sectionHeadText}>Gallery</h2>
         </motion.div>
-        <motion.p
+        <p
           variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           As an art enthusiast, I created a lot of artworks in different media.
-        </motion.p>
+        </p>
 
         <Masonry className="gallery-row">
           {gallery.map((img, index) => (

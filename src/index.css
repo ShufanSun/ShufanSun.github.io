@@ -19,9 +19,17 @@
     display: block;
 }
 .bg-primary {
+  background: linear-gradient(rgb(0, 0, 0),75%, rgba(0,0,0,0));
+  /*backdrop-filter: blur(10px);  Blur effect */
+  transition: background 2s ease, backdrop-filter 2s ease;
+}
+.bg-transparent {
+  background: transparent;
+}
+.bg-tertiary {
   background-color: rgba(1, 60, 2, 0.2); /* Semi-transparent white */
-  backdrop-filter: blur(100px); /* Blur effect */
-  transition: background-color 2s ease, backdrop-filter 2s ease;
+  backdrop-filter: blur(1px); /* Blur effect */
+  /* transition: background-color 2s ease, backdrop-filter 2s ease; */
 }
 .black-gradient {
     background: #000000; /* fallback for old browsers */

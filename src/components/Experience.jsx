@@ -13,7 +13,7 @@ import Tech from './Tech';
 import Contact from './Contact';
 const ExperienceCard = ({ experience }) => (
     <VerticalTimelineElement
-        contentStyle={{ background: '#1d331a', color: '#fff' }}
+        contentStyle={{ background: 'rgba(1, 60, 2, 0.2)', color: '#fff' }}
         contentArrowStyle={{ borderRight: '7px solid #233225' }}
         date={experience.date}
         iconStyle={{ background: experience.iconBg }}
@@ -53,14 +53,14 @@ const ExperienceCard = ({ experience }) => (
 const Experience = () => {
   return (
       <>
-          <motion.div variants={textVariant()}>
+          <div variants={textVariant()}>
               <p className={`${styles.sectionSubText} text-center`}>
                   What I have done so far
               </p>
               <h2 className={`${styles.sectionHeadText} text-center`}>
                   Experience.
               </h2>
-          </motion.div>
+          </div>
 
           <Tech />
 
