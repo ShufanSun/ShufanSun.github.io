@@ -132,7 +132,7 @@
 .green-pink-gradient {
     background: "#019400";
     background: linear-gradient(90.13deg, #002b00 1.9%, #58a644 97.5%);
-    background: -webkit-linear-gradient(-90.13deg, #002b00 1.9%, #58a644 97.5%);
+    background: -webkit-linear-gradient(-90.13deg, #002b0033 1.9%, #58a644DD 97.5%);
 }
 /* Add this CSS to your styles.css or equivalent file */
 
@@ -173,7 +173,12 @@
   height: 100%;
   z-index: -1; /* Ensure the Vanta background is behind other content */
 }
-
+/* Ensure the Vanta background maintains height on mobile devices */
+@media (max-width: 768px) {
+  .vanta-bg {
+      height: 100vh;
+  }
+}
 .main-content {
   position: relative;
   z-index: 1; /* Ensure the main content is above the Vanta background */

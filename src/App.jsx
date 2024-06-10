@@ -6,19 +6,28 @@ import './index.css';
 
 const App = () => {
     const vantaRef = useRef(null);
+    const vantaEffect = useRef(null);
 
     useEffect(() => {
-        VANTA.TOPOLOGY({
-            el: vantaRef.current,
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00
-        });
+        if (!vantaEffect.current) {
+            vantaEffect.current = VANTA.TOPOLOGY({
+                el: vantaRef.current,
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00
+            });
+        }
+
+        return () => {
+            if (vantaEffect.current) vantaEffect.current.destroy();
+        };
     }, []);
+
+    
 
     return (
         <Router>
