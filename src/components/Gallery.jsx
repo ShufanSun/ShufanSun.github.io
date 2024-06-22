@@ -35,7 +35,8 @@ const Gallery = () => {
           variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          As an art enthusiast, I created a lot of artworks in different media.
+          As an art enthusiast, I created a lot of artworks in different media. Below is my gallery of art works done when I was not coding ...
+          Click on the painting to see the process behind the scene!
         </p>
 
         <Masonry className="gallery-row">

@@ -54,14 +54,18 @@ const About = () => {
                 className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
 
             >
-                Applying multimedia to create contents is one of my greatest interests. I enjoy art crafting, coding, and the cross-section of both.
-                I'm on my way getting more expertise in more visualization tools such as Maya, python, js, etc. Let's work together to bring ideas to life:D
+                Applying multimedia to create contents is my greatest interest. I enjoy art crafting, coding, and the cross-section of both.
+                I'm on my way getting more expertise in conducting research activities. Let's work together to bring ideas to life:D
             </motion.p>
             <div className='mt-20 flex flex-wrap gap-10'>
                 {services.map((service, index) => (
                     <ServiceCard key={service.title} index={index} {...service} />
                     ))}
             </div>
+            {/* <a href="https://clustrmaps.com/site/1c059"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=dlK6lZraWIYR6bl-IeO0-ufP1iwDjy9bJDwgw76lWoE&cl=ffffff" /></a> */}
+            {/* <a href='https://clustrmaps.com/site/1c059'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=080808&w=a&t=n&d=dlK6lZraWIYR6bl-IeO0-ufP1iwDjy9bJDwgw76lWoE&co=ffffff&ct=808080'/></a> */}
+            {/* <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=n&d=dlK6lZraWIYR6bl-IeO0-ufP1iwDjy9bJDwgw76lWoE&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353"></script> */}
+            {/* <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=dlK6lZraWIYR6bl-IeO0-ufP1iwDjy9bJDwgw76lWoE"></script> */}
 <Contact/>
         </>
     );
