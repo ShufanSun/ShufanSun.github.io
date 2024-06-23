@@ -1,12 +1,16 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import myPortrait from "../assets/mygreenhead.png";
 import { ComputersCanvas } from './canvas';
 import github from "../assets/github.png";
 import email from "../assets/email.png";
-
+import m1 from "../assets/mango1.jpg";
+import m2 from "../assets/mango2.jpg";
+import m3 from "../assets/mango3.jpg";
 const Hero = () => {
+  const [hovered, setHovered] = useState(false); // State to track hovering
+
   return (
     <section className="relative w-full h-screen mx-auto mt-0 pt-16"> {/* Added padding top to create space */}
       <motion.div 
@@ -22,10 +26,17 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <div className="relative w-36 h-36 rounded-full">
+          <div className="relative w-36 h-36 rounded-full"
+            onMouseEnter={() => setHovered(true)} // Set hovered to true on mouse enter
+            onMouseLeave={() => setHovered(false)} // Set hovered to false on mouse leave
+          >
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-300 to-blue-100 p-1">
               <div className="w-full h-full rounded-full overflow-hidden">
-                <img src={myPortrait} alt="My Portrait" className="w-full h-full object-cover rounded-full" />
+                <img 
+                  src={hovered ? m1 : myPortrait} // Conditional rendering based on hover state
+                  alt="My Portrait" 
+                  className="w-full h-full object-cover rounded-full" 
+                />
               </div>
             </div>
           </div>
@@ -33,20 +44,27 @@ const Hero = () => {
         
         <div className="flex flex-col sm:flex-row items-start gap-5 w-full">
           {/* Image and bar on the left for wide screens */}
+          {/* Image and bar on the left for wide screens */}
           <motion.div 
-            className="hidden sm:flex flex-row items-start gap-5" // Changed items-center to items-start
+            className="hidden sm:flex flex-row items-start gap-5"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            <div className="relative w-36 h-36 rounded-full">
+            <div className="relative w-36 h-36 rounded-full"
+              onMouseEnter={() => setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
+            >
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-300 to-blue-100 p-1">
                 <div className="w-full h-full rounded-full overflow-hidden">
-                  <img src={myPortrait} alt="My Portrait" className="w-full h-full object-cover rounded-full" />
+                  <img 
+                    src={hovered ? m1 : myPortrait}
+                    alt="My Portrait" 
+                    className="w-full h-full object-cover rounded-full" 
+                  />
                 </div>
               </div>
             </div>
-            
             <motion.div 
               className="w-1 h-96 green-gradient" // Increased height to 96px
               initial={{ scaleX: 0 }}
@@ -102,7 +120,7 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
-      <ComputersCanvas className="absolute inset-0 mt-[-200px]" /> {/* Adjusted margin-top to lift the canvas */}
+      <ComputersCanvas className="absolute inset-0 mt-[-200px]" />
     </section>
   );
 }
