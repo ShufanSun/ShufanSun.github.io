@@ -5,6 +5,7 @@ import myPortrait from "../assets/mygreenhead.png";
 import { ComputersCanvas } from './canvas';
 import github from "../assets/github.png";
 import email from "../assets/email.png";
+
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto mt-0 pt-16"> {/* Added padding top to create space */}
@@ -25,7 +26,6 @@ const Hero = () => {
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-300 to-blue-100 p-1">
               <div className="w-full h-full rounded-full overflow-hidden">
                 <img src={myPortrait} alt="My Portrait" className="w-full h-full object-cover rounded-full" />
-
               </div>
             </div>
           </div>
@@ -43,13 +43,10 @@ const Hero = () => {
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-300 to-blue-100 p-1">
                 <div className="w-full h-full rounded-full overflow-hidden">
                   <img src={myPortrait} alt="My Portrait" className="w-full h-full object-cover rounded-full" />
-                  
                 </div>
               </div>
-              
             </div>
             
-        
             <motion.div 
               className="w-1 h-96 green-gradient" // Increased height to 96px
               initial={{ scaleX: 0 }}
