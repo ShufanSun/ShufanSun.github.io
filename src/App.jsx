@@ -1,6 +1,6 @@
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Gallery, StarsCanvas } from './components';
-import TOPOLOGY from 'vanta/src/vanta.topology';
+// import TOPOLOGY from 'vanta/src/vanta.topology';
 import { useEffect, useRef } from 'react';
 import './index.css';
 
