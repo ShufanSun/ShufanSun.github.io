@@ -44,7 +44,6 @@ const Hero = () => {
         
         <div className="flex flex-col sm:flex-row items-start gap-5 w-full">
           {/* Image and bar on the left for wide screens */}
-          {/* Image and bar on the left for wide screens */}
           <motion.div 
             className="hidden sm:flex flex-row items-start gap-5"
             initial={{ opacity: 0, x: -20 }}

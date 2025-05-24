@@ -79,19 +79,19 @@ export const navLinks = [
     {
         id: "work",
         title: "Experience",
-        path: "/#/experience"
+        path: "/experience"
     },
 
     {
         id:"experience",
         title:"Projects",
-        path: "/#/projects"
+        path: "/projects"
     },
 
     {
         id:"gallery",
         title:"Art Gallery",
-        path: "/#/gallery"
+        path: "/gallery"
     },
     
     // {
@@ -185,7 +185,7 @@ const experiences = [
         company_name: "Part-Time Student Job",
         icon: SSEC,
         iconBg: "#ffffff",
-        date: "December 2023 - Present",
+        date: "December 2023 - August 2024",
         points: [
             "Used SquareSpace to help an Anthropology professor with her website for UX UI and marketing",
         ],

@@ -1,50 +1,68 @@
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Gallery, StarsCanvas } from './components';
-// import TOPOLOGY from 'vanta/src/vanta.topology';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useLayoutEffect } from 'react';
 import './index.css';
 
-const App = () => {
-    const vantaRef = useRef(null);
-    const vantaEffect = useRef(null);
-
+// Updated ScrollToTop component - uses useLayoutEffect for immediate scroll
+// Scroll restoration component
+const ScrollToTop = () => {
+    const { pathname } = useLocation();
+  
     useEffect(() => {
-        if (!vantaEffect.current) {
-            vantaEffect.current = VANTA.TOPOLOGY({
-                el: vantaRef.current,
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 1.00
-            });
-        }
+      // Instant scroll to top (no smooth behavior)
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant' // 'auto' also works for instant scrolling
+      });
+      
+      // Optional: Reset focus for accessibility
+      document.body.focus();
+    }, [pathname]);
+  
+    return null;
+  };
 
-        return () => {
-            if (vantaEffect.current) vantaEffect.current.destroy();
-        };
-    }, []);
+const App = () => {
+  const vantaRef = useRef(null);
+  const vantaEffect = useRef(null);
 
-    
+  useEffect(() => {
+    if (!vantaEffect.current && window.VANTA) {
+      vantaEffect.current = window.VANTA.TOPOLOGY({
+        el: vantaRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00
+      });
+    }
 
-    return (
-        <Router>
-            <Navbar />
-            
-            <div ref={vantaRef} className="vanta-bg"></div>
-            <div className="main-content">
-                <Routes>
-                    <Route path="/" element={<About />} />
-                    <Route path="/experience" element={<Experience />} />
-                    <Route path="/projects" element={<Works />} />
-                    <Route path="/gallery" element={<Gallery />} />
-                    {/* <Route path="/contact" element={<Contact />} /> */}
-                </Routes>
-            </div>
-        </Router>
-    );
+    return () => {
+      if (vantaEffect.current) vantaEffect.current.destroy();
+    };
+  }, []);
+
+  return (
+    <Router scrollRestoration="manual">
+      <ScrollToTop />
+      <Navbar />
+      
+      <div ref={vantaRef} className="vanta-bg"></div>
+      <div className="main-content">
+        <Routes>
+          <Route key="about" path="/" element={<About />} />
+          <Route key="experience" path="/experience" element={<Experience />} />
+          <Route key="projects" path="/projects" element={<Works />} />
+          <Route key="gallery" path="/gallery" element={<Gallery />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
+        </Routes>
+      </div>
+    </Router>
+  );
 };
 
 export default App;
