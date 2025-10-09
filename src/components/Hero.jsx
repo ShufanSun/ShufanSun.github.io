@@ -88,7 +88,7 @@ const Hero = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.2, duration: 1 }}
               >
-                A current Computer Sciences & 4D Art Studio sophomore at UW-Madison.
+                A current Computer Sciences & 4D Art Studio senior at UW-Madison.
                 <br className="sm:block hidden" />
                 My academic interests lay in
                 <br className="sm:block hidden" /> <span className="text-[#77C193]">computer vision</span>, <span className="text-[#77C193]">machine learning</span>, <span className="text-[#77C193]">computer graphics</span>, <span className="text-[#77C193]">VR</span>, and <span className="text-[#77C193]">animation</span>.
@@ -111,10 +111,10 @@ const Hero = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.2, duration: 1 }}
             >
-              A current Computer Sciences & 4D Art Studio sophomore at UW-Madison.
+              A current Computer Sciences & 4D Art Studio senior at UW-Madison.
               <br className="sm:block hidden" />
               My academic interests lay in
-              <br className="sm:block hidden" /> <span className="text-[#77C193]">computer vision</span>, <span className="text-[#77C193]">machine learning</span>, <span className="text-[#77C193]">computer graphics</span>, <span className="text-[#77C193]">VR</span>, and <span className="text-[#77C193]">animation</span>.
+              <br className="sm:block hidden" /> <span className="text-[#77C193]">computer vision</span>, <span className="text-[#77C193]">machine learning</span>, <span className="text-[#77C193]">computer graphics</span>, and <span className="text-[#77C193]">animation</span>.
             </motion.p>
           </div>
         </div>
