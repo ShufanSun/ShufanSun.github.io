@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import myPortrait from "../assets/mygreenhead.png";
+import myPortrait from "../assets/portrait_head.jpeg";
 import { ComputersCanvas } from './canvas';
 import github from "../assets/github.png";
 import email from "../assets/email.png";

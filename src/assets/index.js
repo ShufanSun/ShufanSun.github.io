@@ -20,17 +20,16 @@ import nodejs from "./tech/nodejs.png";
 import greenbird from "./gallery/greenbird.jpg";
 import girl1 from "./gallery/girl/girl1.jpg";
 import girl2 from "./gallery/girl/girl2.jpg";
+import wildrobot from "./gallery/wildrobot.jpg";
 import mural1 from "./gallery/mural/mural1.jpg";
 import mural2 from "./gallery/mural/mural2.jpg";
 import mural3 from "./gallery/mural/mural3.jpg";
 import gb1 from "./gallery/greenbird/gb1.jpg";
 import gb2 from "./gallery/greenbird/gb2.jpg";
 import venus from "./gallery/Venus.png";
-import birdy from "./gallery/birdy.jpg";
 import puddle from "./gallery/puddle.jpg";
 import fox from "./gallery/fox.jpg";
 import parrot from "./gallery/mango.jpg";
-import crane from "./gallery/crane.jpg";
 import man from "./gallery/gameCharac/7.jpg";
 import man1 from "./gallery/gameCharac/1.png";
 import man2 from "./gallery/gameCharac/2.jpg";
@@ -43,6 +42,8 @@ import venus1 from "./gallery/Venus/venus1.jpg";
 import venus2 from "./gallery/Venus/venus2.jpg";
 import venus3 from "./gallery/Venus/venus3.jpg";
 import venus4 from "./gallery/Venus/venus4.jpg";
+import haigou1 from "./gallery/haigou/haigou2.jpg";
+import haigou2 from "./gallery/haigou/haigou.jpg";
 import vanita from "./gallery/vanita.png";
 import d1 from "./gallery/d1.jpg";
 
@@ -62,7 +63,7 @@ import mathematica from "./tech/mathematica.jpg";
 import wentai from "./company/wentai.png";
 import SSEC from "./company/SSEC.png";
 import carrent from "./carrent.png";
-import lane from "./lane.png"
+import lane from "./lane.png";
 import baking from "./Forestry/baking1.jpg";
 import baking2 from "./Forestry/baking2.jpg";
 import jobit from "./jobit.png";
@@ -75,6 +76,7 @@ import boat from "./boattracer.png";
 import neurobrush from "./neurobrush.jpg";
 import maya from "./tech/maya.png";
 import haunted from "./haunted.jpg";
+import coco from "./gallery/coco.jpg";
 import illumination from "./company/illumination.png"
 export {
     logo,
@@ -87,6 +89,7 @@ export {
     java,
     matlab,
     unity,
+    coco,
     csharp,
     illumination,
     github,
@@ -100,7 +103,7 @@ export {
     wentai,
     SSEC,
     python,
-    
+    wildrobot,
     git,
     html,
     javascript,
@@ -125,8 +128,9 @@ export {
     mural1,
     mural2,
     mural3,
-    birdy,
     venus,
+    haigou1,
+    haigou2,
     fox,
     d1,
     outside,
@@ -139,7 +143,6 @@ export {
     boat,
     neurobrush,
     vanita,
-    crane,
     man,
     man1,
     man2,

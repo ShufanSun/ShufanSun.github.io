@@ -10,6 +10,7 @@ import {
     cplusplus,
     matlab,
     unity,
+    wildrobot,
     springboot,
     csharp,
     mathematica,
@@ -45,7 +46,6 @@ import {
     dogs,
     d1,
     puddle,
-    birdy,
     forest2,
     eyes,
     boat,
@@ -58,15 +58,17 @@ import {
     wall,
     deer,
     forest,
-    crane,
     man1,
     man2,
     man3,
     man4,
     man5,
+    coco,
     man6,man7,
     man,
     haunted,
+    haigou1,
+    haigou2,
 } from "../assets";
 
 export const navLinks = [
@@ -145,49 +147,56 @@ const technologies = [
         name:"C++",
         icon:cplusplus,
     },
-    {
-        name: "c#",
-        icon: csharp,
-    },
+    // {
+    //     name: "c#",
+    //     icon: csharp,
+    // },
     {
         name: "Matlab",
         icon: matlab,
     },
    
-    {
-        name: "Photoshop",
-        icon: ps,
-    },
-    {
-        name: "Java",
-        icon: java,
-    },
-    {
-        name: "React JS",
-        icon: reactjs,
-    },
+    // {
+    //     name: "Photoshop",
+    //     icon: ps,
+    // },
+    // {
+    //     name: "Java",
+    //     icon: java,
+    // },
+    // {
+    //     name: "React JS",
+    //     icon: reactjs,
+    // },
 
-    {
-        name: "Unity",
-        icon: unity,
-    },
-    {
-        name: "Springboot",
-        icon:springboot,
-    },
+    // {
+    //     name: "Unity",
+    //     icon: unity,
+    // },
+    // {
+    //     name: "Springboot",
+    //     icon:springboot,
+    // },
     
     
 ];
 
 const experiences = [
     {
-        title: "Website creation and design assistant",
-        company_name: "Part-Time Student Job",
+        
+        title: "Undergraduate researcher at Yu’s Group, supervised by Prof. Zongfu Yu",
+        company_name: "UW Madison",
         icon: SSEC,
         iconBg: "#ffffff",
-        date: "December 2023 - August 2024",
+        date: "June 2024 – Present",
         points: [
-            "Used SquareSpace to help an Anthropology professor with her website for UX UI and marketing",
+            "Developed a seam-aware texturing synthesis framework using geometry-conditioned partial inpainting and adaptive weighted blending to eliminate seams and ensure texture continuity",
+            "Designed a multi-view SDF optimization pipeline that integrates silhouette, depth, normal and texture cues for surface refinement, improving geometric accuracy and ensuring watertight reconstruction under sparse view supervision.",
+            "Optimized signed distance fields via normal-based refinement, improving geometric coherence and preserving high-frequency details such as fur and wrinkles.",
+            "Designed and processed a multimodal paired dataset for training diffusion models on normals and textures derived from synthetic 3D renderings.",
+            "Implemented advanced neural network architectures, including UNet, ControlNet, and IP-Adapter, achieving high-fidelity texture generation with CUDA-based multi-GPU acceleration.",
+            "Applied PyTorch 3D for differentiable mesh processing and perceptual geometry refinement from depth and normal cues. ",
+            "Evaluated Gaussian Splatting for volumetric rendering, comparing mesh-based texture projection approaches for geometric fidelity"
         ],
     },
 
@@ -268,19 +277,7 @@ const experiences = [
 
         ],
     },
-    // {
-    //     title: "Wall painter",
-    //     company_name: "My dad's office",
-    //     icon: creator,
-    //     iconBg: "#ffffff",
-    //     date: "August 2022",
-    //     points: [
-    //         "This is something interesting that I've done for fun",
-    //         "There was a big blank wall there and I just painted it using a little brush",
-    //         "Here's the working process if you're curious: https://www.instagram.com/p/CnROC5jBhPZ/",
 
-    //     ],
-    // },
 ];
 
 const testimonials = [
@@ -304,6 +301,65 @@ const testimonials = [
 ];
 
 const gallery = [
+   
+    {
+        image: wildrobot,
+       name: "Wild Robot",
+       description:"Dreamwork Production - inspired, I love the layered lighting interactions.",
+       isCarousel: true,
+       carouselImages: [
+        wildrobot
+      ],
+       tags: [
+        {
+            name: "Gouache",
+            color: "blue-text-gradient",
+        },
+        {
+            name: "Oct 2024",
+            color: "pink-text-gradient",
+        },
+    ],
+    },
+     {
+        image: coco,
+       name: "Coco the Hamster",
+       description:"Chubby and enjoys papaya.",
+       isCarousel: true,
+       carouselImages: [
+        coco
+      ],
+       tags: [
+        {
+            name: "Gouache",
+            color: "blue-text-gradient",
+        },
+        {
+            name: "Sep 2024",
+            color: "pink-text-gradient",
+        },
+    ],
+    },
+    {
+        image: haigou1,
+       name: "Seagull",
+       description:"A betta fish that loves staring at your eyes",
+       isCarousel: true,
+       carouselImages: [
+        haigou2,
+        haigou1
+      ],
+       tags: [
+        {
+            name: "Gouache",
+            color: "blue-text-gradient",
+        },
+        {
+            name: "Aug 2024",
+            color: "pink-text-gradient",
+        },
+    ],
+    },
     {
         image: venus,
        name: "Astrobiology Magazine Front Cover - Life on Venus?",
@@ -337,7 +393,7 @@ const gallery = [
     girl2,girl1
   ],
         name:"Peaceful Sunset",
-        description:"A painting that reflects my mood at the moment.",
+        description:"Uncertainty to Illumination",
         tags: [
             {
                 name: "Gouache",
@@ -417,7 +473,7 @@ const gallery = [
    carouselImages: [
     mural1,mural3,wall,
   ],
-        name:"My dad's office wall",
+        name:"Mural",
         description:"This is a piece of mural of approximately 3m*2m in size. It took me 25h of work in total(finished within 4 days).",
         tags: [
             {
@@ -458,8 +514,8 @@ const gallery = [
 {
     image: parrot,
     isCarousel: false,
-    name:"Mango",
-    description:"He's my pet lovebird Mango, as the name indicates.",
+    name:"Mango the Lovebird",
+    description:"As the name indicates, he looked like a mango.",
     tags: [
         {
             name: "Sketching",
@@ -479,7 +535,7 @@ const gallery = [
     image: forest2,
     isCarousel: false,
     name:"Sound of Forest",
-    description:"Concept of a forest scene.",
+    description:"Calmness",
     tags: [
         {
             name: "Gouache",
@@ -518,15 +574,11 @@ const gallery = [
     image: forest,
     isCarousel: false,
     name:"Forest Mural",
-    description:"My dad's office again, free labor",
+    description:"That took a lot of paint.",
     tags: [
         {
             name: "Acrylic",
             color: "blue-text-gradient",
-        },
-        {
-            name: "Mural",
-            color: "green-text-gradient",
         },
         {
             name: "Summer 2022",
@@ -539,7 +591,7 @@ const gallery = [
     image: deer,
     isCarousel: false,
     name:"Deer in Forest",
-    description:"Concept work",
+    description:"I love water and reflections.",
     tags: [
         {
             name: "Gouache",
@@ -571,22 +623,7 @@ const gallery = [
         },
     ],
 },
-{
-    image: birdy,
-    isCarousel: false,
-    // name:"",
-    description:"CG concept",
-    tags: [
-        {
-            name: "Gouache",
-            color: "blue-text-gradient",
-        },
-        {
-            name: "Dec 2022",
-            color: "pink-text-gradient",
-        },
-    ],
-},
+
 ];
 
 
