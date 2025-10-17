@@ -2,7 +2,7 @@ import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-d
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Gallery, StarsCanvas,Publications } from './components';
 import { useEffect, useRef, useLayoutEffect } from 'react';
 import './index.css';
-
+import React from 'react';
 // Updated ScrollToTop component - uses useLayoutEffect for immediate scroll
 // Scroll restoration component
 const ScrollToTop = () => {
