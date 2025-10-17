@@ -34,7 +34,7 @@
 
     "@react-three/fiber": "^8.13.0",
 
-    "@react-three/postprocessing": "^3.0.4",
+    "@react-three/postprocessing": "^2.0.0",
 
     "@tsparticles/engine": "^3.2.1",
 
