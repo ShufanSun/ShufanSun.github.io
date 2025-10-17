@@ -35,8 +35,8 @@ const Gallery = () => {
           variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          As an art enthusiast, I created a lot of artworks in different media. Below is my gallery of art works done when I was not coding ...
-          Click on the painting to see the process behind the scene!
+          As an art enthusiast, I love exploring form, light, and space through different media. These artworks reflect my curiosity about how perception and geometry interact — the same curiosity that inspires my research in 3D reconstruction.
+Click on each piece to see the creative process behind the scenes!
         </p>
 
         <Masonry className="gallery-row">
@@ -49,11 +49,30 @@ const Gallery = () => {
                 <img src={img.image} alt={img.name} className="gallery-image" />
                 <p> </p>
                 <p className="mt-4 flex flex-wrap gap-2">{img.name}</p>
-                <div className="image-description">
+                {/* <div className="image-description">
                   <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
                     {img.description}
                   </p>
+                </div> */}
+                <div className="image-description">
+                  <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+                    {img.description}
+                    {img.link && (
+                      <>
+                        {" "}
+                        <a
+                          href={img.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-400 hover:underline"
+                        >
+                          [View publication →]
+                        </a>
+                      </>
+                    )}
+                  </p>
                 </div>
+
                 <div className="mt-4 flex flex-wrap gap-2 mb-5">
                   {img.tags &&
                     img.tags.map((tag) => (

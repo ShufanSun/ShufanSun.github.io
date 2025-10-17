@@ -1,5 +1,5 @@
 import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Gallery, StarsCanvas } from './components';
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Gallery, StarsCanvas,Publications } from './components';
 import { useEffect, useRef, useLayoutEffect } from 'react';
 import './index.css';
 
@@ -55,6 +55,7 @@ const App = () => {
       <div className="main-content">
         <Routes>
           <Route key="about" path="/" element={<About />} />
+          <Route key="publications" path="/publications" element={<Publications />} />
           <Route key="experience" path="/experience" element={<Experience />} />
           <Route key="projects" path="/projects" element={<Works />} />
           <Route key="gallery" path="/gallery" element={<Gallery />} />

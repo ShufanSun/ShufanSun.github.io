@@ -54,8 +54,7 @@ const About = () => {
                 className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
 
             >
-                Applying multimedia to create contents is my greatest interest. I enjoy art crafting, coding, and the cross-section of both.
-                I'm on my way getting more expertise in conducting research activities. Let's work together to bring ideas to life:D
+                I am passionate about movies, art crafting, and creating animations through traditional pipelines, and I enjoy combining these creative pursuits with technical work. My current focus is on 3D reconstruction and generative modeling, particularly building realistic avatars from images and videos. I am developing my research expertise in generative graphics and animation and look forward to collaborating on projects that bring innovative 3D ideas to life.
             </motion.p>
             <div className='mt-20 flex flex-wrap gap-10'>
                 {services.map((service, index) => (

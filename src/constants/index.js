@@ -77,7 +77,12 @@ export const navLinks = [
         title: "About",
         path: "/"
     },
-    
+    //  {
+    //     id: "publications",
+    //     title: "Publications",
+    //     path: "/publications"
+    // },
+
     {
         id: "work",
         title: "Experience",
@@ -105,7 +110,7 @@ export const navLinks = [
 
 const services = [
     {
-        title: "Animator",
+        title: "Animation",
         icon: web,
     },
    
@@ -205,7 +210,7 @@ const experiences = [
         company_name: "Under the Guidance of Professor Kevin Ponto and Bryce Sprecher",
         icon: SSEC,
         iconBg: "#ffffff",
-        date: "August 2023 - Present",
+        date: "August 2023 - May 2024",
         points: [
             "Optimized the game asset models and created the workflow for rendering and retopology",
             "Worked with Zbrush and Maya to decimate the size of the models down while maintaining similar looks",
@@ -365,6 +370,7 @@ const gallery = [
        name: "Astrobiology Magazine Front Cover - Life on Venus?",
        description:"Original artwork by Shufan Sun, with concept guided by Dr. Sanjay Limaye.",
        isCarousel: true,
+       link: "https://www.liebertpub.com/toc/ast/24/4",
        carouselImages: [
         venus1,
         venus2,
@@ -496,6 +502,7 @@ const gallery = [
     isCarousel: false,
     name:"Autumn in Leaves",
     description:"Published on Illumination Art Journel May 2023",
+    link:"https://issuu.com/wisconsinunion/docs/illumination_draft_1",
     tags: [
         {
             name: "Oil Painting",
@@ -552,6 +559,7 @@ const gallery = [
    name: "Green Bird in Cherry Blossoms",
    description:"This is a painting selected to be published on Illumination Magazine for visual art genre.",
    isCarousel: true,
+   link:"https://issuu.com/wisconsinunion/docs/illumination_draft_1",
    carouselImages: [
     gb2,gb1,
   ],

@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto mt-0 pt-16">
       <motion.div 
-        className={`${styles.paddingX} absolute inset-0 top-[60px] max-w-7xl mx-auto flex flex-col sm:flex-row items-start gap-5 z-10`}
+        className={`${styles.paddingX} absolute inset-0 top-[60px] max-w-7xl mx-auto flex flex-col sm:flex-row items-start gap-5 z-10 pointer-events-none`}
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -25,7 +25,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          <div className="relative w-36 h-36 rounded-full flex-shrink-0"
+          <div className="relative w-36 h-36 rounded-full flex-shrink-0 pointer-events-auto"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
@@ -51,13 +51,13 @@ const Hero = () => {
               href="https://github.com/yourusername" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
+              className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 pointer-events-auto"
             >
               <img src={github} alt="GitHub" className="w-6 h-6" />
             </a>
             <a 
               href="mailto:your.email@example.com"
-              className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
+              className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 pointer-events-auto"
             >
               <img src={email} alt="Email" className="w-6 h-6" />
             </a>
@@ -73,7 +73,7 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 1 }}
           >
             <div className="flex flex-col items-center gap-3">
-              <div className="relative w-36 h-36 rounded-full"
+              <div className="relative w-36 h-36 rounded-full pointer-events-auto"
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
               >
@@ -99,13 +99,13 @@ const Hero = () => {
                   href="https://github.com/ShufanSun" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 pointer-events-auto"
                 >
                   <img src={github} alt="GitHub" className="w-6 h-6" />
                 </a>
                 <a 
                   href="mailto:ssun329@wisc.edu"
-                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 pointer-events-auto"
                 >
                   <img src={email} alt="Email" className="w-6 h-6" />
                 </a>
@@ -136,7 +136,7 @@ const Hero = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.2, duration: 1 }}
               >
-                I'm a Computer Sciences & 4D Art Studio senior at UW-Madison.
+                a Computer Sciences & 4D Art Studio senior at UW-Madison.
                 <br className="sm:block hidden" />
                 My academic interests lie in
                 <br className="sm:block hidden" /> <span className="text-[#77C193]">3D reconstruction</span> at the intersection of <span className="text-[#77C193]">machine learning</span>, <span className="text-[#77C193]">computer vision</span>, and <span className="text-[#77C193]">animation</span>.
@@ -159,7 +159,7 @@ const Hero = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 1.2, duration: 1 }}
             >
-              I'm a Computer Sciences & 4D Art Studio senior at UW-Madison.
+              a Computer Sciences & 4D Art Studio senior at UW-Madison.
               <br className="sm:block hidden" />
               My academic interests lie in
               <br className="sm:block hidden" /> <span className="text-[#77C193]">3D reconstruction</span> at the intersection of <span className="text-[#77C193]">graphics</span>, <span className="text-[#77C193]">computer vision</span>, and <span className="text-[#77C193]">machine learning</span>.
