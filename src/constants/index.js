@@ -30,6 +30,7 @@ import {
     jobit,
     tripguide,
     girl1,
+    DogWeave,
     girl2,
     greenbird,
     gb1,
@@ -77,11 +78,11 @@ export const navLinks = [
         title: "About",
         path: "/"
     },
-    //  {
-    //     id: "publications",
-    //     title: "Publications",
-    //     path: "/publications"
-    // },
+     {
+        id: "publications",
+        title: "Publications",
+        path: "/publications"
+    },
 
     {
         id: "work",

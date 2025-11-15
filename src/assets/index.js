@@ -77,11 +77,13 @@ import neurobrush from "./neurobrush.jpg";
 import maya from "./tech/maya.png";
 import haunted from "./haunted.jpg";
 import coco from "./gallery/coco.jpg";
-import illumination from "./company/illumination.png"
+import illumination from "./company/illumination.png";
+import DogWeave from "./publications/DogWeave.png";
 export {
     logo,
     backend,
     maya,
+    DogWeave,
     creator,
     mobile,
     web,

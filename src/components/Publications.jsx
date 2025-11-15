@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
+import {DogWeave} from "../assets";
 
 // Sample publication data - replace with your actual data
 const publicationsData = {
   "All": [
     {
       id: 1,
-      title: "DogWeave",
+      title: "DogWeave: High-Fidelity 3D Canine Reconstruction from a Single Image via Normal Fusion and Conditional Inpainting",
       authors: [
-        { name: "Shufan Sun", bold: true, firstAuthor: true },
-        { name: "Chenchen Wang", highlight: true },
-        { name: "Zongfu Yu", highlight: true,bold: true }
+        { name: "Shufan Sun", bold: true, firstAuthor: true },      // mark as first author
+        { name: "Chenchen Wang", highlight: true },                // regular co-author
+        { name: "Zongfu Yu", highlight: true, bold: true, advisor: true } // mark as advisor
       ],
-      venue: "CVPR 2026 Under Preparation",
-      description: "Generating hierarchical 3D part decomposition for open-world 3D shapes.",
-      image: "https://via.placeholder.com/300x200",
+
+
+      // venue: "CVPR 2026 Under Preparation",
+      description: "We propose DogWeave, a template-based framework for reconstructing high-fidelity 3D quadruped models from a single RGB image using only 2D supervision. DogWeave improves geometry and texture by first refining a coarse parametric mesh into a detailed signed distance field through multi-view normal field optimization using diffusion-enhanced normals. It then generates seamless, view-consistent textures through conditional partial inpainting guided by structure and style cues, enabling realistic reconstruction of unobserved regions. Using ~7,000 dog images processed via our 2D pipeline for training, DogWeave produces complete, realistic 3D models and outperforms state-of-the-art single-view reconstruction methods in both geometric accuracy and texture realism for canines.",
+      image: DogWeave,
       links: {
-        project: "https://example.com/project",
+        // project: "https://example.com/project",
         // pdf: "https://example.com/paper.pdf",
         // arxiv: "https://arxiv.org/abs/example",
         // code: "https://github.com/example"
@@ -124,14 +127,19 @@ const Publications = () => {
                   <div className='text-white-100 mb-2 leading-relaxed text-[14px]'>
                     
                     {publication.authors.map((author, index) => (
-                      <span key={index}>
-                        <span className={`${author.highlight ? 'text-secondary' : ''} ${author.bold ? 'font-semibold' : ''}`}>
-                          {author.name}
-                          {author.firstAuthor && <span className='text-secondary'>†</span>}
-                        </span>
-                        {index < publication.authors.length - 1 && ", "}
+                    <span key={index} className="relative inline-block mr-1">
+                      <span className={`${author.highlight ? 'text-secondary' : ''} ${author.bold ? 'font-semibold' : ''}`}>
+                        {author.name}
                       </span>
-                    ))}
+                      <span className="absolute top-0 right-0 text-[10px] translate-y-[-0.2em] text-secondary">
+                        {author.firstAuthor ? '1' : ''}{author.advisor ? '†' : ''}
+                      </span>
+                      {index < publication.authors.length - 1 && ", "}
+                    </span>
+                  ))}
+
+
+
 
                   </div>
 
@@ -204,8 +212,11 @@ const Publications = () => {
 
       {/* Footer Note */}
       <div className='mt-12 p-6 rounded-2xl max-w-5xl mx-auto' style={{ background: 'rgba(1, 60, 2, 0.5)' }}>
-        <p className='text-white-100 text-[14px]'>
+        {/* <p className='text-white-100 text-[14px]'>
           <span className='text-secondary'>*</span> indicates equal contribution
+        </p> */}
+        <p className='text-white-100 text-[14px]'>
+          <span className='text-secondary'>†</span> indicates Advisor
         </p>
       </div>
     </>
