@@ -16,6 +16,7 @@ const ExperienceCard = ({ experience }) => (
         contentStyle={{ background: 'rgba(1, 60, 2, 0.2)', color: '#fff' }}
         contentArrowStyle={{ borderRight: '7px solid #233225' }}
         date={experience.date}
+        dateClassName="font-serif"  // Add this line
         iconStyle={{ background: experience.iconBg }}
         icon={
             <div className='flex justify-center items-center w-full h-full'>
@@ -28,10 +29,9 @@ const ExperienceCard = ({ experience }) => (
         }
     >
         <div>
-            <h3 className='text-white text-[24px] font-bold'>{experience.title}
-            </h3>
+            <h3 className='font-serif text-white text-[20px] font-bold'>{experience.title}</h3>
             <p
-                className='text-secondary text-[16px] font-semibold'
+                className='font-serif text-secondary text-[16px] font-semibold'
                 style={{ margin: 0 }}
             >
                 {experience.company_name}
@@ -42,7 +42,7 @@ const ExperienceCard = ({ experience }) => (
             {experience.points.map((point, index) => (
                 <li
                     key={`experience-point-${index}`}
-                    className='text-white-100 text-[14px] pl-1 tracking-wider'
+                    className='font-serif text-white-100 text-[14px] pl-1 tracking-wider'
                 >
                     {point}
                 </li>
@@ -54,17 +54,20 @@ const Experience = () => {
   return (
       <>
           <div variants={textVariant()}>
-              <p className={`${styles.sectionSubText} text-center`}>
+              {/* <p className={`${styles.sectionSubText} text-center`}>
                   What I have done so far
-              </p>
+              </p> */}
+              {/* <h2 className={`${styles.sectionHeadText} text-center`}>
+                  Experiences
+              </h2> */}
               <h2 className={`${styles.sectionHeadText} text-center`}>
-                  Experience.
+                  Experiences
               </h2>
           </div>
 
-          <Tech />
+          {/* <Tech /> */}
 
-          <div className='mt-20 flex flex-col'>
+          <div className='mt-0 flex flex-col'>
               <VerticalTimeline>
                   {experiences.map((experience, index) => (
                       <ExperienceCard
@@ -74,6 +77,7 @@ const Experience = () => {
                   ))}
               </VerticalTimeline>
           </div>
+          {/* <Tech/> */}
           <Contact/>
       </>
   )

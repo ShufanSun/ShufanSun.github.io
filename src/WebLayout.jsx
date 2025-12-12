@@ -9,15 +9,10 @@ function BadgerLayout(props) {
         <div>
           <Navbar bg="dark" variant="dark">
             <Container>
-              <Navbar.Brand as={Link} to="/">
-                {/* <img
-                  alt="BadgerChat Logo"
-                  src={crest}
-                  width="30"
-                  height="30"
-                  className="d-inline-block align-top"
-                />{" "} */}
-                Shufan Sun
+              <Navbar.Brand as={Link} to="/" >
+               
+              <span className="font-serif text-[#a2dbb8]">Shufan Sun</span>
+                              
               </Navbar.Brand>
               <Nav className="me-auto">
                 <Nav.Link as={Link} to="/">Home</Nav.Link>

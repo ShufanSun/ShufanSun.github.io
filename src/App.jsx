@@ -51,7 +51,7 @@ const App = () => {
       <ScrollToTop />
       <Navbar />
       
-      <div ref={vantaRef} className="vanta-bg"></div>
+      {/* <div ref={vantaRef} className="vanta-bg"></div> */}
       <div className="main-content">
         <Routes>
           <Route key="about" path="/" element={<About />} />

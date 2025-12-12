@@ -129,7 +129,57 @@ const services = [
     },
 ];
 
+const publicationsData = {
+  "All": [
+    {
+      id: 1,
+      title: "DogWeave: High-Fidelity 3D Canine Reconstruction from a Single Image via Normal Fusion and Conditional Inpainting",
+      authors: [
+        { name: "Shufan Sun", bold: true, firstAuthor: true },      // mark as first author
+        { name: "Chenchen Wang", highlight: true },                // regular co-author
+        { name: "Zongfu Yu", highlight: true, bold: true, advisor: true } // mark as advisor
+      ],
 
+
+      venue: "Under Review",
+      for_Cover:true,
+      description: "An SDF-based framework for reconstructing high-fidelity 3D quadruped models from a single RGB image using style supervision. ",
+      image: DogWeave,
+      links: {
+        // project: "https://example.com/project",
+        // pdf: "https://example.com/paper.pdf",
+        // arxiv: "https://arxiv.org/abs/example",
+        // code: "https://github.com/example"
+      }
+    },
+  ],
+  "Conference": [
+    // {
+    //   id: 1,
+    //   title: "PartField: Learning 3D Feature Fields for Part Segmentation and Beyond",
+    //   authors: [
+    //     { name: "Minghua Liu", highlight: true },
+    //     { name: "Mikaela Angelina Uy", highlight: true },
+    //     { name: "Donglai Xiang" },
+    //     { name: "Hao Su" },
+    //     { name: "Sanja Fidler" },
+    //     { name: "Nicholas Sharp" },
+    //     { name: "Jun Gao", bold: true }
+    //   ],
+    //   venue: "ICCV 2025",
+    //   description: "Generating hierarchical 3D part decomposition for open-world 3D shapes.",
+    //   image: "https://via.placeholder.com/300x200",
+    //   links: {
+    //     project: "https://example.com/project",
+    //     pdf: "https://example.com/paper.pdf",
+    //     arxiv: "https://arxiv.org/abs/example",
+    //     code: "https://github.com/example"
+    //   }
+    // }
+  ],
+  "Journal": [],
+  "Preprint": []
+};
 const technologies = [
     {
         name: "JavaScript",
@@ -190,34 +240,44 @@ const technologies = [
 const experiences = [
     {
         
-        title: "Undergraduate researcher at Yu’s Group, supervised by Prof. Zongfu Yu",
-        company_name: "UW Madison",
+        title: "Undergraduate researcher @ Yu's Group",
+        company_name: "Supervised by Prof. Zongfu Yu, ECE Dept @UW-Madison",
         icon: SSEC,
         iconBg: "#ffffff",
-        date: "June 2024 – Present",
+        date: "June 2024 – December 2025",
         points: [
-            "Developed a seam-aware texturing synthesis framework using geometry-conditioned partial inpainting and adaptive weighted blending to eliminate seams and ensure texture continuity",
-            "Designed a multi-view SDF optimization pipeline that integrates silhouette, depth, normal and texture cues for surface refinement, improving geometric accuracy and ensuring watertight reconstruction under sparse view supervision.",
-            "Optimized signed distance fields via normal-based refinement, improving geometric coherence and preserving high-frequency details such as fur and wrinkles.",
-            "Designed and processed a multimodal paired dataset for training diffusion models on normals and textures derived from synthetic 3D renderings.",
-            "Implemented advanced neural network architectures, including UNet, ControlNet, and IP-Adapter, achieving high-fidelity texture generation with CUDA-based multi-GPU acceleration.",
-            "Applied PyTorch 3D for differentiable mesh processing and perceptual geometry refinement from depth and normal cues. ",
-            "Evaluated Gaussian Splatting for volumetric rendering, comparing mesh-based texture projection approaches for geometric fidelity"
+            // "Developed a seam-aware texturing synthesis framework using geometry-conditioned partial inpainting and adaptive weighted blending to eliminate seams and ensure texture continuity",
+            // "Designed a multi-view SDF optimization pipeline that integrates silhouette, depth, normal and texture cues for surface refinement, improving geometric accuracy and ensuring watertight reconstruction under sparse view supervision.",
+            // "Optimized signed distance fields via normal-based refinement, improving geometric coherence and preserving high-frequency details such as fur and wrinkles.",
+            // "Designed and processed a multimodal paired dataset for training diffusion models on normals and textures derived from synthetic 3D renderings.",
+            // "Implemented advanced neural network architectures, including UNet, ControlNet, and IP-Adapter, achieving high-fidelity texture generation with CUDA-based multi-GPU acceleration.",
+            // "Applied PyTorch 3D for differentiable mesh processing and perceptual geometry refinement from depth and normal cues. ",
+            // "Evaluated Gaussian Splatting for volumetric rendering, comparing mesh-based texture projection approaches for geometric fidelity"
         ],
+    },
+    {
+        title: "Charles H. Holbrow Memorial Scholarship Recepient",
+        company_name: "",
+        icon: SSEC,
+        iconBg: "#ffffff",
+        date: "April 2024",
+        points: [
+         ],
     },
 
     {
-        title: "Virtual Environment Group",
-        company_name: "Under the Guidance of Professor Kevin Ponto and Bryce Sprecher",
+        title: "Undergraduate Researcher @ Virtual Environment Group",
+        company_name: "Supervised by Prof. Kevin Ponto and Bryce Sprecher, Wisconsin Institute for Discovery",
         icon: SSEC,
         iconBg: "#ffffff",
         date: "August 2023 - May 2024",
         points: [
-            "Optimized the game asset models and created the workflow for rendering and retopology",
-            "Worked with Zbrush and Maya to decimate the size of the models down while maintaining similar looks",
-            "3D normal map generations",
+            // "Optimized the game asset models and created the workflow for rendering and retopology",
+            // "Worked with Zbrush and Maya to decimate the size of the models down while maintaining similar looks",
+            // "3D normal map generations",
         ],
     },
+
     // {
     //     title:"2023 Game Resprawn Jam",
     //     company_name:"UW-Madison",
@@ -246,44 +306,28 @@ const experiences = [
 
     {
         title: "Java Developing Engineer",
-        company_name: "Wentai Technology - Shanghai",
+        company_name: "Wingtech Inc., Shanghai",
         icon: wentai,
         iconBg: "#ffffff",
         date: "May 2023 - August 2023",
         points: [
-            "Developing and maintaining web applications using java for Springboot API server and postman for testing.",
-            "Collaborating with cross-functional teams including frontends, OAs, and verification to provide high-quality to-B IT service.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-
+         
         ],
     },
     {
         title: "Undergraduate Research Scholar",
-        company_name: "Space Science and Engineering Center, UW-Madison",
+        company_name: "Supervised by Prof Sanjay Limaye, Space Science and Engineering Center @ UW-Madison",
         icon: SSEC,
         iconBg: "#FFFFFF",
         date: "Sep 2022 - May 2023",
         points: [
-            "Performed data analysis using Jupyter Notebook to read and process local files.",
-            "Interpolated Venus occultation data in different dimensions and generated graphs.",
-            "Did independent research activities under Dr. Sanjay Limaye's mentoring.",
-            "Presented the poster at 2023 Undergraduate Symposium.",
+            // "Performed data analysis using Jupyter Notebook to read and process local files.",
+            // "Interpolated Venus occultation data in different dimensions and generated graphs.",
+            // "Did independent research activities under Dr. Sanjay Limaye's mentoring.",
+            // "Presented the poster at 2023 Undergraduate Symposium.",
         ],
     },
-    {
-        title: "Journal Contributer",
-        company_name: "Illumination Journal",
-        icon: illumination,
-        iconBg: "#000000",
-        date: "May 2023",
-        points: [
-            "Selected as one of finalists to be published in the Visual Art category for Illumination Journal 2023 edition.",
-            "Contributed oil painting 'Autumn in Leaves' and watercolor painting'Green Bird in Cherry Blossom'",
-            "Attended distribution party and received a first print copy",
-
-        ],
-    },
-
+   
 ];
 
 const testimonials = [
@@ -640,7 +684,7 @@ const projects = [
     {
         name: "NeuroBrush",
         description:
-            'Advancing Artistic Creation with Neural Networks through Subject Aware Painting and Color Blending',
+            'Advancing Artistic Creation with Neural Networks through Depth Aware Painting and Color Blending',
         category:'Computer Vision',
         tags: [
             {
@@ -667,7 +711,7 @@ const projects = [
         name: "Outside",
         category:'Animation',
         description:
-            'A digital artwork that utilized dynamic techniques.',
+            'A digital artwork that utilized dynamic simulations.',
             
         tags: [
             {
@@ -710,7 +754,7 @@ const projects = [
         category:'Computer Graphics',
         name: "BoatTracer",
         description:
-            '2D Research project for CS 559',
+            '2D research project for CS 559',
             
         tags: [
             {
@@ -737,7 +781,7 @@ const projects = [
         name: "Blooming",
         category:'Animation',
         description:
-            'An idea about separation and hope.',
+            'Parrots are beautiful and full of emotions.',
             
         tags: [
             {
@@ -768,7 +812,7 @@ const projects = [
         name: "Eyes",
         category:'Animation',
         description:
-            'My first attempt of creating Maya animation. The story was inspired by the lining-up deadlines those few days.',
+            'Horror movies are great.',
             
         tags: [
             {
@@ -855,40 +899,40 @@ const projects = [
     },
 
     
-    {
-        category:'Web development',
-        name: "My Personal Website",
-        description:
-            "My github personal website that lists my coding projects and artworks, it's like a resume but better looking:)",
-        tags: [
-            {
-                name: "react",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "javascript",
-                color: "green-text-gradient",
-            },
-            {
-                name: "html/css",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "Three.js",
-                color: "green-text-gradient",
-            },
-            {
-                name: "Vanta.js",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "React",
-                color: "green-text-gradient",
-            },
-        ],
-        image: jobit,
-        // source_code_link: "https://github.com/ShufanSun/ShufanSun.github.io",
-    },
+    // {
+    //     category:'Web development',
+    //     name: "My Personal Website",
+    //     description:
+    //         "My github personal website that lists my coding projects and artworks, it's like a resume but better looking:)",
+    //     tags: [
+    //         {
+    //             name: "react",
+    //             color: "blue-text-gradient",
+    //         },
+    //         {
+    //             name: "javascript",
+    //             color: "green-text-gradient",
+    //         },
+    //         {
+    //             name: "html/css",
+    //             color: "blue-text-gradient",
+    //         },
+    //         {
+    //             name: "Three.js",
+    //             color: "green-text-gradient",
+    //         },
+    //         {
+    //             name: "Vanta.js",
+    //             color: "blue-text-gradient",
+    //         },
+    //         {
+    //             name: "React",
+    //             color: "green-text-gradient",
+    //         },
+    //     ],
+    //     image: jobit,
+    //     // source_code_link: "https://github.com/ShufanSun/ShufanSun.github.io",
+    // },
     {
         category:'Image Processing',
         name: "Corn Processing",
@@ -919,7 +963,7 @@ const projects = [
     {
         name: "Dog Search Gallery",
         description:
-            "This is a frontend project that uses React framework to implement a searching eng for dog images by breeds with pretty user interface.",
+            "A frontend searching engine for dog images by breeds.",
         tags: [
             {
                 name: "React",
@@ -942,7 +986,7 @@ const projects = [
     {category:'Game dev',
         name: "Finding Maggie",
         description:
-            "This is an adventure game that mixes 2D and 3D levels for the user to interact with the self-designed virtual environments.",
+            "Adventure game.",
         tags: [
             {
                 name: "unity",
@@ -963,7 +1007,7 @@ const projects = [
     {category:'Game dev',
         name: "Haunted Housekeeping",
         description:
-            "This is a 2D top-down game that make you the house that helps the builder clean without getting killed by the monsters.",
+            "A 2D top-down horror game.",
         tags: [
             {
                 name: "unity",
@@ -984,7 +1028,7 @@ const projects = [
     {category:'Game dev',
         name: "Alpaca Run!",
         description:
-            'This is a 2d shooter unity game in c#, the player is able to control the alpaca to spit at different enemies. You can download or play the game online here: https://sofine.itch.io/alpaca-run',
+            'This is a 2d shooter unity game.',
             
         tags: [//<a href="https://sofine.itch.io/alpaca-run">here</a>
             {
@@ -1001,8 +1045,9 @@ const projects = [
             },
         ],
         image: carrent,
-        source_code_link: "https://github.com/ShufanSun/alpaca_run_2d_game",
+        // source_code_link: "https://github.com/ShufanSun/alpaca_run_2d_game",
+        itch_link:"https://sofine.itch.io/alpaca-run"
     },
 ];
 
-export { services, technologies, experiences, testimonials, projects, gallery };
+export { services, technologies, experiences, testimonials, projects, gallery,publicationsData };

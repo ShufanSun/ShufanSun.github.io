@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import myPortrait from "../assets/portrait_head.jpeg";
@@ -7,11 +7,24 @@ import github from "../assets/github.png";
 import email from "../assets/email.png";
 import m1 from "../assets/mango1.jpg";
 
+
 const Hero = () => {
   const [hovered, setHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640); // sm breakpoint is 640px
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
-    <section className="relative w-full h-screen mx-auto mt-0 pt-16">
+    <section className="relative w-full h-auto mx-auto mt-0 pt-16">
       <motion.div 
         className={`${styles.paddingX} absolute inset-0 top-[60px] max-w-7xl mx-auto flex flex-col sm:flex-row items-start gap-5 z-10 pointer-events-none`}
         initial={{ opacity: 0, y: 100 }}
@@ -48,7 +61,7 @@ const Hero = () => {
             transition={{ delay: 0.7, duration: 0.5 }}
           >
             <a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/ShufanSun" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 pointer-events-auto"
@@ -56,7 +69,7 @@ const Hero = () => {
               <img src={github} alt="GitHub" className="w-6 h-6" />
             </a>
             <a 
-              href="mailto:your.email@example.com"
+              href="mailto:ssun329@wisc.edu"
               className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 pointer-events-auto"
             >
               <img src={email} alt="Email" className="w-6 h-6" />
@@ -120,54 +133,69 @@ const Hero = () => {
             />
           </motion.div>
 
-          <div className="flex sm:hidden flex-col items-start gap-4 w-full">
-            <div className="flex flex-col items-start gap-4 w-full">
-              <motion.h1 
-                className={`${styles.heroHeadText} text-green text-3xl tracking-wider sm:text-sm`}
-                initial={{ y: 10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1, duration: 1 }}
-              >
-                Hi, I am <span className="text-[#77C193]">Shufan</span>,
-              </motion.h1>
-              <motion.p 
-                className={`${styles.heroSubText} mt-2 text-white-100 text-sm tracking-wide sm:text-xs`}
-                initial={{ y: 10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1.2, duration: 1 }}
-              >
-                a Computer Sciences & 4D Art Studio senior at UW-Madison.
-                <br className="sm:block hidden" />
-                My academic interests lie in
-                <br className="sm:block hidden" /> <span className="text-[#77C193]">3D reconstruction</span> at the intersection of <span className="text-[#77C193]">machine learning</span>, <span className="text-[#77C193]">computer vision</span>, and <span className="text-[#77C193]">animation</span>.
-              </motion.p>
-            </div>
-          </div>
+          {/* mobile */}
+          {/* mobile */}
+<div className="flex sm:hidden flex-col items-start gap-3 w-full">
+  <div className="flex flex-col items-start gap-3 w-full">
+    <motion.h1 
+      className={`${styles.heroHeadText} text-green text-3xl tracking-wider font-serif text-[#a2dbb8]`}
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 1, duration: 1 }}
+    >
+      Shufan Sun
+    </motion.h1>
+    <motion.p 
+      className={`${styles.heroSubText} mt-2 font-serif text-white-100 text-sm tracking-wide leading-tight`}
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 1.2, duration: 1 }}
+    >
+      I am currently a fourth-year Computer Sciences major at <span className="font-serif text-[#a2dbb8]">University of Wisconsin-Madison</span>, advised by <span className="font-serif text-[#a2dbb8]">Prof. Zongfu Yu</span>. My research interests lie in <span className="font-serif text-[#a2dbb8]">3D reconstruction</span> at the intersection of <span className="font-serif text-[#a2dbb8]">graphics</span>, <span className="font-serif text-[#a2dbb8]">computer vision</span>, and <span className="font-serif text-[#a2dbb8]">machine learning</span>, creating tools that make realistic digital content more accessible and support production animation and modeling workflows.
+    </motion.p>
+  </div>
+</div>
 
-          <div className="hidden sm:flex flex-col items-start gap-5">
-            <motion.h1 
-              className={`${styles.heroHeadText} text-green text-2xl tracking-wider sm:text-xxl`}
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1, duration: 1 }}
-            >
-              Hi, I am <span className="text-[#77C193]">Shufan</span>,
-            </motion.h1>
-            <motion.p 
-              className={`${styles.heroSubText} mt-2 text-white-100 text-sm tracking-wide sm:text-xl `}
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.2, duration: 1 }}
-            >
-              a Computer Sciences & 4D Art Studio senior at UW-Madison.
-              <br className="sm:block hidden" />
-              My academic interests lie in
-              <br className="sm:block hidden" /> <span className="text-[#77C193]">3D reconstruction</span> at the intersection of <span className="text-[#77C193]">graphics</span>, <span className="text-[#77C193]">computer vision</span>, and <span className="text-[#77C193]">machine learning</span>.
-            </motion.p>
-          </div>
+{/* large window */}
+<div className="hidden sm:flex flex-col  gap-0">
+<motion.h1 
+  className={`${styles.heroHeadText} tracking-wider font-serif text-[#a2dbb8]`}
+  initial={{ y: 20, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ delay: 1, duration: 1 }}
+>
+  Shufan Sun
+  <span className="text-[0.6em] ml-2 font-chinese-longcang">
+    孙菽繁
+  </span>
+</motion.h1>
+  <motion.p 
+    className={`${styles.heroSubText} mt-2 font-serif text-white-100 text-xl tracking-wide leading-tight`}
+    initial={{ y: 20, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ delay: 1.2, duration: 1 }}
+  >
+    I am currently a fourth-year Computer Sciences major at <span className="font-serif text-[#a2dbb8]">University of Wisconsin-Madison</span>, advised by <span className="font-serif text-[#a2dbb8]">Prof. Zongfu Yu</span>. My research interests lie in <span className="font-serif text-[#a2dbb8]">3D reconstruction</span> at the intersection of <span className="font-serif text-[#a2dbb8]">graphics</span>, <span className="font-serif text-[#a2dbb8]">computer vision</span>, and <span className="font-serif text-[#a2dbb8]">machine learning</span>, creating tools that make realistic digital content more accessible and support production animation and modeling workflows.
+  </motion.p>
+</div>
         </div>
       </motion.div>
-      <ComputersCanvas className="absolute inset-0 mt-[-200px] z-0" />
+
+      {/* ComputersCanvas with conditional positioning */}
+      {/* <div className={`relative w-full ${
+        isMobile 
+          ? 'bottom-[-100px] h-[700px] '  // Mobile: push down below text
+          : 'bottom-[50px] lg:bottom-[-0px] h-[500px] '  // Desktop: original settings
+      }`}> */}
+      <div
+  className={`w-full ${
+    isMobile 
+      ? "mt-60 bottom-[-100px] h-[600px]"   // ↓ adjust mobile spacing here
+      : "mt-0 h-[600px]"   // ↓ adjust desktop spacing here
+  }`}
+>
+        <ComputersCanvas />
+      </div>
     </section>
   );
 }

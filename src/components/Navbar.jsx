@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom"; // Import useLocation
+import { Link, useLocation } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
@@ -8,7 +8,7 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation(); // Get current location
+  const location = useLocation();
 
   // Set active nav item based on current route
   useEffect(() => {
@@ -51,7 +51,7 @@ const Navbar = () => {
           onClick={() => handleNavClick("")}
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex'>
+          <p className='text-white text-[18px] font-serif font-bold cursor-pointer flex'>
             Shufan Sun &nbsp;
           </p>
         </Link>
@@ -68,6 +68,7 @@ const Navbar = () => {
               <Link 
                 to={nav.path}
                 onClick={() => handleNavClick(nav.title)}
+                className="font-serif"
               >
                 {nav.title}
               </Link>
@@ -100,6 +101,7 @@ const Navbar = () => {
                   <Link 
                     to={nav.path}
                     onClick={() => handleNavClick(nav.title)}
+                    className="font-serif"
                   >
                     {nav.title}
                   </Link>
