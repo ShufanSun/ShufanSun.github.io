@@ -128,6 +128,8 @@ const Publications = () => {
 
   return (
     <>
+    <div className="min-h-screen flex flex-col">
+
       {/* Header */}
       <div>
         <h2 className={`${styles.sectionHeadText} text-center`}>
@@ -180,6 +182,7 @@ const Publications = () => {
         <p className='font-serif text-white-100 text-[14px]'>
           <span className='text-secondary'>†</span> indicates Advisor
         </p>
+      </div>
       </div>
     </>
   );

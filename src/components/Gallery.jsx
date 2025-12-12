@@ -119,12 +119,12 @@ const Gallery = () => {
         </motion.div>
         <p
           variants={fadeIn('', '', 0.1, 1)}
-          className="font-serif mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="font-serif mt-0 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           As an art enthusiast, I enjoy exploring form, light, and space through a variety of media. These pieces reflect the same curiosity about perception and geometry that drives my research in 3D reconstruction. Click on each piece to see the creative process behind the scenes!
         </p>
 
-        <Masonry className="gallery-row">
+        <Masonry className="gallery-row mt-5 ">
           {gallery.map((img, index) => (
             <GalleryCard
               key={index}
