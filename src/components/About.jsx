@@ -134,7 +134,7 @@ const About = () => {
 
             {/* Publications + Services — light-mode switchable. */}
             <div className='relative left-1/2 -translate-x-1/2 w-screen bg-white text-black dark:bg-transparent dark:text-white-100 -mb-10 sm:-mb-16'>
-                <div className='max-w-7xl mx-auto px-6 sm:px-16 pt-12 pb-12'>
+                <div className='max-w-7xl mx-auto px-6 sm:px-16 pt-5 pb-12'>
                     {/* Featured Publications */}
                     {featuredPublications.length > 0 && (
                         <div className="mb-10 px-1">
