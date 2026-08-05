@@ -4,6 +4,19 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { DogWeave } from "../assets";
 import { publicationsData } from '../constants';
+import Fireflies from './Fireflies';
+
+// The links a publication actually has, in display order. Callers render
+// separators between entries, so a missing link never leaves a stray "/".
+export const presentLinks = (links = {}) =>
+  [
+    { key: 'project', label: 'Project Page' },
+    { key: 'pdf', label: 'Pdf' },
+    { key: 'arxiv', label: 'ArXiv' },
+    { key: 'code', label: 'Code' },
+  ]
+    .filter(({ key }) => links[key])
+    .map(({ key, label }) => ({ label, href: links[key] }));
 
 const PublicationCard = ({ publication, index }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -11,7 +24,7 @@ const PublicationCard = ({ publication, index }) => {
   return (
     <motion.div
       key={publication.id}
-      className='rounded-xl p-4 transition-all duration-300 w-full max-w-5xl border border-[#a2dbb8] hover:scale-[1.02]'
+      className='rounded-xl p-4 transition-all duration-300 w-full max-w-5xl bg-white border border-black/10 dark:bg-transparent dark:border-[#a2dbb8] hover:scale-[1.02]'
       initial={{ opacity: 0 }}
       animate={imageLoaded ? { opacity: 1 } : { opacity: 0 }}
       transition={{ 
@@ -40,79 +53,54 @@ const PublicationCard = ({ publication, index }) => {
         {imageLoaded && (
           <div className='flex-1 flex flex-col'>
             {/* Title */}
-            <h3 className='font-serif text-white text-[20px] font-bold mb-0'>
+            <h3 className='font-serif text-black dark:text-white text-[20px] font-bold mb-0'>
               {publication.title}
             </h3>
 
             {/* Authors */}
-            <div className='font-serif text-white-100 mb-0 leading-relaxed text-[16px]'>
-              {publication.authors.map((author, index) => (
-                <span key={index} className="relative inline-block mr-1">
-                  <span className={`${author.highlight ? 'text-secondary' : ''} ${author.bold ? 'font-semibold' : ''}`}>
-                    {author.name}
+            <div className='font-serif text-black dark:text-white-100 mb-0 leading-relaxed text-[16px]'>
+              {publication.authors.map((author, index) => {
+                const marks = author.marks ?? `${author.firstAuthor ? '1' : ''}${author.advisor ? '†' : ''}`;
+                return (
+                  <span key={index} className="font-serif mr-1">
+                    <span className={`font-serif ${author.bold ? 'font-semibold dark:text-white' : 'dark:text-secondary'} ${author.italic ? 'italic' : ''}`}>
+                      {author.name}
+                    </span>
+                    {marks && (
+                      <sup className="font-serif text-[10px] text-black dark:text-secondary">{marks}</sup>
+                    )}
+                    {index < publication.authors.length - 1 && ","}
                   </span>
-                  <span className="absolute top-0 right-0 text-[10px] translate-y-[-0.2em] text-secondary">
-                    {author.firstAuthor ? '1' : ''}{author.advisor ? '†' : ''}
-                  </span>
-                  {index < publication.authors.length - 1 && ", "}
-                </span>
-              ))}
+                );
+              })}
             </div>
 
             {/* Venue */}
-            <div className='font-serif text-secondary italic mb-4 text-[16px] font-semibold'>
+            <div className='font-serif text-black dark:text-secondary italic mb-1 text-[16px] font-semibold'>
               {publication.venue}
             </div>
 
-            {/* Links */}
+            {/* Links — separators go between links only, never leading */}
             <div className='font-serif flex flex-wrap gap-2'>
-              {publication.links.project && (
-                <a 
-                  href={publication.links.project}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='text-secondary hover:text-white font-medium transition-colors text-[14px]'
-                >
-                  project page
-                </a>
-              )}
-              {publication.links.pdf && <span className='text-secondary'>/</span>}
-              {publication.links.pdf && (
-                <a 
-                  href={publication.links.pdf}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='text-secondary hover:text-white font-medium transition-colors text-[14px]'
-                >
-                  pdf
-                </a>
-              )}
-              {publication.links.arxiv && <span className='text-secondary'>/</span>}
-              {publication.links.arxiv && (
-                <a 
-                  href={publication.links.arxiv}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='text-secondary hover:text-white font-medium transition-colors text-[14px]'
-                >
-                  arXiv
-                </a>
-              )}
-              {publication.links.code && <span className='text-secondary'>/</span>}
-              {publication.links.code && (
-                <a 
-                  href={publication.links.code}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='text-white hover:text-secondary font-medium transition-colors text-[14px]'
-                >
-                  code
-                </a>
-              )}
+              {presentLinks(publication.links).map((link, i) => (
+                <React.Fragment key={link.label}>
+                  {i > 0 && (
+                    <span className='font-serif text-black dark:text-secondary'>/</span>
+                  )}
+                  <a
+                    href={link.href}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='font-serif text-black dark:text-secondary hover:text-black/60 dark:hover:text-white font-medium transition-colors text-[14px]'
+                  >
+                    {link.label}
+                  </a>
+                </React.Fragment>
+              ))}
             </div>
 
             {/* Description */}
-            <p className='font-serif text-white-100 leading-relaxed text-[14px] tracking-wider'>
+            <p className='font-serif text-black dark:text-secondary leading-relaxed text-[14px] tracking-wider'>
               {publication.description}
             </p>
           </div>
@@ -128,64 +116,74 @@ const Publications = () => {
 
   return (
     <>
-    <div className="min-h-screen flex flex-col">
+    <div className="flex flex-col flex-1">
 
-      {/* Header */}
-      <div>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+      {/* Header — dark green firefly bar in both light and dark mode.
+          Negative top margin tucks it under the navbar (no white stripe). */}
+      <div className='relative left-1/2 -translate-x-1/2 w-screen -mt-6 pt-16 pb-10 min-h-[170px] flex items-center justify-center bg-[#001005]'>
+        <Fireflies />
+        <h2 className={`${styles.sectionHeadText} text-center relative z-10`}>
           Publications
         </h2>
       </div>
 
-      {/* Tabs */}
-      <div className='mt-10 flex flex-wrap justify-center gap-4 mb-10'>
-        {tabs.map((tab) => (
-          <button
-            key={tab}
-            onClick={() => setActiveTab(tab)}
-            className={`font-serif px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-              activeTab === tab
-                ? 'bg-tertiary text-white shadow-lg'
-                : 'text-secondary hover:text-white'
-            }`}
-            style={activeTab === tab ? { background: 'rgba(1, 60, 2, 0.6)' } : {}}
-          >
-            {tab}
-            {publicationsData[tab].length > 0 && (
-              <span className='ml-2 text-xs px-2 py-1 rounded-full bg-white/10'>
-                {publicationsData[tab].length}
-              </span>
-            )}
-          </button>
-        ))}
-      </div>
-
-      {/* Publications List */}
-      <div className='mt-10 flex flex-col items-center gap-6'>
-        {publicationsData[activeTab].length > 0 ? (
-          publicationsData[activeTab].map((publication, index) => (
-            <PublicationCard 
-              key={publication.id} 
-              publication={publication} 
-              index={index}
-            />
-          ))
-        ) : (
-          <div className='text-center py-16 rounded-2xl w-full max-w-5xl' style={{ background: 'rgba(1, 60, 2, 0.5)' }}>
-            <p className='font-serif text-secondary text-[16px]'>No publications in this category yet.</p>
+      {/* White band: everything from the tabs down.
+          Full-bleed out of the max-w-7xl SectionWrapper. */}
+      <div className='relative left-1/2 -translate-x-1/2 w-screen bg-white text-black dark:bg-transparent dark:text-white-100 mt-0 -mb-10 sm:-mb-16 flex-1'>
+        <div className='max-w-7xl mx-auto px-6 sm:px-16 py-12'>
+          {/* Tabs */}
+          <div className='flex flex-wrap justify-center gap-4 mb-10'>
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`font-serif px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  activeTab === tab
+                    ? 'border border-transparent bg-black/10 text-black dark:bg-[rgba(1,60,2,0.6)] dark:text-white dark:shadow-lg'
+                    : 'border border-transparent text-black/60 dark:text-secondary hover:text-black dark:hover:text-white'
+                }`}
+              >
+                {tab}
+                {publicationsData[tab].length > 0 && (
+                  <span className={`ml-2 text-xs px-2 py-1 rounded-full ${
+                    activeTab === tab ? 'bg-black/20 dark:bg-white/20' : 'bg-black/10 dark:bg-white/10'
+                  }`}>
+                    {publicationsData[tab].length}
+                  </span>
+                )}
+              </button>
+            ))}
           </div>
-        )}
-      </div>
 
-      {/* Footer Note */}
-      <div className='mt-12 p-6 rounded-2xl max-w-5xl mx-auto'>
-        <p className='font-serif text-white-100 text-[14px]'>
-          <span className='text-secondary'>†</span> indicates Advisor
-        </p>
+          {/* Legend */}
+          <p className='font-serif text-black/70 dark:text-white-100 text-[13px] text-center mb-4'>
+            <span className='font-serif'>*</span> denotes equal contribution
+            <span className='mx-2 text-black/30'>|</span>
+            <span className='font-serif'>†</span> Corresponding Author
+          </p>
+
+          {/* Publications List */}
+          <div className='flex flex-col items-center gap-6'>
+            {publicationsData[activeTab].length > 0 ? (
+              publicationsData[activeTab].map((publication, index) => (
+                <PublicationCard
+                  key={publication.id}
+                  publication={publication}
+                  index={index}
+                />
+              ))
+            ) : (
+              <div className='text-center py-16 rounded-2xl w-full max-w-5xl bg-black/5 dark:bg-[rgba(1,60,2,0.5)]'>
+                <p className='font-serif text-black/60 dark:text-secondary text-[16px]'>No publications in this category yet.</p>
+              </div>
+            )}
+          </div>
+
+        </div>
       </div>
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Publications, "publications");
+export default SectionWrapper(Publications, "publications", "flex-1 flex flex-col");

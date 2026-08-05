@@ -5,8 +5,21 @@ import * as THREE from "three";
 
 import CanvasLoader from "../Loader";
 
+// The glow sits in her hands. Original tuning: scale 0.5 at y=-2.9 put it at y=-0.4, z=-0.6,
+// i.e. model-local (0, 5.0, -1.2). Deriving it keeps the light on her hands at any scale/position,
+// instead of drifting when the two breakpoints use different transforms.
+const GLOW_LOCAL = { y: 5.0, z: -1.2 };
+
 const Computers = ({ isMobile }) => {
     const computer = useGLTF("./girl/girlModelNorm.gltf");
+
+    const modelScale = isMobile ? 0.34 : 0.42;
+    const modelPos = isMobile ? [0, -2.45, 0] : [0, -2.30, 0];
+    const glowPos = [
+        modelPos[0],
+        modelPos[1] + modelScale * GLOW_LOCAL.y,
+        modelPos[2] + modelScale * GLOW_LOCAL.z,
+    ];
     
     const fireflyRef = useRef();
     const lightRef = useRef();
@@ -48,15 +61,15 @@ const Computers = ({ isMobile }) => {
             <group>
                 <primitive
                     object={computer.scene}
-                    scale={isMobile ? 0.4 : 0.5}
-                    position={isMobile ? [0, -3, 0] : [0, -2.9, 0]}
+                    scale={modelScale}
+                    position={modelPos}
                     rotation={[-0.01, -0.15, -0.01]}
                 />
                 
                 {/* Core light source (small and bright) */}
                 <mesh 
                     ref={fireflyRef}
-                    position={[0, -0.4, -0.6]}
+                    position={glowPos}
                 >
                     <sphereGeometry args={[0.02, 16, 16]} />
                     <meshBasicMaterial 
@@ -67,7 +80,7 @@ const Computers = ({ isMobile }) => {
                 </mesh>
                 
                 {/* Volumetric glow using multiple layered spheres */}
-                <group ref={glowGroupRef} position={[0, -0.4, -0.6]}>
+                <group ref={glowGroupRef} position={glowPos}>
                     {/* Inner glow layer */}
                     <mesh>
                         <sphereGeometry args={[0.06, 32, 32]} />
@@ -106,7 +119,7 @@ const Computers = ({ isMobile }) => {
                 </group>
                 
                 {/* Alternative: Single sphere with custom shader for smooth falloff */}
-                <mesh position={[0, -0.4, -0.6]}>
+                <mesh position={glowPos}>
                     <sphereGeometry args={[0.16, 64, 64]} />
                     <shaderMaterial
                         transparent={true}
@@ -144,7 +157,7 @@ const Computers = ({ isMobile }) => {
                 {/* Point light for illumination */}
                 <pointLight 
                     ref={lightRef}
-                    position={[0, -0.4, -0.6]}
+                    position={glowPos}
                     intensity={1.5}
                     color="#ffaa00"
                     distance={8}
@@ -181,7 +194,7 @@ const ComputersCanvas = () => {
             // camera={{ position: [5, 3, -20], fov: 25 }}
             // camera={{ position: [-10.607, 3, -17.677], fov: 25 }}
             // camera={{ position: [-7.382, 3, -19.255], fov: 25 }}
-            camera={{ position: [-3.931, 3, -20.240], fov: 25 }}
+            camera={{ position: [-3.931, 3, -20.240], fov: 18 }}
 
 
             gl={{ preserveDrawingBuffer: true }}

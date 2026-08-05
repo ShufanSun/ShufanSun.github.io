@@ -10,10 +10,35 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
-    color-scheme: dark;
 }
+
+/* Base canvas + overscroll colour follow the theme so there's no dark strip
+   below the navbar (or dark rubber-band overscroll) in light mode. */
+:root { color-scheme: light; }
+:root.dark { color-scheme: dark; }
+html { background-color: #ffffff; }
+html.dark { background-color: #001005; }
+
 .main-content {
+  background-color: #ffffff;
+}
+.dark .main-content {
   background-color: #001005;
+}
+
+/* Experience timeline — theme-aware center line & date text.
+   Light mode is the default; the `.dark` class on <html> flips to green. */
+.vertical-timeline::before {
+  background: rgba(0, 0, 0, 0.15);
+}
+.dark .vertical-timeline::before {
+  background: rgba(162, 219, 184, 0.25);
+}
+.vertical-timeline-element-date {
+  color: rgba(0, 0, 0, 0.7);
+}
+.dark .vertical-timeline-element-date {
+  color: #f3f3f3;
 }
 
 h1{
@@ -44,7 +69,6 @@ p{
 .bg-primary {
   background: linear-gradient(rgb(0, 0, 0),75%, rgba(0,0,0,0));
   /*backdrop-filter: blur(10px);  Blur effect */
-  transition: background 2s ease, backdrop-filter 2s ease;
 }
 .bg-transparent {
   background: transparent;
@@ -533,41 +557,100 @@ p{
 /* Add this to your CSS or styles file */
 .expanded-image-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999; /* Ensure it's on top of other elements */
+  z-index: 999;
+  padding: 24px;
 }
 
 .expanded-image {
-  max-width: 90vw; /* Use maximum viewport width units to ensure responsiveness */
-  max-height: 90vh; /* Use maximum viewport height units to ensure responsiveness */
-  background: rgba(0, 45, 16, 0.); /* Adjust background color opacity as needed */
-  padding: 20px; /* Adjust as needed */
+  max-width: min(92vw, 1100px);
+  max-height: 92vh;
+  background: transparent;
+  padding: 0;
   text-align: center;
-  display:flex;
-  border-radius: 15px; /* Add rounded corners */
-  position: relative; /* Add relative positioning to handle child absolute positioning */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  position: relative;
 }
 
-.expanded-details {
-  position: absolute;
-  bottom: 20px; /* Adjust distance from the bottom */
-  left: 20px; /* Adjust distance from the left */
-  color: white; /* Text color */
-  text-align: left;
-}
-
+/* Rounded corners for any image in the lightbox (single + carousel slides). */
 .expanded-image img {
-  width: 100%; /* Ensure the image takes up 100% of the container width */
-  height: auto; /* Maintain the original aspect ratio */
-  max-height: calc(90vh - 40px); /* Adjusted based on padding */
-  border-radius: 10px; /* Add rounded corners to the image */
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Single-image view */
+.lightbox-img {
+  max-height: 78vh;
+  object-fit: contain;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+}
+
+/* Floating close button */
+.lightbox-close {
+  position: fixed;
+  top: 22px;
+  right: 26px;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 1001;
+}
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.06);
+}
+
+/* Caption under the image */
+.lightbox-caption {
+  max-width: 680px;
+  text-align: center;
+  color: #fff;
+  padding: 0 8px;
+}
+.lightbox-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.lightbox-desc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+}
+.lightbox-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #a2dbb8;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(162, 219, 184, 0.5);
+  padding-bottom: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.lightbox-link:hover {
+  color: #fff;
+  border-color: #fff;
 }
 
 /* Add this to your CSS */

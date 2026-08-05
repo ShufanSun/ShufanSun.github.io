@@ -3,11 +3,13 @@ import { Link, useLocation } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import ThemeToggle, { useIsDark } from "./ThemeToggle";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const isDark = useIsDark();
   const location = useLocation();
 
   // Set active nav item based on current route
@@ -41,7 +43,7 @@ const Navbar = () => {
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? "bg-primary" : "bg-primary"
+        isDark ? "bg-primary" : "bg-white/95 backdrop-blur-sm border-b border-black/10"
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
@@ -51,19 +53,21 @@ const Navbar = () => {
           onClick={() => handleNavClick("")}
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-serif font-bold cursor-pointer flex'>
+          <p className='text-black dark:text-white text-[18px] font-serif font-bold cursor-pointer flex'>
             Shufan Sun &nbsp;
           </p>
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden sm:flex flex-row gap-10 items-center'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+                active === nav.title
+                  ? "text-black dark:text-white"
+                  : "text-black/50 dark:text-secondary"
+              } hover:text-black dark:hover:text-white text-[18px] font-medium cursor-pointer`}
             >
               <Link 
                 to={nav.path}
@@ -74,10 +78,14 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
+          <li className='flex items-center'>
+            <ThemeToggle />
+          </li>
         </ul>
 
         {/* Mobile Navigation */}
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
+        <div className='sm:hidden flex flex-1 justify-end items-center gap-3'>
+          <ThemeToggle />
           <img
             src={toggle ? close : menu}
             alt='menu'
@@ -88,14 +96,18 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } ${
+              isDark ? "black-gradient" : "bg-white border border-black/10 shadow-lg"
+            } p-6 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
                   className={`font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                    active === nav.title
+                      ? "text-black dark:text-white"
+                      : "text-black/50 dark:text-secondary"
                   }`}
                 >
                   <Link 

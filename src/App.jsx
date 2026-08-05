@@ -1,5 +1,5 @@
 import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Gallery, StarsCanvas,Publications } from './components';
+import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Gallery, StarsCanvas,Publications, Footer } from './components';
 import { useEffect, useRef, useLayoutEffect } from 'react';
 import './index.css';
 import React from 'react';
@@ -49,18 +49,23 @@ const App = () => {
   return (
     <Router scrollRestoration="manual">
       <ScrollToTop />
-      <Navbar />
-      
-      {/* <div ref={vantaRef} className="vanta-bg"></div> */}
-      <div className="main-content">
-        <Routes>
-          <Route key="about" path="/" element={<About />} />
-          <Route key="publications" path="/publications" element={<Publications />} />
-          <Route key="experience" path="/experience" element={<Experience />} />
-          <Route key="projects" path="/projects" element={<Works />} />
-          <Route key="gallery" path="/gallery" element={<Gallery />} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
-        </Routes>
+      {/* Sticky footer: content flexes to fill the viewport, so on short pages
+          the footer sits at the bottom instead of floating mid-screen. */}
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+
+        {/* <div ref={vantaRef} className="vanta-bg"></div> */}
+        <div className="main-content flex-1 flex flex-col">
+          <Routes>
+            <Route key="about" path="/" element={<About />} />
+            <Route key="publications" path="/publications" element={<Publications />} />
+            <Route key="experience" path="/experience" element={<Experience />} />
+            <Route key="projects" path="/projects" element={<Works />} />
+            <Route key="gallery" path="/gallery" element={<Gallery />} />
+            {/* <Route path="/contact" element={<Contact />} /> */}
+          </Routes>
+        </div>
+        <Footer />
       </div>
     </Router>
   );

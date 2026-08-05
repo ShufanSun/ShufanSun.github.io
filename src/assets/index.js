@@ -1,8 +1,5 @@
 import logo from "./logo.svg";
 import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
 
 import github from "./github.png";
 import youtube from "./youtube.png";
@@ -45,7 +42,7 @@ import venus4 from "./gallery/Venus/venus4.jpg";
 import haigou1 from "./gallery/haigou/haigou2.jpg";
 import haigou2 from "./gallery/haigou/haigou.jpg";
 import vanita from "./gallery/vanita.png";
-import d1 from "./gallery/d1.jpg";
+
 
 import deer from "./gallery/deer.jpg";
 import forest from "./gallery/forest.jpg";
@@ -60,17 +57,18 @@ import springboot from "./tech/springboot.png";
 import cplusplus from "./tech/cplusplus.png";
 import csharp from "./tech/csharp.png";
 import mathematica from "./tech/mathematica.jpg";
-import wentai from "./company/wentai.png";
+import wentai from "./company/wingtech_group_logo.jpeg";
 import SSEC from "./company/SSEC.png";
+import wiscECE from "./company/wiscECE.png";
+import ssec_logo from "./company/ssec_logo.png";
+import upenn_logo from "./company/upenn_logo.png";
 import carrent from "./carrent.png";
+import wid from "./company/WID.jpeg";
 import lane from "./lane.png";
 import baking from "./Forestry/baking1.jpg";
 import baking2 from "./Forestry/baking2.jpg";
-import jobit from "./jobit.png";
 import eyes from "./eyes.png"
-import tripguide from "./tripguide.png";
 import corn from "./corn.jpg";
-import dogs from "./dogs.jpg";
 import cockatoo from "./cockatoo.png";
 import boat from "./boattracer.png";
 import neurobrush from "./neurobrush.jpg";
@@ -79,14 +77,15 @@ import haunted from "./haunted.jpg";
 import coco from "./gallery/coco.jpg";
 import illumination from "./company/illumination.png";
 import DogWeave from "./publications/DogWeave.png";
+import Harmony from "./publications/HARMONY.png";
 export {
     logo,
     backend,
     maya,
     DogWeave,
-    creator,
-    mobile,
-    web,
+    Harmony,
+    ssec_logo,
+    upenn_logo,
     mathematica,
     java,
     matlab,
@@ -101,8 +100,10 @@ export {
     menu,
     ps,
     close,
+    wid,
     css,
     wentai,
+    wiscECE,
     SSEC,
     python,
     wildrobot,
@@ -116,11 +117,8 @@ export {
     lane,
     baking,
     baking2,
-    jobit,
-    tripguide,
     haunted,
     corn,
-    dogs,
     greenbird,
     springboot,
     girl1,
@@ -134,7 +132,6 @@ export {
     haigou1,
     haigou2,
     fox,
-    d1,
     outside,
     parrot,
     puddle,

@@ -1,8 +1,5 @@
 import {
-    mobile,
     backend,
-    creator,
-    web,
     javascript,
     html,
     css,
@@ -20,17 +17,21 @@ import {
     python,
     java,
     SSEC,
+    upenn_logo,
+    ssec_logo,
     maya,
     wentai,
+    wiscECE,
+    wid,
     illumination,
     carrent,
     lane,
     baking,
     baking2,
-    jobit,
-    tripguide,
+
     girl1,
     DogWeave,
+    Harmony,
     girl2,
     greenbird,
     gb1,
@@ -44,8 +45,6 @@ import {
     venus3,
     venus4,
     corn,
-    dogs,
-    d1,
     puddle,
     forest2,
     eyes,
@@ -112,73 +111,72 @@ export const navLinks = [
 const services = [
     {
         title: "Animation",
-        icon: web,
     },
    
     {
         title: "Graphics",
-        icon: mobile,
     },
     {
-        title: "Computer Vision",
-        icon: backend,
+        title: "Vision",
     },
     {
-        title: "Painter",
-        icon: creator,
+        title: "Physics",
     },
 ];
 
+// Defined once and referenced from every tab it belongs to, so the tabs can't drift apart.
+const dogWeave = {
+  id: 1,
+  title: "DogWeave: High-Fidelity 3D Canine Reconstruction from a Single Image via Normal Fusion and Conditional Inpainting",
+  authors: [
+    { name: "Shufan Sun", bold: true, marks: "*†" },
+    { name: "Chenchen Wang", marks: "*" },
+    { name: "Zongfu Yu", italic: true }
+  ],
+  venue: "Under Review",
+  for_Cover: true,
+  description: "An SDF-based framework for reconstructing high-fidelity 3D quadruped models from a single RGB image using style supervision. ",
+  image: DogWeave,
+  links: {
+    // project: "https://example.com/project",
+    // pdf: "https://example.com/paper.pdf",
+    arxiv: "https://arxiv.org/abs/2603.07441",
+    // code: "https://github.com/example"
+  }
+};
+
+const harmony = {
+  id: 2,
+  title: "HARMONY: Hierarchical Agentic Reasoning for MONocular Image-to-Scene Synthesis",
+  authors: [
+    { name: "Shufan Sun", bold: true, marks: "*†" },
+    { name: "Chen Wang", marks: "*" },
+    { name: "Jiatao Gu", italic: true },
+    { name: "Lingjie Liu", italic: true }
+  ],
+  venue: "Under Review",
+  for_Cover: true,
+  description: "A hierarchical chain-of-thought framework that leverages both agentic reasoning and visual geometry foundation. ",
+  image: Harmony,
+  links: {
+    project: "https://cwchenwang.github.io/harmony/",
+    // pdf: "https://example.com/paper.pdf",
+    arxiv: "https://arxiv.org/abs/2603.07441",
+    code: "https://github.com/example"
+  }
+};
+
 const publicationsData = {
   "All": [
-    {
-      id: 1,
-      title: "DogWeave: High-Fidelity 3D Canine Reconstruction from a Single Image via Normal Fusion and Conditional Inpainting",
-      authors: [
-        { name: "Shufan Sun", bold: true, firstAuthor: true },      // mark as first author
-        { name: "Chenchen Wang", highlight: true },                // regular co-author
-        { name: "Zongfu Yu", highlight: true, bold: true, advisor: true } // mark as advisor
-      ],
-
-
-      venue: "Under Review",
-      for_Cover:true,
-      description: "An SDF-based framework for reconstructing high-fidelity 3D quadruped models from a single RGB image using style supervision. ",
-      image: DogWeave,
-      links: {
-        // project: "https://example.com/project",
-        // pdf: "https://example.com/paper.pdf",
-        // arxiv: "https://arxiv.org/abs/example",
-        // code: "https://github.com/example"
-      }
-    },
+    // harmony,
+    dogWeave
   ],
-  "Conference": [
-    // {
-    //   id: 1,
-    //   title: "PartField: Learning 3D Feature Fields for Part Segmentation and Beyond",
-    //   authors: [
-    //     { name: "Minghua Liu", highlight: true },
-    //     { name: "Mikaela Angelina Uy", highlight: true },
-    //     { name: "Donglai Xiang" },
-    //     { name: "Hao Su" },
-    //     { name: "Sanja Fidler" },
-    //     { name: "Nicholas Sharp" },
-    //     { name: "Jun Gao", bold: true }
-    //   ],
-    //   venue: "ICCV 2025",
-    //   description: "Generating hierarchical 3D part decomposition for open-world 3D shapes.",
-    //   image: "https://via.placeholder.com/300x200",
-    //   links: {
-    //     project: "https://example.com/project",
-    //     pdf: "https://example.com/paper.pdf",
-    //     arxiv: "https://arxiv.org/abs/example",
-    //     code: "https://github.com/example"
-    //   }
-    // }
-  ],
+  "Conference": [],
   "Journal": [],
-  "Preprint": []
+  "Preprint": [
+    // harmony,
+    dogWeave,
+  ]
 };
 const technologies = [
     {
@@ -240,19 +238,32 @@ const technologies = [
 const experiences = [
     {
         
-        title: "Undergraduate researcher @ Yu's Group",
-        company_name: "Supervised by Prof. Zongfu Yu, ECE Dept @UW-Madison",
+        title: "Research Intern @ SIG Lab",
+        company_name: "Supervised by Prof. Lingjie Liu, UPenn CIS",
+        icon: upenn_logo,
+        iconBg: "#ffffff",
+        date: "March 2026 – Current",
+        points: [
+       ],
+    },
+      {
+        
+        title: "Conferred B.S. Degree in Computer Sciences",
+        company_name: "University of Wisconsin-Madison",
         icon: SSEC,
         iconBg: "#ffffff",
-        date: "June 2024 – December 2025",
+        date: "Aug 2022 – Dec 2025",
         points: [
-            // "Developed a seam-aware texturing synthesis framework using geometry-conditioned partial inpainting and adaptive weighted blending to eliminate seams and ensure texture continuity",
-            // "Designed a multi-view SDF optimization pipeline that integrates silhouette, depth, normal and texture cues for surface refinement, improving geometric accuracy and ensuring watertight reconstruction under sparse view supervision.",
-            // "Optimized signed distance fields via normal-based refinement, improving geometric coherence and preserving high-frequency details such as fur and wrinkles.",
-            // "Designed and processed a multimodal paired dataset for training diffusion models on normals and textures derived from synthetic 3D renderings.",
-            // "Implemented advanced neural network architectures, including UNet, ControlNet, and IP-Adapter, achieving high-fidelity texture generation with CUDA-based multi-GPU acceleration.",
-            // "Applied PyTorch 3D for differentiable mesh processing and perceptual geometry refinement from depth and normal cues. ",
-            // "Evaluated Gaussian Splatting for volumetric rendering, comparing mesh-based texture projection approaches for geometric fidelity"
+                  ],
+    },
+    {
+        
+        title: "Undergraduate researcher @ Yu's Group",
+        company_name: "Supervised by Prof. Zongfu Yu, ECE Dept @UW-Madison",
+        icon: wiscECE,
+        iconBg: "#ffffff",
+        date: "Jun 2024 – Dec 2025",
+        points: [
         ],
     },
     {
@@ -260,56 +271,17 @@ const experiences = [
         company_name: "",
         icon: SSEC,
         iconBg: "#ffffff",
-        date: "April 2024",
+        date: "Apr 2024",
         points: [
          ],
     },
-
-    {
-        title: "Undergraduate Researcher @ Virtual Environment Group",
-        company_name: "Supervised by Prof. Kevin Ponto and Bryce Sprecher, Wisconsin Institute for Discovery",
-        icon: SSEC,
-        iconBg: "#ffffff",
-        date: "August 2023 - May 2024",
-        points: [
-            // "Optimized the game asset models and created the workflow for rendering and retopology",
-            // "Worked with Zbrush and Maya to decimate the size of the models down while maintaining similar looks",
-            // "3D normal map generations",
-        ],
-    },
-
-    // {
-    //     title:"2023 Game Resprawn Jam",
-    //     company_name:"UW-Madison",
-    //     icon:SSEC,
-    //     iconBg:"#ffffff",
-    //     date:"October 19th - 26th 2023",
-    //     points:[
-    //         "Created a 2d top down game in c# and unity called Haunted Housekeeping",
-    //         "Collaborated with a group to get the project done for a 7 day game jam",
-    //         "THe given topic was 'The world is the main character'",
-    //     ]
-    // },
-    // {
-    //     title: "Finding Maggie (an experiment of 2d and 3d game development)",
-    //     company_name: "DS/CS 579 summer 2023",
-    //     icon: SSEC,
-    //     iconBg: "#ffffff",
-    //     date: "June-Auguest 2023",
-    //     points: [
-    //         "Developed 3D and 2D games on my own for fun",
-    //         "Got extremely interested in user experience design for virtual environments",
-    //         "Gained a lot of insights in VR development",
-
-    //     ],
-    // },
 
     {
         title: "Java Developing Engineer",
         company_name: "Wingtech Inc., Shanghai",
         icon: wentai,
         iconBg: "#ffffff",
-        date: "May 2023 - August 2023",
+        date: "May 2023 - Aug 2023",
         points: [
          
         ],
@@ -317,14 +289,10 @@ const experiences = [
     {
         title: "Undergraduate Research Scholar",
         company_name: "Supervised by Prof Sanjay Limaye, Space Science and Engineering Center @ UW-Madison",
-        icon: SSEC,
+        icon: ssec_logo,
         iconBg: "#FFFFFF",
         date: "Sep 2022 - May 2023",
         points: [
-            // "Performed data analysis using Jupyter Notebook to read and process local files.",
-            // "Interpolated Venus occultation data in different dimensions and generated graphs.",
-            // "Did independent research activities under Dr. Sanjay Limaye's mentoring.",
-            // "Presented the poster at 2023 Undergraduate Symposium.",
         ],
     },
    
@@ -463,7 +431,7 @@ const gallery = [
     {
         image: man,
        name: "My First Game Character",
-       description:"This is my attempt of modeling a whole human that matches anatomy and topology principles ground up from a square",
+       description:"This is my attempt of modeling a whole human that matches anatomy and topology principles ground up from a cube",
        isCarousel: true,
        carouselImages: [
         man1,
@@ -525,7 +493,7 @@ const gallery = [
     mural1,mural3,wall,
   ],
         name:"Mural",
-        description:"This is a piece of mural of approximately 3m*2m in size. It took me 25h of work in total(finished within 4 days).",
+        description:"This is a piece of mural of approximately 3m*2m in size. It took 25h of work in total.",
         tags: [
             {
                 name: "Acrylic",
@@ -567,7 +535,7 @@ const gallery = [
     image: parrot,
     isCarousel: false,
     name:"Mango the Lovebird",
-    description:"As the name indicates, he looked like a mango.",
+    description:"As the name indicates, he looks like a mango.",
     tags: [
         {
             name: "Sketching",
@@ -602,7 +570,7 @@ const gallery = [
 {
     image: greenbird,
    name: "Green Bird in Cherry Blossoms",
-   description:"This is a painting selected to be published on Illumination Magazine for visual art genre.",
+   description:"It feels spring.",
    isCarousel: true,
    link:"https://issuu.com/wisconsinunion/docs/illumination_draft_1",
    carouselImages: [
@@ -644,7 +612,7 @@ const gallery = [
     image: deer,
     isCarousel: false,
     name:"Deer in Forest",
-    description:"I love water and reflections.",
+    description:"I love staring at reflections of trees on water surface",
     tags: [
         {
             name: "Gouache",
@@ -705,7 +673,7 @@ const projects = [
             },
         ],
         image: neurobrush,
-        source_code_link:"https://gefeishen.github.io/NuroBrush-web/",
+        source_code_link:"https://github.com/GefeiSHEN/NeuroBrush",
     },
     {
         name: "Outside",
@@ -751,33 +719,6 @@ const projects = [
         youtube_link:"https://www.youtube.com/watch?v=ZxqKoFglJ7Y",
     },
     {
-        category:'Computer Graphics',
-        name: "BoatTracer",
-        description:
-            '2D research project for CS 559',
-            
-        tags: [
-            {
-                name: "Ray Tracing",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "Fluid simulation",
-                color: "green-text-gradient",
-            },
-            {
-                name: "javascript",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "April 2024",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: boat,
-        source_code_link:"https://github.com/ShufanSun/BoatTracer",
-    },
-    {
         name: "Blooming",
         category:'Animation',
         description:
@@ -807,37 +748,6 @@ const projects = [
         ],
         image: cockatoo,
         youtube_link:"https://www.youtube.com/watch?v=V4qVRuGTsFw",
-    },
-    {
-        name: "Eyes",
-        category:'Animation',
-        description:
-            'Horror movies are great.',
-            
-        tags: [
-            {
-                name: "Maya Keyframe",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "Motion Paths",
-                color: "green-text-gradient",
-            },
-            {
-                name: "Fluid simulation",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "Arnold CPU Rendering",
-                color: "green-text-gradient",
-            },
-            {
-                name: "Feb 2024",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: eyes,
-        youtube_link:"https://youtu.be/10SJ6G6IUjg",
     },
     {category:'Computer Graphics',
         name: "3D Game Asset Model Optimization",
@@ -899,40 +809,6 @@ const projects = [
     },
 
     
-    // {
-    //     category:'Web development',
-    //     name: "My Personal Website",
-    //     description:
-    //         "My github personal website that lists my coding projects and artworks, it's like a resume but better looking:)",
-    //     tags: [
-    //         {
-    //             name: "react",
-    //             color: "blue-text-gradient",
-    //         },
-    //         {
-    //             name: "javascript",
-    //             color: "green-text-gradient",
-    //         },
-    //         {
-    //             name: "html/css",
-    //             color: "blue-text-gradient",
-    //         },
-    //         {
-    //             name: "Three.js",
-    //             color: "green-text-gradient",
-    //         },
-    //         {
-    //             name: "Vanta.js",
-    //             color: "blue-text-gradient",
-    //         },
-    //         {
-    //             name: "React",
-    //             color: "green-text-gradient",
-    //         },
-    //     ],
-    //     image: jobit,
-    //     // source_code_link: "https://github.com/ShufanSun/ShufanSun.github.io",
-    // },
     {
         category:'Image Processing',
         name: "Corn Processing",
@@ -960,94 +836,6 @@ const projects = [
         source_code_link: "https://github.com/ShufanSun/Corn-Processing",
     },
 
-    {
-        name: "Dog Search Gallery",
-        description:
-            "A frontend searching engine for dog images by breeds.",
-        tags: [
-            {
-                name: "React",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "Fetching",
-                color: "green-text-gradient",
-            },
-            {
-                name: "User Interface",
-                color: "pink-text-gradient",
-            },
-        ],
-        category:'Frontend',
-        image: dogs,
-        source_code_link: "https://github.com/ShufanSun/DogSearchGallery",
-    },
-
-    {category:'Game dev',
-        name: "Finding Maggie",
-        description:
-            "Adventure game.",
-        tags: [
-            {
-                name: "unity",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "c#",
-                color: "green-text-gradient",
-            },
-            {
-                name: "2D & 3D platform game design",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: tripguide,
-        youtube_link: "https://www.youtube.com/watch?v=UtZiMp_eG90",
-    },
-    {category:'Game dev',
-        name: "Haunted Housekeeping",
-        description:
-            "A 2D top-down horror game.",
-        tags: [
-            {
-                name: "unity",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "Photoshop",
-                color: "green-text-gradient",
-            },
-            {
-                name: "2D game design",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: haunted,
-        itch_link: "https://savagebananas7405.itch.io/haunted-housekeeping",
-    },
-    {category:'Game dev',
-        name: "Alpaca Run!",
-        description:
-            'This is a 2d shooter unity game.',
-            
-        tags: [//<a href="https://sofine.itch.io/alpaca-run">here</a>
-            {
-                name: "c#",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "unity",
-                color: "green-text-gradient",
-            },
-            {
-                name: "graphic design",
-                color: "pink-text-gradient",
-            },
-        ],
-        image: carrent,
-        // source_code_link: "https://github.com/ShufanSun/alpaca_run_2d_game",
-        itch_link:"https://sofine.itch.io/alpaca-run"
-    },
 ];
 
 export { services, technologies, experiences, testimonials, projects, gallery,publicationsData };

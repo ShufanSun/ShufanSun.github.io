@@ -3,7 +3,7 @@ import { SectionWrapper } from "../hoc";
 
 const Contact = () => {
   return (
-    <div className="absolute inset-0 flex flex-col justify-center items-center text-white py-8">
+    <div className="absolute inset-0 flex flex-col justify-center items-center text-black py-8">
       {/* Add your contact information here */}
       {/* <p>Contact Info:</p> */}
       <p><span className="font-serif">Last Updated: Dec 2025</span></p>
