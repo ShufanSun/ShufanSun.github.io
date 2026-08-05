@@ -127,17 +127,9 @@ const About = () => {
 
     return (
         <>
-            {/* Hero + interest cards — always dark green (no light mode). */}
-            <div className='relative left-1/2 -translate-x-1/2 w-screen bg-[#001005] text-white-100'>
+            {/* Hero — always dark green (no light mode). */}
+            <div className='relative left-1/2 -translate-x-1/2 w-screen bg-[#001005] text-white-100 pb-6'>
                 <Hero />
-
-                <div className='max-w-7xl mx-auto px-6 sm:px-16 pb-3'>
-                    <div className='relative z-10 -mt-2 flex flex-wrap gap-10 justify-evenly'>
-                        {services.map((service, index) => (
-                            <ServiceCard key={service.title} index={index} {...service} />
-                        ))}
-                    </div>
-                </div>
             </div>
 
             {/* Publications + Services — light-mode switchable. */}
