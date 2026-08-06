@@ -128,7 +128,7 @@ const About = () => {
     return (
         <>
             {/* Hero — always dark green (no light mode). */}
-            <div className='relative left-1/2 -translate-x-1/2 w-screen bg-[#001005] text-white-100 pb-6'>
+            <div className='relative left-1/2 -translate-x-1/2 w-screen bg-[#001005] text-white-100'>
                 <Hero />
             </div>
 

@@ -142,7 +142,7 @@ const Works = () => {
                 glowing particle model needs a dark backdrop, so this stays dark
                 with white title text even though the rest of the page is white
                 in light mode. */}
-            <div className='relative left-1/2 -translate-x-1/2 w-screen -mt-6 bg-[#001005] pb-10 overflow-hidden'>
+            <div className='relative left-1/2 -translate-x-1/2 w-screen -mt-6 bg-[#001005] overflow-hidden'>
                 {/* Occasional meteor shower behind the title and model. */}
                 <Meteors />
 

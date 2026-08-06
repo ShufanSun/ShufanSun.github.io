@@ -217,7 +217,7 @@ const Hero = () => {
 
       {/* 3D model on the hero — same scale/framing as Projects, height trimmed
           to crop the empty space below the figure. */}
-      <div className="relative z-0 w-full -mt-[130px] h-[300px] sm:h-[360px]">
+      <div className="relative z-0 w-full -mt-[130px] h-[330px] sm:h-[370px]">
         <ComputersCanvas />
       </div>
 
