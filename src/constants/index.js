@@ -169,12 +169,14 @@ const harmony = {
 const publicationsData = {
   "All": [
     // harmony,
+    // harmony,
+    harmony,
     dogWeave
   ],
   "Conference": [],
   "Journal": [],
   "Preprint": [
-    // harmony,
+    harmony,
     dogWeave,
   ]
 };

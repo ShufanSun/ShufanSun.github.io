@@ -25,8 +25,14 @@ const ServiceCard = ({ index, title, icon }) => {
 
 // Academic service — distinct from the `services` constant, which drives the interest tabs above.
 const academicServices = [
-    { role: "Reviewer", subLines: ["Journal: ToG"] },
-    { role: "Teaching Assistant", subLines: ["CIS 5800 Machine Perception (Spring 2026)"] },
+    { role: "Reviewer", subLines: ["Journal: ToG"/*, "Conference: 3DV 2027"*/] },
+    {
+        role: "Teaching Assistant",
+        subLines: [
+            "CIS 5800 Machine Perception (Spring 2026)",
+            { text: "CIS 7000 ", link: "Neural Scene Representation and Neural Rendering", href: "https://neural-representation-2026.github.io/" },
+        ],
+    },
 ];
 
 const FeaturedPublicationCard = ({ publication, index }) => {
@@ -35,7 +41,7 @@ const FeaturedPublicationCard = ({ publication, index }) => {
     return (
         <motion.div 
             key={publication.id}
-            className='rounded-xl p-4 sm:p-5 transition-all duration-300 w-full bg-white border border-black/10 dark:bg-transparent dark:border-[#a2dbb8] mb-6 hover:scale-[1.02]'
+            className='rounded-xl p-4 sm:p-5 w-full bg-white border border-black/10 dark:bg-transparent dark:border-[#a2dbb8] mb-6'
             initial={{ opacity: 0 }}
             animate={imageLoaded ? { opacity: 1 } : { opacity: 0 }}
             transition={{ 
@@ -78,7 +84,7 @@ const FeaturedPublicationCard = ({ publication, index }) => {
                                             {author.name}
                                         </span>
                                         {marks && (
-                                            <sup className="font-serif text-[10px] text-black dark:text-secondary">{marks}</sup>
+                                            <span className="font-serif text-black dark:text-secondary">{marks}</span>
                                         )}
                                         {idx < publication.authors.length - 1 && ","}
                                     </span>
@@ -174,10 +180,22 @@ const About = () => {
                                 </p>
                                 {item.subLines?.map((line) => (
                                     <p
-                                        key={line}
+                                        key={typeof line === 'string' ? line : line.link}
                                         className='font-serif text-black dark:text-white-100 text-[14px] sm:text-[16px] leading-relaxed pl-10'
                                     >
-                                        {line}
+                                        {typeof line === 'string' ? line : (
+                                            <>
+                                                {line.text}
+                                                <a
+                                                    href={line.href}
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                    className='font-serif underline underline-offset-2 hover:text-black/60 dark:hover:text-white transition-colors'
+                                                >
+                                                    {line.link}
+                                                </a>
+                                            </>
+                                        )}
                                     </p>
                                 ))}
                             </div>

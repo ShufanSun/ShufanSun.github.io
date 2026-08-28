@@ -24,7 +24,7 @@ const PublicationCard = ({ publication, index }) => {
   return (
     <motion.div
       key={publication.id}
-      className='rounded-xl p-4 transition-all duration-300 w-full max-w-5xl bg-white border border-black/10 dark:bg-transparent dark:border-[#a2dbb8] hover:scale-[1.02]'
+      className='rounded-xl p-4 w-full max-w-5xl bg-white border border-black/10 dark:bg-transparent dark:border-[#a2dbb8]'
       initial={{ opacity: 0 }}
       animate={imageLoaded ? { opacity: 1 } : { opacity: 0 }}
       transition={{ 
@@ -67,7 +67,7 @@ const PublicationCard = ({ publication, index }) => {
                       {author.name}
                     </span>
                     {marks && (
-                      <sup className="font-serif text-[10px] text-black dark:text-secondary">{marks}</sup>
+                      <span className="font-serif text-black dark:text-secondary">{marks}</span>
                     )}
                     {index < publication.authors.length - 1 && ","}
                   </span>
