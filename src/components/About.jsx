@@ -30,7 +30,7 @@ const academicServices = [
         role: "Teaching Assistant",
         subLines: [
             "CIS 5800 Machine Perception (Spring 2026)",
-            { text: "CIS 7000 ", link: "Neural Scene Representation and Neural Rendering", href: "https://neural-representation-2026.github.io/" },
+            { text: "CIS 7000 ", link: "Neural Scene Representation and Neural Rendering", href: "https://neural-representation-2026.github.io/", suffix: " (Fall 2026)" },
         ],
     },
 ];
@@ -194,6 +194,7 @@ const About = () => {
                                                 >
                                                     {line.link}
                                                 </a>
+                                                {line.suffix}
                                             </>
                                         )}
                                     </p>
