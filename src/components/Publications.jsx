@@ -5,6 +5,7 @@ import { SectionWrapper } from "../hoc";
 import { DogWeave } from "../assets";
 import { publicationsData } from '../constants';
 import Fireflies from './Fireflies';
+import GithubStars from './GithubStars';
 
 // The links a publication actually has, in display order. Callers render
 // separators between entries, so a missing link never leaves a stray "/".
@@ -35,7 +36,7 @@ const PublicationCard = ({ publication, index }) => {
     >
       <div className='flex flex-col md:flex-row gap-6'>
         {/* Thumbnail */}
-        <div className='flex-shrink-0 relative'>
+        <div className='flex-shrink-0 relative md:self-center'>
           {/* Loading placeholder */}
           {!imageLoaded && (
             <div className='w-full md:w-80 h-48 bg-gray-800 rounded-xl animate-pulse' />
@@ -44,7 +45,7 @@ const PublicationCard = ({ publication, index }) => {
           <img 
             src={publication.image} 
             alt={publication.title}
-            className={`w-full md:w-80 h-48 object-cover rounded-xl ${!imageLoaded ? 'hidden' : ''}`}
+            className={`w-full md:w-80 h-auto object-contain rounded-xl ${!imageLoaded ? 'hidden' : ''}`}
             onLoad={() => setImageLoaded(true)}
           />
         </div>
@@ -95,6 +96,9 @@ const PublicationCard = ({ publication, index }) => {
                   >
                     {link.label}
                   </a>
+                  {link.label === 'Code' && /github\.com/.test(link.href) && (
+                    <GithubStars repoUrl={link.href} />
+                  )}
                 </React.Fragment>
               ))}
             </div>
@@ -132,12 +136,12 @@ const Publications = () => {
       <div className='relative left-1/2 -translate-x-1/2 w-screen bg-white text-black dark:bg-transparent dark:text-white-100 mt-0 -mb-10 sm:-mb-16 flex-1'>
         <div className='max-w-7xl mx-auto px-6 sm:px-16 py-12'>
           {/* Tabs */}
-          <div className='flex flex-wrap justify-center gap-4 mb-10'>
+          <div className='flex flex-wrap justify-center gap-2 mb-10'>
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`font-serif px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                className={`font-serif text-sm px-2 py-0.5 rounded-lg font-medium transition-all duration-300 ${
                   activeTab === tab
                     ? 'border border-transparent bg-black/10 text-black dark:bg-[rgba(1,60,2,0.6)] dark:text-white dark:shadow-lg'
                     : 'border border-transparent text-black/60 dark:text-secondary hover:text-black dark:hover:text-white'
@@ -145,7 +149,7 @@ const Publications = () => {
               >
                 {tab}
                 {publicationsData[tab].length > 0 && (
-                  <span className={`ml-2 text-xs px-2 py-1 rounded-full ${
+                  <span className={`ml-1 text-[10px] px-1.5 py-0 rounded-full ${
                     activeTab === tab ? 'bg-black/20 dark:bg-white/20' : 'bg-black/10 dark:bg-white/10'
                   }`}>
                     {publicationsData[tab].length}
@@ -163,7 +167,7 @@ const Publications = () => {
           </p>
 
           {/* Publications List */}
-          <div className='flex flex-col items-center gap-6'>
+          <div className='flex flex-col items-center gap-4'>
             {publicationsData[activeTab].length > 0 ? (
               publicationsData[activeTab].map((publication, index) => (
                 <PublicationCard

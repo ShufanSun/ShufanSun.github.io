@@ -7,6 +7,7 @@ import { Tilt } from "react-tilt";
 import { SectionWrapper } from '../hoc'
 import Hero from "./Hero";
 import { presentLinks } from "./Publications";
+import GithubStars from "./GithubStars";
 import { useIsDark } from "./ThemeToggle";
 
 const ServiceCard = ({ index, title, icon }) => {
@@ -25,7 +26,7 @@ const ServiceCard = ({ index, title, icon }) => {
 
 // Academic service — distinct from the `services` constant, which drives the interest tabs above.
 const academicServices = [
-    { role: "Reviewer", subLines: ["Journal: ToG"/*, "Conference: 3DV 2027"*/] },
+    { role: "Reviewer", subLines: ["Journal: ToG"] },
     {
         role: "Teaching Assistant",
         subLines: [
@@ -41,7 +42,7 @@ const FeaturedPublicationCard = ({ publication, index }) => {
     return (
         <motion.div 
             key={publication.id}
-            className='rounded-xl p-4 sm:p-5 w-full bg-white border border-black/10 dark:bg-transparent dark:border-[#a2dbb8] mb-6'
+            className='rounded-xl p-4 sm:p-5 w-full bg-white border border-black/10 dark:bg-transparent dark:border-[#a2dbb8] mb-4'
             initial={{ opacity: 0 }}
             animate={imageLoaded ? { opacity: 1 } : { opacity: 0 }}
             transition={{ 
@@ -52,7 +53,7 @@ const FeaturedPublicationCard = ({ publication, index }) => {
         >
             <div className='flex flex-col md:flex-row gap-6'>
                 {/* Thumbnail */}
-                <div className='flex-shrink-0 relative'>
+                <div className='flex-shrink-0 relative md:self-center'>
                     {/* Loading placeholder */}
                     {!imageLoaded && (
                         <div className='w-full md:w-80 h-48 bg-gray-800 rounded-xl animate-pulse' />
@@ -61,7 +62,7 @@ const FeaturedPublicationCard = ({ publication, index }) => {
                     <img 
                         src={publication.image} 
                         alt={publication.title}
-                        className={`w-full md:w-80 h-48 object-cover rounded-xl ${!imageLoaded ? 'hidden' : ''}`}
+                        className={`w-full md:w-80 h-auto object-contain rounded-xl ${!imageLoaded ? 'hidden' : ''}`}
                         onLoad={() => setImageLoaded(true)}
                     />
                 </div>
@@ -112,6 +113,9 @@ const FeaturedPublicationCard = ({ publication, index }) => {
                                     >
                                         {link.label}
                                     </a>
+                                    {link.label === 'Code' && /github\.com/.test(link.href) && (
+                                        <GithubStars repoUrl={link.href} />
+                                    )}
                                 </React.Fragment>
                             ))}
                         </div>

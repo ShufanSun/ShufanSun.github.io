@@ -29,7 +29,7 @@ const ExperienceCard = ({ experience, isDark }) => (
         dateClassName="font-serif"  // Add this line
         iconStyle={{ background: experience.iconBg }}
         icon={
-            <div className='flex justify-center items-center w-full h-full'>
+            <div className='flex justify-center items-center w-full h-full rounded-full overflow-hidden'>
                 <img
                     src={experience.icon}
                     alt={experience.company_name}

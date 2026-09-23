@@ -12,6 +12,7 @@ import hoverPortrait from "../assets/portrait_hover.jpg";
 
 const SCHOLAR_URL = "https://scholar.google.com/citations?hl=en&user=OccNUoAAAAAJ";
 const LINKEDIN_URL = "https://www.linkedin.com/in/shufan-sun-071bb0211/";
+const X_URL = "https://x.com/sofine_sun";
 
 const Hero = () => {
   const [hovered, setHovered] = useState(false);
@@ -97,6 +98,17 @@ const Hero = () => {
             >
               <img src={linkedin} alt="LinkedIn" className="w-full h-full object-cover rounded-full" />
             </a>
+            <a
+              href={X_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (Twitter)"
+              className="w-8 h-8 rounded-full overflow-hidden bg-black hover:bg-black/90 flex items-center justify-center pointer-events-auto"
+            >
+              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
           </motion.div>
         </motion.div>
         
@@ -163,6 +175,17 @@ const Hero = () => {
                 >
                   <img src={linkedin} alt="LinkedIn" className="w-full h-full object-cover rounded-full" />
                 </a>
+                <a
+                  href={X_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X (Twitter)"
+                  className="w-8 h-8 rounded-full overflow-hidden bg-black hover:bg-black/90 flex items-center justify-center pointer-events-auto"
+                >
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </a>
               </motion.div>
             </div>
           </motion.div>
@@ -185,7 +208,7 @@ const Hero = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 1.2, duration: 1 }}
     >
-      I am currently a research assistant at <span className="font-serif text-white-100">University of Pennsylvania SIG Lab</span>, supervised by <a href="https://lingjie0206.github.io/" target="_blank" rel="noopener noreferrer" className="font-serif text-white-100 underline underline-offset-2 hover:text-[#a2dbb8] transition-colors">Prof. Lingjie Liu</a>. Previously I received a B.S. degree in Computer Sciences from <span className="font-serif text-white-100">University of Wisconsin-Madison</span>, advised by <a href="https://engineering.wisc.edu/directory/profile/zongfu-yu/" target="_blank" rel="noopener noreferrer" className="font-serif text-white-100 underline underline-offset-2 hover:text-[#a2dbb8] transition-colors">Prof. Zongfu Yu</a>.<span className="block mt-4 font-serif">My research interests lie in <span className="font-serif text-white-100">3D/4D reconstruction</span> at the intersection of <span className="font-serif text-white-100">computer graphics</span>, <span className="font-serif text-white-100">computer vision</span>, and <span className="font-serif text-white-100">machine learning</span>. I am particularly interested in how visual perception can guide machine intelligence toward a deeper understanding of the world and its faithful, high-fidelity simulation.</span>
+      I am currently a research assistant at <span className="font-serif text-white-100">Penn Computer Graphics Lab</span>, supervised by <a href="https://lingjie0206.github.io/" target="_blank" rel="noopener noreferrer" className="font-serif text-white-100 underline underline-offset-2 hover:text-[#a2dbb8] transition-colors">Prof. Lingjie Liu</a>. Previously I received a B.S. degree in Computer Sciences from <span className="font-serif text-white-100">University of Wisconsin-Madison</span>, advised by <a href="https://engineering.wisc.edu/directory/profile/zongfu-yu/" target="_blank" rel="noopener noreferrer" className="font-serif text-white-100 underline underline-offset-2 hover:text-[#a2dbb8] transition-colors">Prof. Zongfu Yu</a>.<span className="block mt-4 font-serif">My research interests lie in <span className="font-serif text-white-100">3D/4D reconstruction</span> at the intersection of <span className="font-serif text-white-100">computer graphics</span>, <span className="font-serif text-white-100">computer vision</span>, and <span className="font-serif text-white-100">machine learning</span>. I am particularly interested in how visual perception can guide machine intelligence toward a deeper understanding of the world and its faithful, high-fidelity simulation.</span>
     </motion.p>
   </div>
 </div>
@@ -209,7 +232,7 @@ const Hero = () => {
     animate={{ y: 0, opacity: 1 }}
     transition={{ delay: 1.2, duration: 1 }}
   >
-     I am currently a research assistant at <span className="font-serif text-white-100">University of Pennsylvania SIG Lab</span>, supervised by <a href="https://lingjie0206.github.io/" target="_blank" rel="noopener noreferrer" className="font-serif text-white-100 underline underline-offset-2 hover:text-[#a2dbb8] transition-colors">Prof. Lingjie Liu</a>. Previously I received a B.S. degree in Computer Sciences from <span className="font-serif text-white-100">University of Wisconsin-Madison</span>, advised by <a href="https://engineering.wisc.edu/directory/profile/zongfu-yu/" target="_blank" rel="noopener noreferrer" className="font-serif text-white-100 underline underline-offset-2 hover:text-[#a2dbb8] transition-colors">Prof. Zongfu Yu</a>.<span className="block mt-4 font-serif">My research interests lie in <span className="font-serif text-white-100">3D/4D reconstruction</span> at the intersection of <span className="font-serif text-white-100">computer graphics</span>, <span className="font-serif text-white-100">computer vision</span>, and <span className="font-serif text-white-100">machine learning</span>. I am particularly interested in how visual perception can guide machine intelligence toward a deeper understanding of the world and its faithful, high-fidelity simulation.</span>
+     I am currently a research assistant at <span className="font-serif text-white-100">Penn Computer Graphics Lab</span>, supervised by <a href="https://lingjie0206.github.io/" target="_blank" rel="noopener noreferrer" className="font-serif text-white-100 underline underline-offset-2 hover:text-[#a2dbb8] transition-colors">Prof. Lingjie Liu</a>. Previously I received a B.S. degree in Computer Sciences from <span className="font-serif text-white-100">University of Wisconsin-Madison</span>, advised by <a href="https://engineering.wisc.edu/directory/profile/zongfu-yu/" target="_blank" rel="noopener noreferrer" className="font-serif text-white-100 underline underline-offset-2 hover:text-[#a2dbb8] transition-colors">Prof. Zongfu Yu</a>.<span className="block mt-4 font-serif">My research interests lie in <span className="font-serif text-white-100">3D/4D reconstruction</span> at the intersection of <span className="font-serif text-white-100">computer graphics</span>, <span className="font-serif text-white-100">computer vision</span>, and <span className="font-serif text-white-100">machine learning</span>. I am particularly interested in how visual perception can guide machine intelligence toward a deeper understanding of the world and its faithful, high-fidelity simulation.</span>
   </motion.p>
 </div>
         </div>

@@ -32,6 +32,7 @@ import {
     girl1,
     DogWeave,
     Harmony,
+    HarmonyTeaser,
     girl2,
     greenbird,
     gb1,
@@ -133,7 +134,7 @@ const dogWeave = {
     { name: "Chenchen Wang", marks: "*" },
     { name: "Zongfu Yu", italic: true }
   ],
-  venue: "Under Review",
+  venue: "arXiv 2026",
   for_Cover: true,
   description: "An SDF-based framework for reconstructing high-fidelity 3D quadruped models from a single RGB image using style supervision. ",
   image: DogWeave,
@@ -149,32 +150,58 @@ const harmony = {
   id: 2,
   title: "HARMONY: Hierarchical Agentic Reasoning for MONocular Image-to-Scene Synthesis",
   authors: [
-    { name: "Shufan Sun", bold: true, marks: "*†" },
+    { name: "Shufan Sun", bold: true, marks: "*" },
     { name: "Chen Wang", marks: "*" },
+    { name: "Enxin Song" },
     { name: "Jiatao Gu", italic: true },
     { name: "Lingjie Liu", italic: true }
   ],
-  venue: "Under Review",
+  venue: "arXiv 2026",
   for_Cover: true,
   description: "A hierarchical chain-of-thought framework that leverages both agentic reasoning and visual geometry foundation. ",
-  image: Harmony,
+  image: HarmonyTeaser,
   links: {
     project: "https://cwchenwang.github.io/harmony/",
     // pdf: "https://example.com/paper.pdf",
-    arxiv: "https://arxiv.org/abs/2603.07441",
-    code: "https://github.com/example"
+    arxiv: "https://arxiv.org/abs/2609.26793",
+    code: "https://github.com/ShufanSun/harmony-release"
+  }
+};
+
+const physDuo = {
+  id: 3,
+  title: "PhysDuo: Learning Pairwise Physics for Compositional Multi-Object Simulation",
+  authors: [
+    { name: "Zhuoman Liu" },
+    { name: "Shufan Sun", bold: true },
+    { name: "Chen Wang" },
+    { name: "Yin Yang", italic: true },
+    { name: "Jiatao Gu", italic: true },
+    { name: "Lingjie Liu", italic: true }
+  ],
+  venue: "arXiv 2026",
+  for_Cover: true,
+  description: "A compositional point-cloud rigid-body simulator that learns per-object free motion and a reusable pairwise contact operator, generalizing from pairwise interactions to scenes with many objects.",
+  image: Harmony,
+  links: {
+    // project: "https://example.com/project",
+    // pdf: "https://example.com/paper.pdf",
+    // arxiv: "https://arxiv.org/abs/xxxx.xxxxx",
+    // code: "https://github.com/example"
   }
 };
 
 const publicationsData = {
   "All": [
-    // harmony,
+    // physDuo,
+    harmony,
     dogWeave
   ],
   "Conference": [],
   "Journal": [],
   "Preprint": [
-    // harmony,
+    // physDuo,
+    harmony,
     dogWeave,
   ]
 };
@@ -238,7 +265,7 @@ const technologies = [
 const experiences = [
     {
         
-        title: "Research Intern @ SIG Lab",
+        title: "Research Assistant @ Penn Computer Graphics Lab",
         company_name: "Supervised by Prof. Lingjie Liu, UPenn CIS",
         icon: upenn_logo,
         iconBg: "#ffffff",

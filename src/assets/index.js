@@ -78,12 +78,14 @@ import coco from "./gallery/coco.jpg";
 import illumination from "./company/illumination.png";
 import DogWeave from "./publications/DogWeave.png";
 import Harmony from "./publications/HARMONY.png";
+import HarmonyTeaser from "./publications/HARMONY_teaser.jpg";
 export {
     logo,
     backend,
     maya,
     DogWeave,
     Harmony,
+    HarmonyTeaser,
     ssec_logo,
     upenn_logo,
     mathematica,
